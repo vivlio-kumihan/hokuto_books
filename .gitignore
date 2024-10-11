@@ -35,6 +35,10 @@ wp-config.php
 # htaccess
 /.htaccess
 
+# remove fat file
+php-cgi-5.2.8.core
+
+# my remove
 .DS_Store
 tmp/
 
