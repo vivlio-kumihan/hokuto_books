@@ -1,0 +1,38 @@
+<Files "wp-login.php">
+order deny,allow
+deny from all
+allow from  116.67.202.72
+allow from  182.166.249.18
+allow from  182.166.251.26
+</Files>
+
+AddType text/x-component .htc
+
+AddHandler x-httpd-php528 .php
+suPHP_ConfigPath /home/aa11215vkt/html/
+<Files ~ "^(\.htaccess|\.htpasswd|php\.ini|.*\.sql|.*\.log|.*\.cron|.*\.inc|.*\.phps|.*\.yml)$">
+deny from all
+</Files>
+Options +FollowSymLinks
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+
+# uploaded files
+RewriteRule ^([_0-9a-zA-Z-]+/)?files/(.+) wp-includes/ms-files.php?file=$2 [L]
+
+# add a trailing slash to /wp-admin
+RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule  ^[_0-9a-zA-Z-]+/(wp-(content|admin|includes).*) $1 [L]
+RewriteRule  ^[_0-9a-zA-Z-]+/(.*\.php)$ $1 [L]
+RewriteRule . index.php [L]
+</IfModule>
+
+# END WordPress

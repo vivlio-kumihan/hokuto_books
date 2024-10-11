@@ -1,0 +1,104 @@
+#Sliders {
+	position:relative;
+	width:600px;
+	height:320px;
+	margin:10px auto 0px;
+}
+
+/*
+	Slideshow style
+*/
+
+#slides {
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:300;
+}
+
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	If height not specified height will be set by the slide content
+	Set to display none, prevents content flash
+*/
+
+.slides_container {
+	width:600px;
+	overflow:hidden;
+	position:relative;
+	display:none;
+}
+
+/*
+	Each slide
+	Important:
+	Set the width of your slides
+	Offeset for the 20px of padding
+	If height not specified height will be set by the slide content
+	Set to display block
+*/
+
+.slides_container a {
+	width:600px;
+	height:320px;
+	display:block;
+}
+
+.slides_container a img {
+	display:block;
+}
+
+/*
+	Next/prev buttons
+*/
+
+#slides .next,#slides .prev {
+	position:absolute;
+	top:150px;
+	left:-44px;
+	display:block;
+	z-index:101;
+}
+
+#slides .next {
+	left:570px;
+}
+
+/*
+	Pagination
+*/
+
+.pagination {
+	position:absolute;
+	bottom:5px;
+	right:5px;
+	z-index:300;
+}
+
+.pagination li {
+	float:left;
+	margin:0 1px;
+	list-style:none;
+}
+
+.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url(../js/img/pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+* html .pagination li a {
+	height:13px;
+	text-indent:-9999px;
+}
+
+.pagination li.current a {
+	background-position:0 -12px;
+}

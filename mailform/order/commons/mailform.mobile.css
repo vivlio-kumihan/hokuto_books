@@ -1,0 +1,436 @@
+@charset "UTF-8";
+
+/*//////////////////////////////////////////////////*/
+/*// 01.ベースの設定                              //*/
+/*//////////////////////////////////////////////////*/
+form#mailform {
+	margin: 0px auto 0px auto;
+	padding: 0px 0px 50px 0px;;
+}
+form#mailform label {
+	cursor: pointer;
+	text-decoration: underline;
+	display: block;
+	padding: 5px 5px;
+	margin-bottom: 1px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+label.label_true {
+	background-color: #FFFFEE;
+	border: solid 1px #CCCCCC;
+	text-decoration: none;
+}
+label.label_false {
+	background-color: none;
+	border: none;
+	text-decoration: underline;
+	background-image: none;
+}
+div#mailfrom_hidden_object {
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+div#mailfrom_hidden_object input {
+	margin: 10px;
+}
+div#mfp_closed {
+	display: none;
+}
+div.mfp_disp {
+	display: none;
+}
+div#input_time_disp {
+	padding: 10px;
+}
+div#expires_time_disp {
+	padding: 10px;
+	text-align: center;
+}
+div#expires_time_disp strong {
+	font-size: 18px;
+	color: #CC0000;
+}
+div#limit_disp {
+	padding: 10px;
+	text-align: center;
+}
+div#limit_disp strong {
+	font-size: 24px;
+	color: #CC0000;
+}
+img.must {
+	width: 30px;
+	height: 16px;
+	float: left;
+	margin: 0px 0px 0px 5px;
+}
+div.mfp_err {
+	text-align: left;
+	margin: 5px 0px 0px 0px;
+	padding: 3px 0px 5px 17px;
+	color: #FF0000;
+	font-size: 12px;
+	line-height: normal;
+	display: none;
+	background-image: url(../images/mfp_error.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 1px;
+}
+input.mfp {
+	padding: 2px;
+}
+textarea.mfp {
+	padding: 5px;
+}
+div.mfp_buttons {
+	padding: 10px;
+	text-align: center;
+}
+div.mfp_phase_buttons {
+	height: 60px;
+}
+input.mfp_phase_next {
+	background-image: url(../images/mfp_next.gif);
+	float: right;
+}
+input.mfp_phase_prev {
+	background-image: url(../images/mfp_prev.gif);
+	float: left;
+}
+
+input.mfp_phase_next,input.mfp_phase_prev {
+	width: 200px;
+	height: 60px;
+	overflow: hidden;
+	text-indent: -5000px;
+	border: none;
+	border-style: none;
+	cursor: pointer;
+}
+
+input#button_mfp_goconfirm {
+	width: 180px;
+	height: 60px;
+	overflow: hidden;
+	background-color: #FFFFFF;
+	background-image: url(../images/mfp_goconfirm.gif);
+	border: none;
+	border-style: none;
+	cursor: pointer;
+}
+input#button_mfp_gosend {
+	width: 180px;
+	height: 60px;
+	overflow: hidden;
+	background-color: #FFFFFF;
+	background-image: url(../images/mfp_gosend.gif);
+	border: none;
+	border-style: none;
+	cursor: pointer;
+}
+input#button_mfp_gocancel {
+	width: 180px;
+	height: 60px;
+	overflow: hidden;
+	background-color: #FFFFFF;
+	background-image: url(../images/mfp_gocancel.gif);
+	border: none;
+	border-style: none;
+	cursor: pointer;
+}
+input#button_mfp_reset {
+	width: 180px;
+	height: 60px;
+	overflow: hidden;
+	background-color: #FFFFFF;
+	background-image: url(../images/mfp_reset.gif);
+	border: none;
+	border-style: none;
+	cursor: pointer;
+}
+.reset_over {
+	background-image: url(../images/mfp_reset_over.gif);
+}
+.reset_out {
+	background-image: url(../images/mfp_reset.gif);
+}
+.confirm_over {
+	background-image: url(../images/mfp_confirm_over.gif);
+}
+.confirm_out {
+	background-image: url(../images/mfp_confirm.gif);
+}
+
+/*//////////////////////////////////////////////////*/
+
+
+/*//////////////////////////////////////////////////*/
+/*// 02.テーブルの指定                            //*/
+/*//////////////////////////////////////////////////*/
+table.mailform {
+	width: 100%;
+	padding: 10px;
+}
+table.mailform tr th {
+	padding: 7px 0px 7px 0px;
+	border-bottom: solid 1px #CCCCCC;
+	font-weight: normal;
+	font-size: 12px;
+	text-align: right;
+	width: 160px;
+}
+table.mailform tr th span {
+	font-size: 10px;
+	color: #999999;
+	display: block;
+}
+table.mailform tr td {
+	padding: 7px 10px 7px 10px;
+	border-bottom: solid 1px #CCCCCC;
+	font-size: 12px;
+}
+table.mailform tr td ul li,table.mailform tr td ul,table.mailform tr td ol,table.mailform tr td ol li {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+table.mailform tr td ul li {
+	float: left;
+	padding: 0px 10px 0px 0px;
+}
+table.mailform tr td p,table.mailform tr td div,table.mailform tr td span {
+	clear: both;
+}
+
+div.buttons {
+	margin: 0px auto 0px auto;
+}
+
+div#twex {
+	margin: 0px;
+	overflow: hidden;
+	z-index: 100;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	text-align: center;
+	background-color: #000000;
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.60;
+	-khtml-opacity: 0.60;
+	opacity: 0.60;
+}
+img#loading_proccess_image {
+	position: absolute;
+	z-index: 1000;
+}
+/*//////////////////////////////////////////////////*/
+
+input,textarea,select {
+	font-size: 100%;
+}
+
+dl.mailform {
+	padding: 0px 0px;
+	margin: 0px;
+}
+
+dl.mailform dt {
+	float: left;
+	clear: both;
+	font-size: 100%;
+	text-align: left;
+	font-weight: normal;
+	padding: 5px 20px 0px 10px;
+	margin: 0px;
+}
+dl.mailform dt img {
+	float: right;
+}
+dl.mailform dt span {
+	display: none;
+	font-size: 10px;
+	color: #999999;
+}
+dl.mailform dd {
+	padding: 30px 20px 15px 20px;
+	border-bottom: solid 1px #CCCCCC;
+	font-size: 12px;
+	margin: 0px;
+	text-align: left;
+}
+dl.mailform dd ul,dl.mailform dd ol {
+	margin: 0px;
+	padding: 0px;
+}
+dl.mailform dd ul li,dl.mailform dd ol li {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+dl.mailform dd ul li {
+	/*float: left;*/
+	padding: 0px 10px 0px 0px;
+}
+
+/*// Phase Input Style //*/
+
+div.mfp_phase_section,div#mfp_phase_confirm {
+	display: none;
+	margin: 0px;
+	clear: both;
+	background-color: #FFF;
+	margin: 5px 15px;
+	border: solid 1px #CCC;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 2px 5px #999;
+	-webkit-box-shadow: 0px 2px 5px #999;
+	-moz-box-shadow: 0px 2px 5px #999;
+}
+p.mfp_caption {
+	margin: 10px;
+}
+input.mfp_phase_ui {
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	padding: 3px;
+	margin: 5px 15px;
+}
+h3.mfp_phase_title {
+	background-image: url(../images/mfp_h3.png);
+	padding: 5px 15px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	font-size: 21px;
+	margin: 0px 0px 10px 0px;
+	color: #FFFFFF;
+	text-shadow: 1px 1px 1px #000000;
+}
+ol.mfp_phase_input_proccess {
+	margin: 15px;
+	height: 40px;
+}
+ol.mfp_phase_input_proccess li {
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding: 5px 10px;
+	margin: 5px;
+	float: left;
+	font-weight: bolder;
+}
+li.mfp_phase_disabled {
+	-webkit-box-shadow: 1px 1px 4px #999999;
+	-moz-box-shadow: 1px 1px 4px #999999;
+	box-shadow: 1px 1px 4px #999999;
+	background-color: #CCCCCC;
+	border: solid 1px #999999;
+}
+li.mfp_phase_current {
+	-webkit-box-shadow: 1px 1px 4px #999999;
+	-moz-box-shadow: 1px 1px 4px #999999;
+	box-shadow: 1px 1px 4px #999999;
+	color: #FFFFFF;
+	text-shadow: 1px 1px 1px #000000;
+	background-image: url(../images/mfp_h3.png);
+	border: solid 1px #FFFFFF;
+	background-color: #FFEEEE;
+}
+
+table.infield {
+	width: 660px;
+	margin: 0px auto 0px auto;
+}
+table.infield tr th {
+	padding: 5px;
+	margin: 0px;
+	text-align: left;
+	font-size: 100%;
+	width: 150px;
+	border-bottom: solid 1px #CCCCCC;
+	color: #232323;
+}
+table.infield tr td {
+	text-align: left;
+	padding: 5px;
+	border-bottom: solid 1px #CCCCCC;
+}
+table.infield tr td p {
+	text-align: left;
+	font-size: 100%;
+	line-height: 1.5em;
+	border-left: solid 2px #CCCCCC;
+	padding: 5px 0px 5px 10px;
+	margin: 0px;
+}
+.mfp_color {
+	background-color: #E8EEF9;
+}
+
+div#mfp_phase_confirm {
+	display: none;
+}
+div#mfp_phase_confirm h2 {
+	font-size: 100%;
+	padding: 10px;
+	background-color: #333;
+	color: #FFF;
+}
+div#mfp_phase_confirm table {
+	width: 100%;
+	margin: 0px auto 20px auto;
+}
+
+div#mfp_phase_confirm table tr th,div#mfp_phase_confirm table tr td {
+	padding: 5px 10px;
+	font-size: 80%;
+}
+div#mfp_phase_confirm table tr th {
+	text-align: left;
+	width: 30%;
+}
+div#mfp_phase_confirm table tr td {
+	text-align: left;
+}
+div#mfp_progress {
+	margin: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border: solid 1px #CCC;
+	overflow: hidden;
+	text-align: left;
+	background-image: url(../images/mfp_progress_disabled.jpg);
+	position: relative;
+	height: 30px;
+}
+p#mfp_progress_bar_text {
+	z-index: 10;
+	position: absolute;
+	top: 5px;
+	left: 0px;
+	width: 100%;
+	color: #FFF;
+	font-weight: bolder;
+	text-shadow: 1px 1px 2px #000;
+	font-size: 10px;
+	text-align: center;
+}
+div#mfp_progress_bar {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 0%;
+	height: 30px;
+	background-image: url(../images/mfp_progress.jpg);
+	overflow: hidden;
+}

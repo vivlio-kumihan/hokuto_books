@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+body {
+	background:none;
+}
+
+#HeadImg {
+	background-color:#1F2620;
+	height:100px;
+	}
+
+html>/**/body #TopicPath {	/* IE6,7 以外 */
+	display:table-header-group\9;
+	height:0px\9;
+	}
+
+html>/**/body #Container {	/* IE6,7 以外 */
+	display: table\9;
+}　
+
+html>/**/body #Main {	/* IE6,7 以外 */
+	display:table-cell\9;
+	float: none\9;
+	width: 720px\9;
+	vertical-align: top\9;
+}
+
+html>/**/body #Sub {	/* IE6,7 以外 */
+	display:table-cell\9;
+	float: none\9;
+	width: 260px\9;
+	padding-left: 10px\9;
+	vertical-align: top\9;
+}
+
+*+html #TopBookList {
+	zoom:1;
+	}
+
+*+html #TopBookList dl {
+	float:none;
+	display:inline;
+	zoom:1;
+	}
+
+*+html #TopBookList .bookList {
+	zoom:1;
+	width:690px;
+	}
+
+*+html #Main {
+	zoom:1;	/* IE7 */
+}
+
+*+html #Sub {
+	zoom:1;	/* IE7 */
+}
+
+#PageIndex {
+	background:none;
+	}
+
+#PageIndex #HeadImg {
+	background:url(../img/top-main-img-bg.png) repeat-x 0px 0px;
+	height:340px;
+	}
+
+#TopBookList dl {
+
+	margin:0px 0px 20px;
+	padding:10px;
+	
+	
+	}
+
+
+
+#Footer {background:none;}
+
+#FootInner {}
+
+
+
+/*アクセスマッププリント*/
+
+#PrintMap p.btPrint,
+#PrintMap p.btClose {
+	display:none;
+	height:0px;
+	}

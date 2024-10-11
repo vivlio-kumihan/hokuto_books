@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+/*フォントサイズ*/
+body                       {
+	font: 17px/1.5 arial,sans-serif; /* 基本文字設定 */
+}
+
+#Header .btCaps ul li.btCaps01 a {background-position:left top;}
+#Header .btCaps ul li.btCaps02 a {background-position:left top;}
+#Header .btCaps ul li.btCaps03 a {background-position:0px -24px;}

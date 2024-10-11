@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+div#mfp_phase_confirm {
+	display: none;
+	padding: 15px;
+}
+div#mfp_phase_confirm table {
+	width: 100%;
+	border: solid 1px #EEE;
+	box-shadow: 0px 0px 10px #999999;
+	-webkit-box-shadow: 0px 0px 10px #999999;
+	-moz-box-shadow: 0px 0px 10px #999999;
+	margin: 0px auto 20px auto;
+}
+div#mfp_phase_confirm table tr th,div#mfp_phase_confirm table tr td {
+	padding: 5px 10px;
+	font-size: 12px;
+}
+div#mfp_phase_confirm table tr td p {
+	font-size: 12px;
+	text-align: left;
+}
+div#mfp_phase_confirm table tr th {
+	text-align: right;
+}

@@ -1,0 +1,1880 @@
+@charset "UTF-8";
+
+@import "common.css";
+
+
+/*メインイメージ
+-------------------------------------------------------------------------*/
+
+#HeadImg {
+	position:relative;
+	width:1000px;
+	height:100px;
+	margin:0px auto 20px;
+	background-repeat:no-repeat;
+	background-position:left top;
+	}
+
+#PageIndex   #HeadImg {
+	height:340px;
+	}
+
+#HeadImg h2.title {
+	text-indent:-9999px;
+	}
+
+#PageIndex #HeadImg #Sliders {
+	position:absolute;
+	top:0px;
+	left:400px;
+	}
+
+#PageIndex #HeadImg .mainCopy {
+	background: url(../img/top-main-copy.png) no-repeat 0px 0px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	text-indent:-9999px;
+	width:400px;
+	height:340px;
+	}
+
+#PageIndex #HeadImg .mainCopy h2,
+#PageIndex #HeadImg .mainCopy p {
+	font-size:100%;
+	margin:0px;
+	padding:0px;
+	}
+
+/*タイトル
+-------------------------------------------------------------------------*/
+#Pagefeature      #HeadImg {background-image:url(../img/title-feature.png);}
+#Pagebook         #HeadImg,
+#Pageorder        #HeadImg {background-image:url(../img/title-book.png);}
+#Pageguide        #HeadImg {background-image:url(../img/title-guide.png);}
+#Pagevoice        #HeadImg {background-image:url(../img/title-voice.png);}
+#Pageprice        #HeadImg {background-image:url(../img/title-price.png);}
+#Pagefaq          #HeadImg {background-image:url(../img/title-faq.png);}
+#Pageaccess       #HeadImg {background-image:url(../img/title-access.png);}
+#Pagenews         #HeadImg {background-image:url(../img/title-news.png);}
+#Pagesearch       #HeadImg {background-image:url(../img/title-search.png);}
+#Pagesitemap      #HeadImg {background-image:url(../img/title-sitemap.png);}
+#Pagetransaction  #HeadImg {background-image:url(../img/title-transaction.png);}
+#Pagelinks        #HeadImg {background-image:url(../img/title-links.png);}
+#Pagecontact      #HeadImg {background-image:url(../img/title-contact.png);}
+#Pageconsultation #HeadImg {background-image:url(../img/title-consultation.png);}
+#Pagecalendar     #HeadImg {background-image:url(../img/title-calendar.png);}
+#Pagepurchase     #HeadImg {background-image:url(../img/title-purchase.png);}
+#Pagemelmaga      #HeadImg {background-image:url(../img/title-melmaga.png);}
+#Pagestaff        #HeadImg {background-image:url(../img/title-staff.png);}
+#Pagepublish      #HeadImg {background-image:url(../img/title-publish.png);}
+#Pageknowledge    #HeadImg {background-image:url(../img/title-knowledge.png);}
+
+
+/*グローバルナビ　オン
+-------------------------------------------------------------------------*/
+#Pagefeature   #Menu li.menu01 a,
+#Pageprice     #Menu li.menu02 a,
+#Pagestaff     #Menu li.menu03 a,
+#Pageknowledge #Menu li.menu04 a,
+#Pagevoice     #Menu li.menu05 a,
+#Pagefaq       #Menu li.menu06 a,
+#Pageaccess    #Menu li.menu07 a {background-position:left bottom;}
+
+
+/*トップページ
+-------------------------------------------------------------------------*/
+
+.top_menu {
+	margin:0 0 20px;
+	}
+
+.top_menu:after {
+	visibility:hidden;
+	height:0;
+	display:block;
+	font-size:0;
+	content:" ";
+	clear:both;
+}
+
+.conBox .top_menu h2 {
+	text-align:center;
+	margin:0 0 20px;
+	}
+
+.top_menu ul {
+	margin:0 -10px 0 0;
+}
+
+.top_menu ul:after {
+	visibility:hidden;
+	height:0;
+	display:block;
+	font-size:0;
+	content:" ";
+	clear:both;
+}
+
+.top_menu ul li {
+	position:relative;
+	float:left;
+	width:218px;
+	margin:0 10px 10px 0;
+	list-style:none;
+	min-height:220px;
+	
+	border:1px solid #CCC;
+	border-top:none;
+	
+	-webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+	}
+
+.top_menu ul li.top_menu01 {background:url(../img/top-menu01-bg.png) no-repeat center bottom;}
+.top_menu ul li.top_menu02 {background:url(../img/top-menu02-bg.png) no-repeat center bottom;}
+.top_menu ul li.top_menu03 {background:url(../img/top-menu03-bg.png) no-repeat center bottom;}
+.top_menu ul li.top_menu04 {background:url(../img/top-menu04-bg.png) no-repeat center bottom;}
+.top_menu ul li.top_menu05 {background:url(../img/top-menu05-bg.png) no-repeat center bottom;}
+.top_menu ul li.top_menu06 {background:url(../img/top-menu06-bg.png) no-repeat center bottom;}
+	
+.conBox .top_menu ul li h3 {
+	margin:0 0 10px;
+	padding:0;
+	border:none;
+	}
+
+.conBox .top_menu ul li h3 img {
+	width:100%;
+	}
+
+.top_menu a:link, .top_menu a:visited, .top_menu a:active {color:#333;}
+
+.conBox .top_menu ul li p {
+	}
+
+.conBox .top_menu ul li .more {
+	background-color:#C60;
+	position:absolute;
+	right:10px;
+	bottom:10px;
+	margin:0;
+	padding:2px 10px;
+	color:#FFF;
+	font-weight:bold;
+	font-size:12px;
+	}
+
+.top_menu ul li.bnr02 {
+	margin-top:-7px;
+	}
+
+.top_menu ul li:hover {
+	box-shadow:         0px 0px 10px #A2A2A2;
+	-moz-box-shadow:    0px 0px 10px #A2A2A2;　/* Firefox用 */  
+	-webkit-box-shadow: 0px 0px 10px #A2A2A2;　/* Safari,Google Chrome用 */
+	
+	behavior: url(/common/css/PIE.htc);
+
+	}
+
+
+
+
+
+
+
+.conBox .bnr_area {
+	margin:0 -10px 0 0;
+	padding:0;
+	}
+
+.conBox .bnr_area li {
+	float:left;
+	margin:0 10px 10px 0;
+	list-style:none;
+	}
+
+.result_area {
+	margin:0 -10px 40px 0 !important;
+	}
+
+.result_area:after {
+	visibility:hidden;
+	height:0;
+	display:block;
+	font-size:0;
+	content:" ";
+	clear:both;
+}
+
+.result_area li {
+	width:335px !important;
+	border:1px solid #CCC;
+	padding:10px 10px 0;
+	min-height:100px;
+	
+	-webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+	}
+
+
+/*書籍一覧*/
+
+#TopBookList {}
+
+#TopBookList ul.rssLink {
+	float:right;
+	margin:0px;
+	font-size:85%;
+}
+	#TopBookList ul.rssLink:after {
+      content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+#TopBookList ul.rssLink li {
+	float:left;
+	margin-left:20px;
+	list-style:none;
+	}
+
+#TopBookList ul.rssLink li a {
+	text-decoration:none;
+	}
+
+#TopBookList ul.rssLink li a:visited {
+	color:#333;
+	text-decoration:none;
+	}
+
+#TopBookList ul.rssLink li a:hover {
+	color:#333;
+	text-decoration:none;
+	}
+
+#TopBookList ul.rssLink li.btRss {}
+
+* html #TopBookList p.btRss {top:12px;}
+
+#TopBookList ul.rssLink li.btRss a {
+	display:block;
+	background: url(../img/rss-icon.png) no-repeat 0px 1px;
+	padding:0px 0px 0px 20px;
+}
+
+#TopBookList ul.rssLink li.btHistory {}
+#TopBookList ul.rssLink li.btHistory a {
+	background: url(../img/arrow.png) no-repeat 0px 2px;
+	padding-left:18px;
+	}
+
+#TopBookList .bookList {
+	clear:both;
+	}
+
+#TopBookList dl {
+	line-height:1.2;
+	}
+
+#TopBookList a {text-decoration:none;}
+
+#TopBookList a:visited {text-decoration:none;}
+
+#TopBookList a:hover {text-decoration:underline;}
+
+#TopBookList h4 {
+	background:none;
+	margin:0px 0px 5px;
+	padding:0px;
+	font-size:95%;
+	}
+
+#TopBookList p.subTitle {
+	margin:0px 0px 10px;
+	font-size:95%;
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-weight:bold;
+	}
+
+#TopBookList p {
+	margin:0px 0px 10px;
+	font-size:85%;
+	}
+
+#TopBookList dl {
+	background:#FCFCFC;
+	position:relative;
+	float:left;
+	width:300px;
+	min-height:145px;
+	height: auto !important;
+	height: 145px;
+	margin:0px 10px 20px;
+	padding:10px;
+	
+	box-shadow: 0px 0px 2px #A2A2A2;
+	-moz-box-shadow: 0px 0px 2px #A2A2A2;
+	-webkit-box-shadow: 0px 0px 2px #A2A2A2;
+	
+   	behavior: url(/common/css/PIE.htc);	
+	
+	cursor:pointer;
+	
+	}
+	 #TopBookList dl:after {
+      content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+* html #TopBookList dl {
+	width:320px;
+	height:165px;
+	}
+
+#TopBookList dl:hover {
+	background: #FFF;
+	box-shadow:         0px 0px 10px #A2A2A2;
+	-moz-box-shadow:    0px 0px 10px #A2A2A2;　/* Firefox用 */  
+	-webkit-box-shadow: 0px 0px 10px #A2A2A2;　/* Safari,Google Chrome用 */
+	
+	behavior: url(/common/css/PIE.htc);
+
+	}
+
+#TopBookList dt {
+	position:absolute;
+	top:10px;
+	left:10px;
+	clear:both;
+	width:100px;
+	}
+
+#TopBookList dt img {
+	position:relative;
+
+	width:100px;
+	height:145px;
+	
+	box-shadow: 1px 1px 2px #999;
+	-moz-box-shadow: 1px 1px 2px #999;
+	-webkit-box-shadow: 1px 1px 2px #999;
+	
+	behavior: url(/common/css/PIE.htc);
+	
+	}
+
+#TopBookList dd {
+	position:absolute;
+	top:15px;
+	left:125px;
+	width:185px;
+	}
+
+#TopBookList dd p.author {
+	position:absolute;
+	top:105px;
+	left:0px;
+	font-weight:bold;
+	}
+
+#TopBookList dd p.cat {
+	position:absolute;
+	top:125px;
+	left:0px;
+	}
+
+#TopBookList dd .price {
+	position:absolute;
+	top:118px;
+	right:0px;
+	}
+
+#TopBookList dd .no-order .btOrder,
+#TopBookList dd .no-order .soldOut,
+#TopBookList dd .no-order .amazon,
+#TopBookList dd .no-order .undecided {
+	display:none;
+	}
+
+#TopBookList dd .order .btOrder {
+	display:block;
+	padding-top:3px;
+	height:20px;
+	}
+
+#TopBookList dd .amazon .amazon {
+	display:block;
+	padding-top:3px;
+	height:20px;
+	}
+	
+* html #TopBookList dd .order .btOrder {
+	text-align:right;
+	}
+
+#TopBookList dd .order .soldOut,
+#TopBookList dd .order .amazon,
+#TopBookList dd .order .undecided {
+	display:none;
+	}
+
+
+#TopBookList dd .sold-out .btOrder,
+#TopBookList dd .sold-out .amazon,
+#TopBookList dd .sold-out .undecided {
+	display:none;
+	}
+
+#TopBookList dd .amazon .btOrder,
+#TopBookList dd .amazon .soldOut,
+#TopBookList dd .amazon .undecided {
+	display:none;
+	}
+
+#TopBookList dd .undecided .btOrder,
+#TopBookList dd .undecided .soldOut,
+#TopBookList dd .undecided .amazon {
+	display:none;
+	}
+
+#TopBookList dd .sold-out .soldOut,
+#TopBookList dd .amazon .undecided {
+	padding-top:3px;
+	color:#F00;
+	font-weight:bold;
+	}
+
+
+.btmMenuBox {
+	background:#FCFCFC;
+	margin:0px 10px 30px;
+	padding:40px 100px 0px;
+	border:1px solid #CCC;
+}
+
+ .btmMenuBox:after {
+      content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+#BtmMenu {
+	position:relative;
+	background:url(../img/service-bnr-bg.png) no-repeat left top;
+	width:700px;
+	height:175px;
+	text-indent:-9999px;
+	font-size:100%;
+	margin-bottom:0px;
+}
+
+#BtmMenu h3,
+#BtmMenu p,
+#BtmMenu ul,
+#BtmMenu li {
+	margin:0px;
+	padding:0px;
+}
+
+#BtmMenu h3 {
+	background:none;
+}
+
+#BtmMenu h3,
+#BtmMenu p {
+	position:absolute;
+}
+
+#BtmMenu p.btContact {
+	position:absolute;
+	top:5px;
+	right:5px;
+	width:190px;
+}
+
+#BtmMenu p.btContact a {
+	display:block;
+	height:30px;
+}
+
+#BtmMenu a:hover {
+	background:#FFF;
+	filter: alpha(opacity=20);
+	-moz-opacity:0.2;
+	opacity:0.2;
+}
+
+* html #BtmMenu a:hover {background:none;}
+
+#BtmMenu ul {
+	padding-top:40px;
+	width:700px;
+}
+
+#BtmMenu ul li {
+	float:left;
+	width:175px;
+	list-style:none;
+}
+
+#BtmMenu ul li a {
+	display:block;
+	height:100px;
+}
+
+
+/*共通
+-------------------------------------------------------------------------*/
+
+.serviceImg {
+
+	border:5px solid #FFF;
+	overflow:hidden;
+	
+	box-shadow: 0px 0px 3px #CCC;
+	-moz-box-shadow: 0px 0px 3px #CCC;
+	-webkit-box-shadow: 0px 0px 3px #CCC;
+	
+   	behavior: url(/common/css/PIE.htc);
+	
+	}
+
+.serviceImg img {
+	margin: -5px;
+	}
+
+.bookImg {
+	
+	box-shadow: 1px 1px 3px #999;
+	-moz-box-shadow: 1px 1px 3px #999;
+	-webkit-box-shadow: 1px 1px 3px #999;
+	
+   	behavior: url(/common/css/PIE.htc);
+	
+	}
+
+.imgPhoto img {
+	background:#FFF;
+	border:1px solid #CCC;
+	padding:5px;
+	}
+
+#tabs ul.tabsMenu {
+	margin:0px 0px 20px;
+	}
+
+	#tabs ul.tabsMenu:after {
+      content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+/*個人情報保護方針同意（フラッシュペーパー）*/
+
+.privacyFla {
+	margin:0px 10px 20px;
+	border:1px solid #CCC;
+	}
+
+
+
+/*IE6 対策
+-------------------------------------------------------------------------*/
+
+* html .ui-widget-header {}
+
+* html .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	background:#EFEFEF;
+	text-shadow:none;
+}
+
+* html .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+	background:none;
+	text-shadow:none;
+	}
+* html .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+	background:none;	
+	}
+
+
+* html .ui-tabs {}
+* html .ui-tabs .ui-tabs-nav {height:48px;}
+* html .ui-tabs .ui-tabs-nav li {}
+
+* html .ui-tabs .ui-tabs-nav li a {height:37px;background:#EFEFEF;}
+* html .ui-tabs .ui-tabs-nav li a:hover {background:#E1E1E1;}
+
+* html .ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
+	background:#FFF;
+	height:38px;
+	}
+
+
+/*当社の特徴
+-------------------------------------------------------------------------*/
+#Pagefeature {}
+
+#Pagefeature table.winner {
+	width:660px;
+	font-size:87.5%;
+	border-top:1px solid #CCC;
+	}
+	
+#Pagefeature table.winner th {
+	padding:10px 5px;
+	border:none;
+	border-bottom:1px solid #CCC;
+	}
+
+#Pagefeature table.winner td {
+	padding:10px 5px;
+	border:none;
+	border-bottom:1px solid #CCC;
+	}
+
+#Pagefeature table.winner tr.even {}
+#Pagefeature table.winner tr.evenRow {
+	background-color:#F7F3E8;
+}
+
+#Pagefeature table.winner td.year  {width:30px;text-align:center}
+#Pagefeature table.winner td.count {width:90px;text-align:center;}
+#Pagefeature table.winner td.title {}
+#Pagefeature table.winner td.win   {width:220px;}
+
+
+/*書籍一覧
+-------------------------------------------------------------------------*/
+
+/*詳細*/
+
+#BookDetail {
+	position:relative;
+	margin-bottom:50px;
+}
+
+#BookDetail span.subTitle {
+	font-size:100%;
+	margin:0px 0px 0px 20px;
+	}
+
+#BookDetail #BookImages {
+	width:660px;
+	padding-top:10px;
+	}
+
+#BookDetail #BookImages ul {
+	margin:0px 0px 50px 10px;
+}
+
+* html #BookDetail #BookImages ul {
+	position:relative;
+}
+
+#BookDetail #BookImages ul:after {
+      content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+#BookDetail #BookImages ul li {
+	list-style:none;
+	margin-bottom:20px;
+}
+
+#BookDetail #BookImages ul li.bookImgMain {margin-bottom:40px;}
+
+#BookDetail #BookImages ul li.bookImgMain img {	
+	position:relative;
+	
+	width:300px;
+	height:435px;
+	
+	box-shadow: 3px 3px 10px #666;
+	-moz-box-shadow: 3px 3px 10px #666;
+	-webkit-box-shadow: 3px 3px 10px #666;
+	
+   	behavior: url(/common/css/PIE.htc);	
+}
+
+#BookDetail #BookImages ul li.bookImgSub {
+	float:left;
+	margin-right:10px;
+	margin-bottom:0px;
+}
+
+* html #BookDetail #BookImages ul li.bookImgSub {margin-right:5px;}
+
+#BookDetail #BookImages ul li.bookImgSub img {
+	position:relative;
+	
+	width:100px;
+	height:145px;
+	
+	box-shadow: 1px 1px 3px #999;
+	-moz-box-shadow: 1px 1px 3px #999;
+	-webkit-box-shadow: 1px 1px 3px #999;
+	
+   	behavior: url(/common/css/PIE.htc);	
+
+}
+
+#BookDetail .infoBox {
+	width:310px;
+	float:right;
+	}
+	#BookDetail .infoBox:after {
+      content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+#BookDetail .bookInfo {
+	font-size:85%;
+	padding-top:10px;
+	margin-bottom:30px;	
+	}
+	#BookDetail .bookInfo:after {
+      content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+#BookDetail .bookInfo h4 {
+	font-size:100%;
+	
+	background:none;
+	
+	color:#333;
+	
+	margin:0px;
+	padding:0px;
+	
+	border-radius:         none;
+	-webkit-border-radius: none;
+	-moz-border-radius:    none;
+	
+	behavior: url(/common/css/PIE.htc);
+	
+	}
+
+#BookDetail .bookInfo p.howtoOrder {
+	margin:30px 0px 10px;	
+	}
+
+#BookDetail .bookInfo:after {
+      content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+#BookDetail .bookInfo dl {
+	margin:10px 0px;
+	padding-bottom:5px;
+	border-bottom:1px dotted #CCC;
+	}
+
+#BookDetail .bookInfo dl:after {
+      content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+#BookDetail .bookInfo dl dt {
+	float:left;
+	width:100px;
+	font-weight:bold;
+	padding-top:2px;
+	}
+
+#BookDetail .bookInfo dl dd {
+	float:left;
+	width:210px;
+	}
+	
+#BookDetail .bookInfo dl dd.authorName {
+	position:relative;
+	}
+
+#BookDetail .bookInfo dl dd.authorName .authorSummary {
+	visibility: hidden;
+	height:0px;
+	}
+
+#BookDetail .bookInfo dl dd.author-summary .authorSummary {
+	position:absolute;
+	top:0px;
+	right:0px;
+	visibility: visible;
+	}
+
+#BookDetail .bookInfo dl dd.price {
+	position:relative;
+	}
+
+#BookDetail dd.no-order .btOrder,
+#BookDetail dd.no-order .soldOut,
+#BookDetail dd.no-order .amazon,
+#BookDetail dd.no-order .undecided {
+	visibility: hidden;
+	height:0px;
+	}
+
+#BookDetail dd.order .soldOut,
+#BookDetail dd.order .amazon,
+#BookDetail dd.order .undecided {
+	visibility: hidden;
+	height:0px;
+	}
+
+#BookDetail dd.amazon .btOrder,
+#BookDetail dd.amazon .soldOut,
+#BookDetail dd.amazon .undecided {
+	visibility: hidden;
+	height:0px;
+	}
+
+#BookDetail dd.undecided .btOrder,
+#BookDetail dd.undecided .soldOut,
+#BookDetail dd.undecided .amazon {
+	visibility: hidden;
+	height:0px;
+	}
+
+#BookDetail .bookInfo dl dd.order .btOrder {
+	position:absolute;
+	top:-2px;
+	right:0px;
+	visibility: visible;
+	}
+
+#BookDetail .bookInfo dl dd.sold-out .soldOut {
+	position:absolute;
+	top:0px;
+	right:0px;
+	color:#F00;
+	font-weight:bold;
+	}
+
+#BookDetail .outLine {}
+
+#BookDetail .outLine p {
+	margin:0px 0px 10px;
+	font-size:90%;
+	}
+
+#BookDetail #tabs h4 {
+	background:none;
+	margin-bottom:20px;
+	padding:0px;
+	color:#333;
+	font-size:100%;
+	}
+
+#BookDetail #tabs ul.tabsMenu {
+	margin:0px 0px 20px;
+	}
+
+#BookDetail #tabs ul.tabsMenu:after {
+      content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+
+/*書籍お申し込みフォーム*/
+
+#Pagebook {}
+
+#Pagebook #Order table {
+	margin:0px 30px 30px;
+	width:580px;
+	}
+
+#Pagebook #Order table th {
+	background:#F6F6F6;
+	width:180px;
+	}
+
+#Pagebook #Order table th sup {
+	color:#F00;
+	margin-left:5px;
+	}
+
+#Pagebook #Order table td select {
+	margin-bottom:5px;
+	}
+
+#Pagebook #Order p.btSubmit {
+	text-align:center;
+	}
+
+
+/*自費出版ご購入お申し込み方法
+-------------------------------------------------------------------------*/
+
+#Purchase {}
+
+#Purchase img.order {
+	margin:0px 5px;
+	vertical-align:top;
+	}
+
+#Purchase table.account {
+	width:400px;
+	margin:0px 30px 40px;
+	vertical-align:top;
+	}
+
+#Purchase table.account th {
+	background:#F6F6F6;
+	text-align:center;
+	width:100px;
+	}
+
+#Purchase table.account td {
+	text-align:center;
+	}
+
+
+/*京都選書『京都の本を随時ご紹介』メルマガ申込
+-------------------------------------------------------------------------*/
+
+#Melmaga {}
+
+#Melmaga table.mag2 {
+	width:600px;
+	margin:0px 30px 40px;
+	vertical-align:top;
+	}
+
+#Melmaga table.mag2 th {
+	background:#F6F6F6;
+	width:200px;
+	}
+
+#Melmaga table.mag2 td {}
+
+#Melmaga table.mag2 td img.bnrMag2 {
+	margin-left:5px;
+	}
+
+
+/*自費出版ご案内
+-------------------------------------------------------------------------*/
+
+#Pageguide {}
+
+#Pageguide .infoBox {
+	
+	margin:0px 20px 20px;
+	
+	padding-top:20px;
+
+	background:#FFF;
+
+	border-radius:         5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:    5px;
+	
+	box-shadow: 0px 0px 5px #CCC;
+	-moz-box-shadow: 0px 0px 5px #CCC;
+	-webkit-box-shadow: 0px 0px 5px #CCC;
+	
+   	behavior: url(/common/css/PIE.htc);
+	
+	}
+
+#Pageguide .infoBox:after {
+      content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+#Pageguide .infoBox p {
+	margin:0px 30px 20px;
+	}
+
+.infoBox + h4 {
+	margin-top:60px;
+	}
+
+.infoBox + p {
+	margin-top:40px;
+	}
+
+
+/*特定商取引法に基づく表示
+-------------------------------------------------------------------------*/
+#Pagetransaction {}
+
+#Pagetransaction .conBox {
+	padding-top:20px;
+	}
+
+#Pagetransaction table {
+	width:660px;
+	}
+	
+#Pagetransaction table th {
+	width:200px;
+	padding:15px;
+	border:none;
+	border:1px solid #CCC;
+	font-weight:normal;
+	background:#F7F3E8;
+	}
+
+#Pagetransaction table td {
+	padding:15px;
+	border:none;
+	border:1px solid #CCC;
+	background:#FFF;
+	}
+
+
+/*自費出版関連リンク集
+-------------------------------------------------------------------------*/
+#Pagelinks .conBox {}
+
+#Pagelinks .conBox ul {}
+
+#Pagelinks .conBox ul li {
+	margin-bottom:20px;
+	}
+
+#Pagelinks .conBox ul li a {
+	background: url(../img/arrow-links.png) no-repeat right center;
+	padding:0px 18px 0px 0px;
+	}
+
+
+/*カレンダー
+-------------------------------------------------------------------------*/
+#Pagecalendar .conBox {
+	padding-top:20px;
+	}
+
+#Pagecalendar span.shopClosed {
+	background-color:#F0A990;
+	padding:10px;
+	border:1px solid #CCC;
+	color:#AE3227;
+	}
+
+#Pagecalendar .conBox table {
+	float:left;
+	margin: 0px 10px 30px;
+	width:320px;
+	}
+
+* html #Pagecalendar .conBox table {
+	margin: 0px 0px 20px 25px;
+	}
+
+#Pagecalendar .conBox table th {
+	background:#F6F3E9;
+	}
+
+#Pagecalendar .conBox table  th,
+#Pagecalendar .conBox table  td {
+	text-align:center;
+	border:1px solid #CCC;
+	}
+
+#Pagecalendar .conBox table  td {
+	background:#FFF;
+	}
+
+#Pagecalendar .conBox table  th.month {
+	text-align:left;
+	border:none;
+	font-weight:bold;
+	padding:0px 0px 5px;
+	background:none;
+	}
+
+#Pagecalendar .conBox table  td.holiday {
+	background-color:#F0A990;
+	color:#AE3227;
+	}
+
+#Pagecalendar .conBox table  td.closed {
+	background-color:#F0A990;
+	color:#AE3227;
+	}
+
+
+/*お問い合わせ
+-------------------------------------------------------------------------*/
+
+#Pagecontact {}
+
+#Contact #mailform {
+	margin:0px;
+	padding:0px;
+	}
+
+#Contact table {
+	width:660px;
+	}
+
+#Contact table th {
+	width:180px;
+	padding:15px;
+	border:none;
+	border:1px solid #CCC;
+	background:#FFF;
+	}
+
+#Contact table td {
+	padding:15px;
+	border:none;
+	border:1px solid #CCC;
+	background:#FFF;
+	}
+
+#Contact table th sup {
+	margin-left:5px;
+	color:#F00;
+	}
+
+#Contact input {margin:5px 0px;}
+
+#Contact .btSubmit {
+	text-align:center;
+	}
+
+#Contact .btSubmit input:hover {
+	background:#FFF;
+	filter: alpha(opacity=90);
+	-moz-opacity:0.9;
+	opacity:0.9;
+	}
+
+* html #Contact .btSubmit input:hover {background:none;}
+
+
+/*自費出版相談会
+-------------------------------------------------------------------------*/
+#Pageconsultation {}
+
+
+/*ご参考価格・ご予算例
+-------------------------------------------------------------------------*/
+#Pageprice {}
+
+#Pageprice ul.priceMenu {
+	margin:50px -10px 60px 10px;
+	}
+	#Pageprice ul.priceMenu:after {
+      content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+#Pageprice ul.priceMenu li {
+	float:left;
+	list-style:none;
+	margin-right:20px;
+	}
+#Pageprice ul.priceMenu li a:hover {
+	background:#FFF;
+	filter: alpha(opacity=90);
+	-moz-opacity:0.9;
+	opacity:0.9;
+	}
+
+
+#Pageprice table.priceSpec {
+	width:660px;
+	}
+#Pageprice table.priceSpec,
+#Pageprice table.priceSpec th,
+#Pageprice table.priceSpec td  {
+	border:none;
+	padding:5px;
+	}
+
+#Pageprice table.priceSpec th {
+	width:80px;
+	}
+
+#Pageprice table.priceSpec th,
+#Pageprice table.priceSpec td {
+	border-bottom:1px dotted #CCC;
+	}
+
+#Pageprice .priceTitle {
+	font-size:120%;
+	font-weight:bold;
+	margin-bottom:30px;
+	border-bottom:2px solid #666;
+	}
+
+#Pageprice .priceTitle span {
+	font-size:140%;
+	}
+
+#Pageprice .priceTotal {
+	font-size:120%;
+	font-weight:bold;
+	margin-bottom:10px;
+	}
+
+#Pageprice .priceTotal span {
+	font-size:160%;
+	}
+
+
+#Pageprice table.priceEstimate {
+	width:660px;
+	}
+
+#Pageprice table.priceEstimate th {
+	background:#F7F3E8;
+	text-align:center;
+	}
+
+#Pageprice table.priceEstimate .totalBorder {
+	border-bottom:2px solid #666;
+	}
+
+
+/*よくあるご質問
+-------------------------------------------------------------------------*/
+
+/*アコーディオン開閉*/
+
+#Pagefaq {}
+
+#Pagefaq .conBox {}
+
+
+dl.accordion {
+	margin:0px 30px 30px 30px;
+	}
+
+dl.accordion dt {
+	background:url(../img/faq/faq-icon-q.png) no-repeat 0px 3px;
+	padding:0px 0px 10px 0px;
+	margin-bottom:9px;
+	border-bottom:1px dotted #CCCCCC;
+	}
+
+* html dl.accordion dt {display:inline-block;}
+*+html dl.accordion dt {display:inline-block;}
+
+/*IE8 ハック*/
+html>/**/body dl.accordion dt {
+	display:inline-block;
+	width:100%;
+	} 
+
+	dl.accordion dt:after {
+	  content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+dl.accordion dt p {
+	margin:0px;
+	}
+
+dl.accordion dt h4 {
+	background:none;
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	margin:0px;
+	padding-left:40px;
+	color:#333;
+	}
+
+dl.accordion dd {
+	overflow:hidden;
+	margin-bottom:20px;
+}
+
+	dl.accordion dd:after {
+      content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+dl.accordion dd span {
+	background: #FFF url(../img/faq/faq-icon-a.png) no-repeat 10px 10px;
+	margin:10px;
+	padding:20px 0px 10px 60px;
+	margin-bottom:50px;
+	display:block;
+	
+	border-radius:         5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:    5px;
+	
+	box-shadow: 0px 0px 10px #CCC;
+	-moz-box-shadow: 0px 0px 10px #CCC;
+	-webkit-box-shadow: 0px 0px 10px #CCC;
+	
+   	behavior: url(/common/css/PIE.htc);
+
+	}
+
+	dl.accordion dd span:after {
+      content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+dl.accordion dd span p {
+	line-height:1.8;
+	}
+
+#Pagefaq ul.seihonImg {
+	margin:0px;
+	}
+
+	#Pagefaq ul.seihonImg:after {
+	  content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+#Pagefaq ul.seihonImg li {
+	float:left;
+	margin-right:10px;
+	margin-bottom:10px;
+	list-style:none;
+	}
+
+
+/*アクセスマップ
+-------------------------------------------------------------------------*/
+
+#Pageaccess {}
+
+#map_canvas {
+	margin:0px 10px 50px;
+	width:660px;
+	height:600px;
+	border:1px solid #999;
+	}
+
+#map_canvas .mapMarker {}
+
+#map_canvas .mapMarker h4 {
+	font-size:100%;
+	color:#333;
+	padding:0px;
+	margin:0px 0px 10px;
+	background:none;
+	}
+
+#map_canvas .mapMarker p {
+	margin:0px;
+	padding:0px;
+}
+
+#Pageaccess table {
+	width:660px;
+	}
+	
+#Pageaccess table th {
+	width:50%;
+	padding:15px;
+	border:none;
+	border:1px solid #CCC;
+	background:#F6F3E9;
+	}
+
+#Pageaccess table td {
+	padding:15px;
+	border:none;
+	border:1px solid #CCC;
+	vertical-align:top;
+	background:#FFF;
+	}
+
+#Pageaccess table td h5 {
+	margin-bottom:10px;
+	border:none;
+	}
+
+#Access ul.map {
+	margin:0px -10px 10px 10px;
+	}
+
+#Access ul.map li {
+	float:left;
+	margin:0px 20px 10px 0px;
+	list-style:none;
+	}
+
+* html #Access ul.map li {margin:0px 0px 10px 10px;}
+
+#Access ul.map li h5 {
+	margin:0px 0px 5px;
+	padding:0px;
+	border:none;
+	}
+
+#Access ul.map li p {
+	margin:10px 0px 20px;
+	}
+
+#Access ul.map li img {
+	border:1px solid #CCC;
+	}
+
+#Access ul.map li img {
+	margin:-1px;
+	}
+
+#Access ul.map li p.mapPrint a {
+	background: url(../img/bt-print.png) no-repeat left top;
+	padding:10px 10px 10px 50px;
+	}
+
+
+/*自費出版ニュース
+-------------------------------------------------------------------------*/
+#Pagepublish {}
+
+#Pagepublish .conBox ul {
+	margin-bottom:60px;
+	}
+
+#Pagepublish .conBox ul li {
+	margin-bottom:20px;
+	padding:10px 0px 5px 45px; 
+	background: url(../img/pdficon_large.png) no-repeat left center;
+	list-style:none;
+	}
+
+#Pagepublish .conBox dl {
+	border:1px solid #CCC;
+	padding:10px;
+	font-size:85%;
+	margin-bottom:15px;
+	}
+
+#Pagepublish .conBox dl:after {
+	  content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+#Pagepublish .conBox dl dt {
+	float:left;
+	width:180px;
+	}
+
+#Pagepublish .conBox dl dd {
+	float:left;
+	width:470px;
+	}
+
+
+
+
+
+/*サイトマップ
+-------------------------------------------------------------------------*/
+
+#Pagesitemap .ddsg-wrapper {}
+
+#Pagesitemap .conBox ul {
+	margin-bottom:0px;
+	}
+
+#Pagesitemap .conBox .child {
+	margin-left:20px;
+	}
+
+#Pagesitemap .conBox ul li ul {
+	margin-top:10px;
+	margin-bottom:20px;
+	}
+
+#Pagesitemap .conBox ul li ul li {
+	margin-bottom:10px;
+	}
+
+#Pagesitemap .conBox ul li {
+	list-style:none;
+	margin-bottom:20px;
+	}
+
+#Pagesitemap .conBox ul li a {
+	background: url(../img/footer-arrow.png) no-repeat 0px 5px;
+	padding-left:10px;
+	text-decoration:none;
+	}
+
+#Pagesitemap .conBox ul li a:hover {
+	text-decoration:underline;
+	}
+
+
+/*新着情報
+-------------------------------------------------------------------------*/
+
+#Pagenews {}
+
+#Pagenews h3 {
+	font-weight:bold;
+	font-family:'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+	}
+
+#Pagenews h3.blogTitle {
+	margin:0px;
+	padding:0px 0px 0px 15px;
+	margin:0px 0px 40px;
+	border-left:8px solid #900;
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-weight:normal;
+	}
+
+#Pagenews h4 {}
+
+
+/*WP 検索結果*/
+
+#Pagesearch h4 {
+	background:none;
+	padding:0px;
+	margin:0px 10px 10px;
+	
+	border-radius:         0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius:    0px;
+	
+	behavior: url(/common/css/PIE.htc);
+	
+	}
+
+#Pagesearch #Search img {
+	width:100px;
+	height:145px;
+	
+	box-shadow: 1px 1px 2px #999;
+	-moz-box-shadow: 1px 1px 2px #999;
+	-webkit-box-shadow: 1px 1px 2px #999;
+	
+	behavior: url(/common/css/PIE.htc);
+	
+	}
+
+
+/*WP 検索フォーム*/
+.searchBox #searchform {
+	height:60px;
+	margin-bottom:10px;
+	}
+	
+.searchBox #searchform form,
+.searchBox #searchform input {}
+.searchBox #searchform input#s {
+	font-size:14px;
+	position:absolute;
+	top:18px;
+	left:15px;
+	width:181px;
+	
+	border-radius:         5px 0px 0px 5px;
+	-webkit-border-radius: 5px 0px 0px 5px;
+	-moz-border-radius:    5px 0px 0px 5px;
+	
+	padding:3px;
+
+}
+
+.searchBox #searchsubmit {
+	position:absolute;
+	top:18px;
+	right:15px;
+	width:40px;
+	height:27px;
+	
+	padding-bottom:3px;
+	
+	border:none;
+
+	border-radius:         0px 5px 5px 0px;
+	-webkit-border-radius: 0px 5px 5px 0px;
+	-moz-border-radius:    0px 5px 5px 0px;
+
+	background: #444; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#444), to(#121212));
+	background: -webkit-linear-gradient(top, #444, #121212);
+	background: -moz-linear-gradient(top, #444, #121212);
+	background: -ms-linear-gradient(top, #444, #121212);
+	background: -o-linear-gradient(top, #444, #121212);
+	-pie-background: linear-gradient(top,#444,#121212);
+      
+	color:#CCC;
+	font-size: 12px;
+	text-decoration:none;
+	line-height:1.2;
+
+}
+
+* html .searchBox #searchform input#s {
+	position:absolute;
+	width:220px;
+	height:21px;
+	color:#FFF;
+}
+
+* html .searchBox #searchsubmit {
+	position:absolute;
+	background: #333;
+	height:21px;
+	border:none;
+}
+
+*+html .searchBox #searchform input#s {
+	width:211px;
+}
+
+*+html .searchBox #searchsubmit {
+	height:26px;
+	}
+
+/*WP ページナビゲーション*/
+#WpMain #wp_page_numbers {
+	margin:0px 10px 20px;
+	width:620px;
+	}
+
+
+/*WP*/
+p.date {
+	clear:both;
+	font-size:80%;
+	color:#666666;
+	padding-top:5px;
+	padding-bottom:30px;
+	border-top:1px solid #CCCCCC;
+}
+
+p.pagelink    {clear:both;padding-bottom:10px;font-size:80%;}
+span.pageprev {float:left;}
+span.pagenext {float:right;}
+
+/*カテゴリー／アーカイブ　タイトル*/
+p.category,
+p.month,
+p.search {
+	background: url(../img/arrow-green-l.gif) no-repeat 0px 2px;
+	margin:0px 0px 20px;
+	padding:0px 0px 0px 25px;
+	font-size:158%;
+	line-height:1.2;
+	font-weight:bold;
+}
+
+/*ローカルナビ*/
+
+#WpSub ul {
+	margin:0px 15px;
+	font-size:95%;
+}
+#WpSub ul li {
+	line-height:1.5;
+}
+
+#WpSub ul li h2 {
+	border-bottom:2px solid #666;
+	margin-bottom:15px;
+	padding-bottom:2px;
+}
+
+#WpSub ul ul {
+	margin:0px 5px 40px;
+	}
+
+#WpSub ul ul li {
+	padding-bottom:5px;
+	margin-bottom:5px;
+	border-bottom:1px dotted #CCC;
+	}
+
+#WpSub ul li a {
+	display:block;
+}
+
+* html #WpSub ul li a {
+	display:inline-block;
+	width:100%;
+}
+
+#WpSub ul li a:hover {}
+
+#WpSub ul.children {
+	margin:0px 0px 0px 14px;
+}
+
+#WpSub ul.children li {background:none;}
+
+/*カレンダー*/
+#WpSub table#wp-calendar {
+	width:220px;
+	margin:20px 10px 20px;
+	border-collapse:collapse;  
+	border-spacing:0;
+	font-size:80%;
+}
+
+#WpSub table#wp-calendar a {
+	font-weight:bold;
+	background-image:none;
+	padding:0px;
+}
+
+#WpSub table#wp-calendar tr {
+	border-bottom:1px dotted #CCCCCC;
+}
+
+#WpSub table#wp-calendar th {
+	padding:2px 0px;
+	text-align:center;
+	border-bottom:1px dotted #CCCCCC;
+}
+
+#WpSub table#wp-calendar td {
+	padding:2px 0px;
+	text-align:center;
+	border-bottom:1px dotted #CCCCCC;
+}
+#WpSub table#wp-calendar td.pad {
+	border-bottom:none;
+}
+#WpSub table#wp-calendar caption {
+	font-weight:bold;
+	margin-bottom:10px;
+}
+
+#WpSub table#wp-calendar td#prev {
+	text-align:left;
+	}
+#WpSub table#wp-calendar td#next {
+	text-align:right;
+	}
+
+.feed {
+	background: url(../img/rss-icon.png) no-repeat 0px 0px;
+	padding:0px 0px 0px 20px;
+	margin:0px 20px;
+	font-size:80%;
+	}
+
+.postinfo {
+	clear:both;
+	border-top:1px dotted #CCC;
+	margin:0px 0px 30px;
+	padding-top:5px;
+	text-align:right;
+	font-size:90%;
+}
+
+#WpNewsList dl {
+	clear:both;
+	margin:0px;
+	}
+	 #WpNewsList:after {
+      content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+
+#WpNewsList dt {
+	float: left;
+	clear: both;
+	width: 80px;
+	padding-bottom:5px;
+	font-size:90%;
+	}
+
+#WpNewsList dd {
+	float: left;
+	width: 370px;
+	padding-bottom:5px;
+	}
+
+#WpNewsList dd a {
+	display: inline;
+	}
+
+#recentcomments {}
+ul#recentcomments li a {
+	background:none;
+}
+
+img.alignright {
+	float:right;
+	padding:0px 0px 10px 10px;
+	}
+img.alignleft {
+	float:left;
+	padding:0px 10px 10px 0px;
+	}
+img.aligncenter {
+	text-align:center;
+	padding:0px 10px 10px 10px;
+	}
+	
+/*コメント*/
+.cominfo {
+	clear:both;
+	font-size:70%;
+	color:#666666;
+	padding-top:5px;
+	padding-bottom:30px;
+	border-top:1px solid #333333;
+	}
+form#comment {width:200px;}
+#comfeed {font-size:80%;line-height:1.2;}
+#trurl {font-size:80%;}
+
+/*end*/

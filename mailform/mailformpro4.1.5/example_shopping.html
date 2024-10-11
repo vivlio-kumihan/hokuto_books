@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=320,initial-scale=1.0,user-scalable=no" />
+		<title>Mailform Pro 4</title>
+		<!-- example -->
+		<link rel="stylesheet" href="mfp.statics/example.css" type="text/css" />
+		
+		<!-- Mailform Pro 4 Cart Includes -->
+		<link rel="stylesheet" href="mfp.statics/cart.css" type="text/css" />
+		<script type="text/javascript" src="mfp.statics/cart.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<h1>Mailform Pro 4</h1>
+				<p>究極の進化を遂げたメールフォームプロ4.0の登場です。</p>
+			</div>
+			<div id="container">
+				<div class="section" style="border: solid 1px #CCC;margin: 10px;padding: 10px;">
+					<h2>ショッピングカートデモ</h2>
+					<form class="mfpcart" action="mailformpro/mailformpro.cgi?addon=cart/cart.js" data-text="カートに進む &gt;" data-href="example.html" onsubmit="return mfpCartAdd(this);">
+						<select name="item">
+							<option value="Nexus7_32GB">Google Nexus 7 タブレット 32GB</option>
+							<option value="Nexus7_16GB">Google Nexus 7 タブレット 16GB</option>
+							<option value="MD093J/A">Apple iMac 21.5 i5 2.7GHz</option>
+							<option value="PCH-1100AA01">PlayStation Vita 3G/Wi‐Fi</option>
+							<option value="CECH-4000B">PlayStation 3 250GB</option>
+							<option value="WUP-S-KAFC">Wii U プレミアムセット</option>
+							<option value="B006OV7O8U">Xbox 360 250GB</option>
+							<option value="yamawasabi">山わさび</option>
+							<option value="shiroikoibito">白い恋人</option>
+							<option value="kuroiaijin">黒い愛人</option>
+							<option value="wadanoriyuki">和田憲幸の愛憎</option>
+							<option value="yamato">ヤマト運輸宅配代金</option>
+							<option value="sagawa">佐川急便宅配代金</option>
+							<option value="bank">銀行振込手数料</option>
+							<option value="mfp_paypal_payment">ペイパル決済手数料</option>
+						</select>
+						<select name="qty">
+							<option value="1">1個</option>
+							<option value="2">2個</option>
+							<option value="3">3個</option>
+							<option value="4">4個</option>
+							<option value="5">5個</option>
+							<option value="6">6個</option>
+							<option value="7">7個</option>
+							<option value="8">8個</option>
+							<option value="9">9個</option>
+							<option value="10">10個</option>
+						</select>
+						<button type="submit" data-text="カートに入れました"><span>カートに追加</span></button>
+					</form>
+				</div>
+			</div>
+			<div id="footer">
+				<p>Copyright &copy; 2004 SYNCKGRAPHICA.All Rights Reserved.</p>
+			</div>
+		</div>
+	</body>
+</html>

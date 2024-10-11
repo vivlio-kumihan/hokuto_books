@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+
+/*アクセスマッププリント
+-------------------------------------------------------------------------*/
+
+body {
+	text-align:center;
+	color:#333;
+	font-size:15px;
+}
+
+h2 {font-size:100%;}
+h3 {font-size:180%;}
+h4 {font-size:120%;}
+h5 {font-size:110%;}
+
+a {
+	border:none;
+	text-decoration:none;
+	}
+
+img {border:none;}
+
+#PrintMap {
+	width:640px;
+	margin:10px auto;
+	text-align:left;
+	}
+
+
+p {
+	margin:0px 0px 1.5em;
+	}
+
+a {
+	color:#39C;
+	outline: none;
+}
+
+a:visited {
+	text-decoration:none;
+}
+
+a:hover {text-decoration:none;}
+
+a:hover img {}
+	
+h3 {
+	margin:0px;
+	padding:0px 0px 0px 15px;
+	margin:0px 0px 40px;
+	border-left:8px solid #900;
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-weight:normal;
+	}
+
+h4 {
+	background:#E5DFCA;
+	color:#222222;
+	margin:0px 0px 10px;
+	padding:5px 15px;
+	
+	border-radius:         5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:    5px;
+		
+	}
+
+h5 {
+	color:#745F4C;
+	margin:0px 0px 0px;
+	padding:2px;
+	}
+
+table {  
+	border-collapse:collapse;
+	border-spacing:0;
+	font-size:inherit;
+	font:100%;
+	line-height:1.2;
+	}
+
+#PrintMap {
+	position:relative;
+	}
+
+#PrintMap .mapWide {
+	width:640px;
+	height:800px;
+	}
+
+*+html #PrintMap .mapWide {
+	height:950px;
+	}
+
+#PrintMap .mapWide:after {
+      content:".";
+      display:block;
+      clear:both;
+      height:0;
+      visibility:hidden;
+	}
+#PrintMap .mapDetail {
+	width:640px;
+	margin:0px auto;
+	}
+
+#PrintMap table {
+	width:640px;
+	margin-bottom:20px;
+	border-collapse:collapse;
+	font-size:12px;
+	}
+	
+#PrintMap table th {
+	width:50%;
+	padding:10px;
+	border:none;
+	border:1px solid #CCC;
+	background:#F6F3E9;
+	}
+
+#PrintMap table td {
+	padding:10px 10px 0px;
+	border:none;
+	border:1px solid #CCC;
+	vertical-align:top;
+	background:#FFF;
+	}
+	
+#PrintMap table ul {
+	margin:0px;
+	padding:0px 0px 0px 20px;
+	}
+
+#PrintMap table ul li {
+	margin:0px 0px 10px;
+	list-style-type:disc;
+	}
+
+#PrintMap table table td h5 {
+	margin-bottom:0px;
+	border:none;
+	}
+
+
+#PrintMap p.btPrint,
+#PrintMap p.btClose,
+#PrintMap p.telInfo {
+	text-align:center;
+	}
+
