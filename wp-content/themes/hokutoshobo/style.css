@@ -1,0 +1,164 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Noto Serif JP", serif;
+}
+
+.noto-serif-jp {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.noto-serif-jp__md {
+  font-weight: 600;
+}
+
+.noto-sans-jp {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.noto-sans-jp__md {
+  font-weight: 500;
+}
+
+.kaisei-harunoumi-regular {
+  font-family: "Kaisei HarunoUmi", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.zen-old-mincho-regular {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.yuji-boku-regular {
+  font-family: "Yuji Boku", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.zen-old-mincho-regular {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+ul {
+  padding: 0;
+}
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+
+.mb-md {
+  margin-bottom: 30px !important;
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+@media (min-width: 960px) {
+  .mb-lg {
+    margin-bottom: 150px !important;
+  }
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+@media (min-width: 960px) {
+  .pb-lg {
+    padding-bottom: 150px !important;
+  }
+}
+
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 960px) {
+  .flex {
+    flex-direction: row;
+  }
+}
+
+#main-content {
+  position: relative;
+  z-index: 0;
+}
+
+.font-sm {
+  font-size: 12px;
+}
+@media (min-width: 960px) {
+  .font-sm {
+    font-size: 14px;
+  }
+}
+
+.font-md {
+  font-size: 18px;
+}
+@media (min-width: 960px) {
+  .font-md {
+    font-size: 20px;
+  }
+}
+
+.font-lr {
+  font-size: 18px;
+}
+@media (min-width: 960px) {
+  .font-lr {
+    font-size: 24px;
+  }
+}
+
+.font-lg {
+  font-size: 21px;
+}
+@media (min-width: 960px) {
+  .font-lg {
+    font-size: 30px;
+  }
+}
+
+.container {
+  background-color: blue;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
