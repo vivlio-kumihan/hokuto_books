@@ -1,10 +1,10 @@
 === Custom Field Template ===
 Contributors: Hiroaki Miyashita
-Donate link: http://wpgogo.com/development/custom-field-template.html
-Tags: custom field, custom fields, custom, fields, field, template, meta, custom field template, custom post type
+Donate link: https://www.wpcft.com/
+Tags: custom fields, fields, cft, template, meta
 Requires at least: 2.1
-Tested up to: 4.5.2
-Stable tag: 2.3.7
+Tested up to: 6.6.2
+Stable tag: 2.7.4
 License: GPLv2 or later
 
 The Custom Field Template plugin extends the functionality of custom fields.
@@ -12,6 +12,10 @@ The Custom Field Template plugin extends the functionality of custom fields.
 == Description ==
 
 The Custom Field Template plugin adds the default custom fields on the Write Post/Page. The template format is almost same as the one of the rc:custom_field_gui plugin. The difference is following.
+
+* [English Custom Field Template Manual](https://www.wpcft.com/)
+
+We have finally published a manual site for the custom field template plugin. You can also use the custom field refinement search for posts in the admin panel. Please check here.
 
 * You can set any number of the custom field templates and switch the templates when you write/edit the post/page.
 * This plugin does not use the ini file for the template but set it in the option page of the plugin.
@@ -74,7 +78,7 @@ Localization
 * Hungarian (hu_HU) - [Balazs Kovacs](http://www.netpok.hu)
 * Indonesian (id_ID) - [Masino Sinaga](http://www.openscriptsolution.com/)
 * Italian (it_IT) - [Gianni Diurno](http://gidibao.net/)
-* Japanese (ja) - [Hiroaki Miyashita](http://wpgogo.com/)
+* Japanese (ja) - [Hiroaki Miyashita](https://wpgogo.com/)
 * Dutch (nl_NL) - [Rene](http://wordpresswebshop.com/)
 * Polish (pl_PL) - [Difreo](http://www.difreo.pl/)
 * Brazilian Portuguese (pt_BR) - [Caciano Gabriel](http://www.gn10.com.br/)
@@ -88,6 +92,8 @@ Localization
 If you have translated into your language, please let me know.
 
 * [Japanese Custom Field Template Manual](http://ja.wpcft.com/)
+
+Are you interested in other plugins? See the following site [CMS x WP](https://www.cmswp.jp/).
 
 == Installation ==
 
@@ -111,6 +117,107 @@ See the default template and modify it.
 4. Auto Hook of `the_content()` in the option page of this plugin may help you do this. You can use [cft] shortcodes here. You can switch the cft formats in each category.
 
 == Changelog ==
+
+= 2.7.3 =
+* Information update.
+* Premium code check.
+
+= 2.7 =
+* Premium Settings.
+* Custom Field Refinement Search for posts in the admin panel.
+
+= 2.6.7 =
+* Bugfix: security fix.
+
+= 2.6.6 =
+* Bugfix: security fix.
+
+= 2.6.5 =
+* Text change.
+
+= 2.6.4 =
+* Bugfix: security fix.
+
+= 2.6.2 =
+* Bugfix: security fix.
+
+= 2.6.1 =
+* Bugfix: security fix.
+
+= 2.6 =
+* Bugfix: security fix.
+
+= 2.5.9 =
+* Bugfix: security fix.
+
+= 2.5.8 =
+* Bugfix: import options.
+
+= 2.5.7 =
+* Multiple validation.
+* Loading limitation by the user id, user login and user role.
+* Bugfix: import options.
+
+= 2.5.6 =
+* Bugfix: multipleButton attribute in a fieldset.
+
+= 2.5.5 =
+* User ID and User role filters.
+
+= 2.5.4 =
+* Code cleaning.
+
+= 2.5.3 =
+* WordPress 5.6.
+
+= 2.5.2 =
+* Security fix.
+
+= 2.5.1 =
+* WordPress 5.5.
+* Code cleaning.
+
+= 2.5 =
+* Code cleaning.
+
+= 2.4.9 =
+* Bugfix: Auto Hook of `the_content()`.
+
+= 2.4.8 =
+* Bugfix: custom field template option.
+
+= 2.4.7 =
+* `Before the more tag` position for Auto Hook of `the_content()`.
+
+= 2.4.6 =
+* Code cleaning.
+
+= 2.4.5 =
+* Code cleaning.
+
+= 2.4.4 =
+* Code cleaning.
+* Bugfix: media picker for pages.
+* Bugfix: quick edit for custom post types.
+
+= 2.4.3 =
+* Bugfix: deployment of templates.
+
+= 2.4.2 =
+* Support for Gutenberg.
+
+= 2.4.1 =
+* Bugfix: save button with file delete checkboxes.
+
+= 2.4 =
+* Bugfix: cftsearch.
+
+= 2.3.9 =
+* Code cleaning.
+* Bugfix: cftsearch.
+
+= 2.3.8 =
+* Code cleaning.
 
 = 2.3.7 =
 * Bugfix: image output in the cft shortcode with the format attribute. 
