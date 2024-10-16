@@ -4,5 +4,17 @@
 			"path": "."
 		}
   ],
-  "settings": {}
+"settings": {
+  "liveSassCompile.settings.includeItems": [
+    "/wp-content/themes/hokutoshobo/**/*.scss"
+  ],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": null
+    }
+  ]
+}
+
 }
