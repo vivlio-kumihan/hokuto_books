@@ -14,4 +14,3 @@ Template Name: Page Book
   <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
-</body></html>

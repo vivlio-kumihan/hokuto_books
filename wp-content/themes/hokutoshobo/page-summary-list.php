@@ -27,4 +27,3 @@ wp_list_pages('title_li=&child_of=' . $id);
   <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
-</body></html>

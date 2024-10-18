@@ -1,0 +1,93 @@
+@use "../globals" as *;
+
+.header {
+  max-width: $contentMaxWidth;
+  height: $navHeight;
+  margin: 0 auto;
+  &__upper {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 1rem;
+  }
+}
+
+.logo-space {
+  display: flex;
+  align-items: center;
+  color: $cTheme;
+  &__wrapper {
+    font-family: $fontGothic;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+  &__name {
+    font-family: "Noto Serif JP", serif;
+    font-size: 2.7em;
+    font-weight: 900;
+    letter-spacing: .35em;
+  }
+  &__catch {
+    padding: 7px;
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 500;
+    font-family: $fontGothic;
+    line-height: 1;
+    color: #990f01;
+    border: 2px solid #990f01;
+    & div {
+      margin-bottom: 5px;
+      font-size: 2.1em;
+      font-weight: 900;
+    }
+  }
+}
+
+.header-others {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__upper {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+  }
+}
+
+.tel-number {
+  position: relative;
+  font-size: 25px;
+  font-weight: 900;
+  font-family: $fontGothic;
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+    left: -25px;
+    content: "\f095";
+    font-size: 20px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: bold;
+  }
+  & span {
+    display: block;
+    font-size: .5em;
+    font-weight: 500;
+  }
+}
+
+.btn-contact {
+  height: 50px;
+  background-color: $cTheme;
+  border-radius: 0 0 10px 10px;
+  & > a {
+    display: grid;
+    place-content: center;
+    height: 100%;
+    padding: 0 20px;
+    font-family: $fontRym;
+    font-weight: 900;
+    color: #fff;
+  }
+}

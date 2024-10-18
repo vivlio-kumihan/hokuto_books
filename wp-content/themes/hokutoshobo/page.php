@@ -9,4 +9,3 @@
   <?php get_sidebar(page); ?>
 </div>
 <?php get_footer(); ?>
-</body></html>

@@ -48,4 +48,3 @@ Template Name: Page Book Order
   <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
-</body></html>
