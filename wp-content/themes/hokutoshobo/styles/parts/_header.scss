@@ -1,57 +1,124 @@
 @use "../globals" as *;
+@use '../parts/common' as *;
 
 .header {
-  max-width: $contentMaxWidth;
-  height: $navHeight;
-  margin: 0 auto;
-  &__upper {
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    padding-bottom: 1rem;
+  @include bg($image: "./images/img-main-sm1-port@0.75x.jpg");
+  height: 100vh;
+  @include mq(lg) {
+    @include bg($image: "");
+    margin: 0 auto;
+    max-width: 1080px;
+    width: 90%;
+    height: $navHeight;
+    &__upper {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      padding-bottom: 1rem;
+    }
   }
 }
 
 .logo-space {
   display: flex;
-  align-items: center;
-  color: $cTheme;
+  flex-direction: column;
+  padding-top: 45vh;
+  color: #fff;
+  text-align: center;
+  @include mq(lg) {
+    padding-top: 0;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    color: $cTheme;
+  }
   &__wrapper {
     font-family: $fontGothic;
     font-size: .9rem;
     font-weight: 500;
+    & > a > span:first-of-type {
+      font-size: 16px;
+    }
+    & > a > span:last-of-type {
+      font-size: 13px;
+    }
+    @include mq(lg) {
+      & > a > span:first-of-type {
+        font-size: 13px;
+      }
+    }
   }
   &__name {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 9px 0 3px;
     font-family: "Noto Serif JP", serif;
     font-size: 2.7em;
     font-weight: 900;
-    letter-spacing: .35em;
+    @include mq(lg) {
+      gap: 15px;
+      margin: 3px 0 0;
+      font-size: 3em;
+    }
   }
   &__catch {
-    padding: 7px;
+    margin-top: 120px;
     text-align: center;
-    font-size: .8rem;
-    font-weight: 500;
     font-family: $fontGothic;
-    line-height: 1;
-    color: #990f01;
-    border: 2px solid #990f01;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    // color: #0261a3;
+    color: rgba($color: #fff, $alpha: .7);
+    @include mq(lg) {
+      font-size: .7rem;
+    }
     & div {
       margin-bottom: 5px;
-      font-size: 2.1em;
+      font-size: 1.4em;
       font-weight: 900;
+      @include mq(lg) {
+        font-size: 2em;
+      }
+    }
+    & div {
+      text-shadow: 0 0 20px yellow;
+      @include mq(lg) {
+        text-shadow: unset;
+      }
+    }
+    & span {
+      text-shadow: 0 0 7px yellow;
+    }
+    & div,
+    & span {
+      @include mq(lg) {
+        text-shadow: unset;
+      }
+    }
+
+    @include mq(lg) {
+      margin-top: 0;
+      padding: 7px;
+      line-height: 1;
+      color: #990f01;
+      border: 2px solid #990f01;
     }
   }
 }
 
 .header-others {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  &__upper {
+  display: none;
+  @include mq(lg) {
     display: flex;
-    align-items: flex-end;
-    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    &__upper {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+    }
   }
 }
 
@@ -78,16 +145,21 @@
 }
 
 .btn-contact {
-  height: 50px;
-  background-color: $cTheme;
-  border-radius: 0 0 10px 10px;
-  & > a {
-    display: grid;
-    place-content: center;
-    height: 100%;
-    padding: 0 20px;
-    font-family: $fontRym;
-    font-weight: 900;
-    color: #fff;
+  display: none;
+  @include mq(lg) {
+    display: block;
+    height: 50px;
+    background-color: $cTheme;
+    border-radius: 0 0 10px 10px;
+    & > a {
+      display: grid;
+      place-content: center;
+      height: 100%;
+      padding: 0 10px;
+      font-size: 15px;
+      font-family: $fontRym;
+      font-weight: 900;
+      color: #fff;
+    }
   }
 }

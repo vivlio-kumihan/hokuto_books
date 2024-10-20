@@ -1,0 +1,8 @@
+[
+  { "url": "./images/products/souvenirs-item01.jpg", "name": "ぼけ封じお守り", "type": [], "price": "200", "weight": "10" },
+  { "url": "./images/products/souvenirs-item02.jpg", "name": "無病 ひょうたん守り", "type": [], "price": "300", "weight": "10" },
+  { "url": "./images/products/souvenirs-item03.jpg", "name": "招福 福守り", "type": [], "price": "400", "weight": "10" },
+  { "url": "./images/products/souvenirs-item01.jpg", "name": "おかめ百福", "type": [], "price": "500", "weight": "10" },
+  { "url": "./images/products/souvenirs-item02.jpg", "name": "おかめキーホルダー", "type": [], "price": "600", "weight": "10" },
+  { "url": "./images/products/souvenirs-item03.jpg", "name": "宝珠土鈴", "type": [], "price": "1000", "weight": "10" }
+]

@@ -1,16 +1,12 @@
 @use '../globals/' as *;
 @use '../parts/common' as *;
 
-.container {
-  background-color: blue;
-  color: #fff;
+#container {
+  position: relative;
+  background-color: $cWhite;
+  transition: .5s;
+  z-index: 2;
 }
-// #container {
-//   position: relative;
-//   background-color: $cWhite;
-//   transition: .5s;
-//   z-index: 2;
-// }
 
 // // .sideを前面に出すためのローカル・スタッキング・コンテキストの親要素を仕掛ける。
 // #main-content {

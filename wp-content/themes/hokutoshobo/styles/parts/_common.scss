@@ -13,6 +13,10 @@ body {
   font-family: "Noto Serif JP", serif;
 }
 
+#global-container {
+  background-color: #fff;
+}
+
 // !!!!! WEBフォントの指定で2年前から変わったところがあるよう。!!!!!
 // 講義のような項目はなかった。
 // google fontsに『フォント名: CSS class for a variable style』という項目あり、
@@ -162,33 +166,35 @@ a {
 }
 
 .global-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: $contentMaxWidth;
-  height: 50px;
-  margin: 0 auto;
-  & > li {
-    flex-basis: calc(100% / 8);
-    height: 100%;
-    border-right: 1px solid #333;
-    &:first-of-type {
-      border-left: 1px solid #333;
-    }
-    & > a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
+  @extend .content-width;
+  display: none;
+  @include mq(lg) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    & > li {
+      flex-basis: calc(100% / 8);
       height: 100%;
-      font-weight: 900;
-      text-align: center;
-      color: $cBlackMd;
-      transition: .7s;
-      &:hover {
+      border-right: 1px solid #333;
+      &:first-of-type {
+        border-left: 1px solid #333;
+      }
+      & > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
         font-weight: 900;
-        color: #fff;
-        background-color: $cThemeMd;
+        text-align: center;
+        color: $cBlackMd;
+        transition: .7s;
+        &:hover {
+          font-weight: 900;
+          color: #fff;
+          background-color: $cThemeMd;
+        }
       }
     }
   }
@@ -231,11 +237,25 @@ a {
     bottom: -7px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 7px;
     width: max-content;
+    font-size: 7px;
+    color: #333;
   }
-
 }
+
+.mq-sm-apear {
+  display: inline-block;
+  @include mq(lg) {
+    display: none;
+  }
+}
+.mq-lg-apear {
+  display: none;
+  @include mq(lg) {
+    display: inline-block;
+  }
+}
+
 
 // .modal {
 //   @extend .content-width;
