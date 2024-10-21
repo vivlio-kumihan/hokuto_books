@@ -1,30 +1,23 @@
 <div id="Container">
   <div id="Main">
     <div class="conBox">
-      <div class="top_menu">
-        <!--h2><img src="http://localhost:8888/hokuto-bs/common/img/top-menu-h2.png" width="679" height="65" alt="北斗書房はこんな自費出版会社です"/></h2-->
-        <ul>
-          <!-- 7月号OKで次第上を削除、下をactiveにする。 -->
-          <a href="http://localhost:8888/hokuto-bs/news/info/2631/">
-            <li class="top_menu1">
-              <h3></h3>
-            </li>
-          </a>
-          <a href="http://localhost:8888/hokuto-bs/news/jihisyuppan/2350/">
-            <li class="top_menu2"><!-- ニュースレターバナー -->
-              <h3></h3>
-            </li>
-          </a>
-          <a href="http://localhost:8888/hokuto-bs/news/info/803/">
-            <li class="top_menu3">
-              <h3></h3>
-            </li>
-          </a>
-        </ul>
-      </div>
+      <ul>
+        <li>
+          <a href="http://localhost:8888/hokuto-bs/news/info/2631/"></a>
+        </li>
+        <li>
+          <a href="http://localhost:8888/hokuto-bs/news/jihisyuppan/2350/"></a>
+        </li>
+        <li>
+          <a href="http://localhost:8888/hokuto-bs/news/info/803/"></a>
+        </li>
+      </ul>
     </div>
-    <div class="conBox" id="TopBookList">
-      <a href="http://localhost:8888/hokuto-bs/purchase/" style="float:right;"><img src="http://localhost:8888/hokuto-bs/common/img/bt-purchase.png" alt="自費出版のご購入方法" /></a>
+
+    <div class="latest-books">
+      <a href="http://localhost:8888/hokuto-bs/purchase/">
+        <img src="http://localhost:8888/hokuto-bs/common/img/bt-purchase.png" alt="自費出版のご購入方法" />
+      </a>
       <h3>最新の製作実績</h3>
       <p>北斗書房でおつくりいただいた自費出版作品を紹介します。</p>
       <div class="bookList">
@@ -72,18 +65,19 @@
         <?php endforeach; ?>
         <?php restore_current_blog(); ?>
       </div>
-      <p><a href="http://localhost:8888/hokuto-bs/book/">書籍一覧はこちら</a></p>
+      <p>
+        <a href="http://localhost:8888/hokuto-bs/book/">書籍一覧はこちら</a>
+      </p>
     </div>
-    <div class="conBox">
-      <ul class="bnr_area">
-        <li><a href="http://localhost:8888/hokuto-bs/establishment/" target="_blank"><img src="http://localhost:8888/hokuto-bs/common/img/bt-kinenshi.png" alt="創業記念誌作成" width="220" height="80" /></a></li>
-        <li><a href="http://prodigi.jp/~bungeidojin/" target="_blank"><img src="http://localhost:8888/hokuto-bs/common/img/bt-dojinshi.png" alt="文芸同人誌案内所" width="220" height="80" /></a></li>
-        <li><a href="https://hokuto-p-co-jp.prm-ssl.jp/index.html" target="_blank"><img src="http://localhost:8888/hokuto-bs/common/img/bt-hokuto.png" alt="株式会社北斗プリント社のサイト" width="220" height="80" /></a></li>
-        <li><a href="https://hokuto-p-co-jp.prm-ssl.jp/asks/index.php" target="_blank"><img src="http://localhost:8888/hokuto-bs/common/img/bt-asks.png" alt="株式会社北斗プリント社1F　あすくす" width="220" height="80" /></a></li>
-        <li><a href="https://hokuto-p-co-jp.prm-ssl.jp/asks/nenga/index.php" target="_blank"><img src="http://localhost:8888/hokuto-bs/common/img/bt-nenga.png" alt="京都デザイン,京都年賀状,年賀状印刷,株式会社北斗プリント社1F　あすくす" width="220" height="80" /></a></li>
-        <li><a href=" http://www.san-en.org/link/" target="_blank"><img src="http://localhost:8888/hokuto-bs/common/img/bnr/sanen.png" alt="起業家・経営者・若者の学びと未来の場。三縁の会" width="220" height="80" /></a></li>
-      </ul>
-    </div>
+
+    <ul class="bnr_area">
+      <li><a href="http://localhost:8888/hokuto-bs/establishment/" target="_blank"><img src="http://localhost:8888/hokuto-bs/common/img/bt-kinenshi.png" alt="創業記念誌作成" width="220" height="80" /></a></li>
+      <li><a href="http://prodigi.jp/~bungeidojin/" target="_blank"><img src="http://localhost:8888/hokuto-bs/common/img/bt-dojinshi.png" alt="文芸同人誌案内所" width="220" height="80" /></a></li>
+      <li><a href="https://hokuto-p-co-jp.prm-ssl.jp/index.html" target="_blank"><img src="http://localhost:8888/hokuto-bs/common/img/bt-hokuto.png" alt="株式会社北斗プリント社のサイト" width="220" height="80" /></a></li>
+      <li><a href="https://hokuto-p-co-jp.prm-ssl.jp/asks/index.php" target="_blank"><img src="http://localhost:8888/hokuto-bs/common/img/bt-asks.png" alt="株式会社北斗プリント社1F　あすくす" width="220" height="80" /></a></li>
+      <li><a href="https://hokuto-p-co-jp.prm-ssl.jp/asks/nenga/index.php" target="_blank"><img src="http://localhost:8888/hokuto-bs/common/img/bt-nenga.png" alt="京都デザイン,京都年賀状,年賀状印刷,株式会社北斗プリント社1F　あすくす" width="220" height="80" /></a></li>
+      <li><a href=" http://www.san-en.org/link/" target="_blank"><img src="http://localhost:8888/hokuto-bs/common/img/bnr/sanen.png" alt="起業家・経営者・若者の学びと未来の場。三縁の会" width="220" height="80" /></a></li>
+    </ul>
   </div>
   <hr />
   <div id="Sub">

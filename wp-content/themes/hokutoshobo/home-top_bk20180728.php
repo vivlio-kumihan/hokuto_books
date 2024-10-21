@@ -106,7 +106,7 @@ foreach( (array) $network_posts as $key => $post ) {
     restore_current_blog();
 }
 wp_reset_query();
- 
+
 endif;
 ?>
     </div>

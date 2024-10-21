@@ -39,7 +39,7 @@
             </div>
           </div>
           <div class="header-others__lower">
-            <form class="search" method="get" id="search-form" action="<?php echo home_url('/'); ?>">
+            <form class="search" method="get" id="search-form" action="<?php echo esc_url(home_url('/')); ?>">
               <input class="search__input" type="text" name="search-input" placeholder="キーワードを入力" />
               <input class="search__submit-btn" name="search-submit-btn" type="submit" value="検索" />
             </form>
