@@ -5,7 +5,33 @@
   position: relative;
   background-color: $cWhite;
   transition: .5s;
-  z-index: 2;
+  z-index: 0;
+  & main {
+    position: relative;
+    z-index: -1;
+  }
+}
+
+.top-page {
+  &__slider {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 50vh;
+  }
+}
+
+.latest-books {
+  font-size: .85rem;
+  line-height: 1.5;
+}
+
+.self-publish-info {
+  &__consultation-banner {
+    width: 100%;
+    height: 300px;
+    background-color: red;
+  }
 }
 
 // // .sideを前面に出すためのローカル・スタッキング・コンテキストの親要素を仕掛ける。

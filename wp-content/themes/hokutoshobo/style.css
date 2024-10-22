@@ -264,19 +264,33 @@ a {
   position: relative;
   background-color: white;
   transition: 0.5s;
-  z-index: 2;
+  z-index: 0;
+}
+#container main {
+  position: relative;
+  z-index: -1;
+}
+
+.top-page__slider {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 50vh;
+}
+
+.latest-books {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.self-publish-info__consultation-banner {
+  width: 100%;
+  height: 300px;
+  background-color: red;
 }
 
 .header {
-  background-color: unset;
-  background-image: url("./images/img-main-sm1-port@0.75x.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-clip: border-box;
-  color: inherit;
-  height: 100vh;
+  display: none;
 }
 @media (min-width: 960px) {
   .header {
@@ -288,6 +302,7 @@ a {
     background-attachment: scroll;
     background-clip: border-box;
     color: inherit;
+    display: block;
     margin: 0 auto;
     max-width: 1080px;
     width: 90%;
@@ -298,6 +313,24 @@ a {
     justify-content: space-between;
     height: 100%;
     padding-bottom: 1rem;
+  }
+}
+
+.header.for-top-page-main-visual {
+  background-color: unset;
+  background-image: url("./images/img-main-sm1-port@0.75x.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-clip: border-box;
+  color: inherit;
+  display: block;
+  height: 100vh;
+}
+@media (min-width: 960px) {
+  .header.for-top-page-main-visual {
+    display: none;
   }
 }
 

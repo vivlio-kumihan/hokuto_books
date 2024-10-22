@@ -2,10 +2,10 @@
 @use '../parts/common' as *;
 
 .header {
-  @include bg($image: "./images/img-main-sm1-port@0.75x.jpg");
-  height: 100vh;
+  display: none;
   @include mq(lg) {
     @include bg($image: "");
+    display: block;
     margin: 0 auto;
     max-width: 1080px;
     width: 90%;
@@ -16,6 +16,15 @@
       height: 100%;
       padding-bottom: 1rem;
     }
+  }
+}
+
+.header.for-top-page-main-visual {
+  @include bg($image: "./images/img-main-sm1-port@0.75x.jpg");
+  display: block;
+  height: 100vh;
+  @include mq(lg) {
+    display: none;
   }
 }
 
