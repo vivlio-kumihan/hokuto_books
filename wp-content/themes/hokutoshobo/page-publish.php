@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="wpBox">
+<div class="main">
   <div class="conBox">
     <h3>自費出版ニュース</h3>
     <p>自費出版ニュースは、PDFファイルでご覧いただけます。</p>

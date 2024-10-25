@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="wpBox">
+<div class="main">
   <div class="conBox">
     <h3>当社の関連団体</h3>
     <ul>

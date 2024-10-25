@@ -24,3 +24,11 @@
 ```
 font-feature-settings: "palt" 1;
 ```
+
+```html
+<a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ</a>
+```
+
+```html
+<img src="<?php echo get_template_directory_uri(); ?>/images/bnr-jsjapan.png" />
+```

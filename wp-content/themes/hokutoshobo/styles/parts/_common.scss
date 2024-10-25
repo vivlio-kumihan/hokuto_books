@@ -335,23 +335,42 @@ a {
 }
 
 .attention {
-  display: inline-block;
-  position: relative;
-  font-family: $fontGothic;
-  font-size: .8em;
-  font-weight: 900;
-  line-height: 1;
-  font-feature-settings: "palt" 1;
-  color: $cTheme;
-  &::after {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-45%);
-    right: -1.25em;
-    content: "\f08e";
-    font-size: 1em;
-    font-family: "Font Awesome 6 Free";
-    font-weight: bold;
+  & > a {
+    display: inline-block;
+    position: relative;
+    font-family: $fontGothic;
+    font-size: .8em;
+    font-weight: 900;
+    line-height: 1;
+    font-feature-settings: "palt" 1;
+    color: $cTheme;
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-45%);
+      right: -1.25em;
+      content: "\f08e";
+      font-size: 1em;
+      font-family: "Font Awesome 6 Free";
+      font-weight: bold;
+    }
+  }
+  &.before-mark {
+    padding-left: 1.25em;
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-40%);
+      left: 0;
+      content: "\f35a";
+      font-size: 1em;
+      font-family: "Font Awesome 6 Free";
+      font-weight: bold;
+      color: $cOrangeDk;
+    }
+    &::after {
+      content: "";
+    }
   }
 }
 

@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="wpBox">
+<div class="main">
   <div class="conBox">
     <table border="0" cellpadding="5" cellspacing="0">
       <tr>

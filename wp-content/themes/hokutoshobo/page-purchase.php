@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="wpBox">
+<div class="main">
   <div id="Purchase" class="conBox">
     <h3>自費出版ご購入お申し込み方法</h3>
     <p>書籍一覧で<img class="order" src="http://localhost:8888/hokuto-bs/common/img/bt-order-s.png" alt="販売中" />マークが記載された作品は弊社より購入が可能です。</p>

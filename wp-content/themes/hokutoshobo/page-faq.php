@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="wpBox">
+<div class="main">
   <div class="conBox" id="Faq">
     <div id="tabs">
       <ul class="tabsMenu">

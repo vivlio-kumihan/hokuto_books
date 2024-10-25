@@ -4,15 +4,15 @@
 
 <div id="page-top" class="main">
   <div class="main__inner">
-    <h3 class="main__header3">北斗書房は、京都・洛北の<br class="mq-sm-apear" />自費出版専門会社です。</h3>
+    <h3 class="main__header3">北斗書房は、京都・洛北の<br class="mq-sm-apear" />自費出版専門会社です</h3>
     <p>日本古典文学が生まれた京都で、長年自費出版制作のお手伝いに取り組んで参りました。</p>
     <p>このページでは、北斗書房の特徴を３つにまとめてご紹介します。</p>
     <ul class="main__list">
-      <li><a href="#60-ear-history">60年の歴史&emsp;印刷会社が運営する「本づくり」の専門会社です</a></li>
+      <li><a href="#60-ear-history">60年の歴史&emsp;印刷会社が運営する<br class="mq-sm-apear" />「本づくり」の専門会社です</a></li>
       <li><a href="#self-publishing-advisor">専門の「自費出版アドバイザー」が対応いたします</a></li>
       <li><a href="#about-self-publishing">北斗書房の考える「自費出版」</a></li>
     </ul>
-    <div class="note">※クリックしていただくとそれぞれの特徴に移動します</div>
+    <div class="note">※クリックするとそれぞれの特徴に移動します</div>
   </div>
   <div id="60-ear-history" class="main__inner">
     <h3 class="main__header3">60年の歴史&nbsp;印刷会社が運営する「本づくり」の専門会社です</h3>
@@ -28,7 +28,9 @@
     <p>株式会社 北斗プリント社では、編集・印刷・製本など本を作るために必要な設備をほぼ揃えており、当社で刊行した自費出版作品のほとんどを自社内で制作しております。</p>
     <p>株式会社 北斗プリント社の工場見学サイトは、こちらをご覧ください。</p>
     <div class="attention margin-top-1dot5em">
-      <a class="arrow-link" href="http://www.hokuto-p.co.jp/factory/index.html" target="_blank">株式会社 北斗プリント社 工場見学（別ウィンドウで開きます）</a>
+      <a class="arrow-link" href="http://www.hokuto-p.co.jp/factory/index.html" target="_blank">
+        株式会社&nbsp;北斗プリント社&nbsp;工場見学<span class="mq-sm-apear">へ</span><span class="mq-lg-apear">（別ウィンドウで開きます）</span>
+      </a>
     </div>
     <p>北斗書房では、原則として書店販売を行わない「私家版」を取り扱っております。販売目的の大量印刷をあえて行なわず、お客様が本当に必要とされる部数をお作りします。そのため、出版社と比較してより手ごろな費用で本をつくることができます。</p>
     <p>北斗書房は、本づくりのプロ集団として長年蓄積された信用とノウハウにより、細かいところにまで気配りの行き届いた本づくりを行います。</p>
@@ -42,7 +44,7 @@
       <dd>良質な自費出版物制作を提供する「専門家」として、NPO法人自費出版ネットワークが認定する資格です。</dd>
     </dl>
     <div class="attention margin-top-1dot5em">
-      <a class="arrow-link" href="http://www.jsjapan.net" target="_blank">NPO法人日本自費出版ネットワーク（別ウィンドウで開きます）</a>
+      <a class="arrow-link" href="http://www.jsjapan.net" target="_blank">NPO法人日本自費出版ネットワーク<span class="mq-sm-apear">へ</span><span class="mq-lg-apear">（別ウィンドウで開きます）</span></a>
     </div>
     <p>北斗書房では、直接お会いして打ち合わせを行っております。</p>
     <p>社内にはこれまでお作りした作品も多数展示しておりますので、ご来社くださったお客様には作例をご覧いただくことができます。</p>

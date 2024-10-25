@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="wpBox">
+<div class="main">
   <div class="conBox">
     <h3>お電話でのお問い合わせはこちら</h3>
     <p><img src="/common/img/contact/contact-tel-no.png" alt="TEL 075-791-6125 / FAX 075-791-7290" /></p>

@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="wpBox">
+<div class="main">
   <div class="conBox" id="Access">
     <h3>アクセスマップ</h3>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>

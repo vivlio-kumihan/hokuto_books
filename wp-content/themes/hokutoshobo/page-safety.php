@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="wpBox">
+<div class="main">
   <div class="conBox">
     <h3>安心・安全な自費出版制作サービスをご提供します</h3>
     <h4>「NPO法人自費出版ネットワーク」会員企業です</h4>

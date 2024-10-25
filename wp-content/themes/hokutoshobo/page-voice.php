@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="wpBox">
+<div class="main">
   <div class="conBox">
     <h3>「京都のみちづくり」を執筆して</h3>
     <h4>和田　章仁 様</h4>

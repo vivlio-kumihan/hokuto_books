@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="wpBox">
+<div class="main">
   <div class="conBox">
     <h1>このページは『自費出版制作の流れ』と同じ内容。</h1>
     <h1>このページは破棄し、リダイレクトで処理してしまう。</h1>
