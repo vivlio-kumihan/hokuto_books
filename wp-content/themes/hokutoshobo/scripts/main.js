@@ -2,6 +2,7 @@ class Main {
   constructor() {
     this.LatestYear = new LatestYear();
     this.HideHeader = new HideHeader();
+    this.MonitorLine = new MonitorLine();
     // // headerのインスタンを生成する。
     // this.header = document.querySelector(".header");
     // // テキスト・アニメーション用の小見出しを収集してアニメーション用にインスタンス化する。

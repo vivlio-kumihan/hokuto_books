@@ -120,6 +120,32 @@ a {
   }
 }
 
+.margin-top-1dot5em {
+  margin-top: 1.5em;
+}
+.margin-top-1em {
+  margin-top: 1em;
+}
+.margin-top-dot75em {
+  margin-top: .75em;
+}
+.margin-top-dot5em {
+  margin-top: .5em;
+}
+
+.margin-bottom-1dot5em {
+  margin-bottom: 1.5em;
+}
+.margin-bottom-1em {
+  margin-bottom: 1em;
+}
+.margin-bottom-dot75em {
+  margin-bottom: .75em;
+}
+.margin-bottom-dot5em {
+  margin-bottom: .5em;
+}
+
 .content-width {
   width: 90%;
   margin: 0 auto;
@@ -243,6 +269,20 @@ a {
   }
 }
 
+.image-wrapper {
+  margin-bottom: 1.5em;
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  & > figcaption {
+    text-align: center;
+    font-family: $fontGothic;
+    font-size: .9rem;
+  }
+}
+
 .mq-sm-apear {
   display: inline-block;
   @include mq(lg) {
@@ -256,6 +296,64 @@ a {
   }
 }
 
+.note {
+  margin-top: 1em;
+  font-family: $fontGothic;
+  font-size: .8rem;
+  line-height: 1.2;
+  color: $cTheme;
+}
+
+.to-page-top {
+  display: flex;
+  justify-content:flex-end;
+  margin-top: 1em;
+  & > a {
+    position: relative;
+    display: inline-block;
+    padding-left: 1em;
+    padding: 6px 10px 6px 20px;
+    font-family: $fontGothic;
+    font-size: .7rem;
+    font-weight: 900;
+    line-height: 1;
+    font-feature-settings: "palt" 1;
+    color: #fff;
+    background-color: $cTheme;
+    border-radius: 5px;
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 8px;
+      content: "\f102";
+      font-size: 1em;
+      font-family: "Font Awesome 6 Free";
+      font-weight: bold;
+    }
+  }
+}
+
+.attention {
+  display: inline-block;
+  position: relative;
+  font-family: $fontGothic;
+  font-size: .8em;
+  font-weight: 900;
+  line-height: 1;
+  font-feature-settings: "palt" 1;
+  color: $cTheme;
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-45%);
+    right: -1.25em;
+    content: "\f08e";
+    font-size: 1em;
+    font-family: "Font Awesome 6 Free";
+    font-weight: bold;
+  }
+}
 
 // .modal {
 //   @extend .content-width;

@@ -1,38 +1,121 @@
 @use '../globals/' as *;
 @use '../parts/common' as *;
 
-#container {
+.main {
   position: relative;
-  background-color: $cWhite;
-  transition: .5s;
-  z-index: 0;
-  & main {
-    position: relative;
-    z-index: -1;
-  }
-}
-
-.top-page {
-  &__slider {
-    display: grid;
-    place-content: center;
-    width: 100%;
-    height: 50vh;
-  }
-}
-
-.latest-books {
-  font-size: .85rem;
+  width: 90%;
+  max-width: $contentMaxWidth;
+  margin: 50px auto;
   line-height: 1.5;
-}
-
-.self-publish-info {
-  &__consultation-banner {
-    width: 100%;
-    height: 300px;
-    background-color: red;
+  &__inner {
+    &:not(:first-of-type) {
+      margin-top: 2rem;
+    }
+  }
+  &__header3 {
+    position: relative;
+    padding-left: .5em;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: 900;
+    font-feature-settings: "palt" 1;
+    &::before {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      content: "";
+      width: 5px;
+      min-height: 1em;
+      background-color: $cTheme;
+    }
+    &.two-lines-height::before {
+      min-height: 2.5em;
+    }
+  }
+  p:not(:first-of-type) {
+    margin-top: .75em;
+  }
+  & .catch {
+    margin-top: .75em;
+    font-size: 1.2em;
+    font-weight: 900;
+    color: $cTheme;
+  }
+  &__list {
+    margin-top:.7em;
+    & > li {
+      position: relative;
+      padding-left: 1em;
+      font-family: $fontGothic;
+      font-size: 15px;
+      line-height: 1.2;
+      color: $cTheme;
+      &::before {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        content: "";
+        width: .8em;
+        height: .8em;
+        border-radius: 50%;
+        background-color: $cTheme;
+      }
+    }
+    & > li:not(:first-of-type) {
+      margin-top: .5em;
+    }
+  }
+  &__description-list {
+    padding: 1em;
+    font-family: $fontGothic;
+    font-size: .9em;
+    line-height: 1.4;
+    color: $cTheme;
+    background-color: $cOrangeLt;
+    & > dt {
+      margin-bottom: .5em;
+      font-size: 1rem;
+      text-align: center;
+      font-feature-settings: "palt" 1;
+    }
+    & > dd {
+      text-align: justify;
+    }
   }
 }
+
+// #container {
+//   position: relative;
+//   background-color: $cWhite;
+//   transition: .5s;
+//   z-index: 0;
+//   & main {
+//     position: relative;
+//     z-index: -1;
+//   }
+// }
+
+// .top-page {
+//   &__slider {
+//     display: grid;
+//     place-content: center;
+//     width: 100%;
+//     height: 50vh;
+//   }
+// }
+
+// .latest-books {
+//   font-size: .85rem;
+//   line-height: 1.5;
+// }
+
+// .self-publish-info {
+//   &__consultation-banner {
+//     width: 100%;
+//     height: 300px;
+//     background-color: red;
+//   }
+// }
 
 // // .sideを前面に出すためのローカル・スタッキング・コンテキストの親要素を仕掛ける。
 // #main-content {

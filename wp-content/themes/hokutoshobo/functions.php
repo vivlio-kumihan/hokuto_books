@@ -19,6 +19,7 @@ function my_scripts()
   wp_enqueue_script('latest-year-js', get_template_directory_uri() . '/scripts/libs/latest-year.js', array(), null, true);
   wp_enqueue_script('hide-header-js', get_template_directory_uri() . '/scripts/libs/hide-header.js', array(), null, true);
   wp_enqueue_script('mobile-menu-js', get_template_directory_uri() . '/scripts/libs/mobile-menu.js', array(), null, true);
+  wp_enqueue_script('monitor-line-js', get_template_directory_uri() . '/scripts/libs/monitor-line.js', array(), null, true);
   wp_enqueue_script('main-js', get_template_directory_uri() . '/scripts/main.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'my_scripts');
