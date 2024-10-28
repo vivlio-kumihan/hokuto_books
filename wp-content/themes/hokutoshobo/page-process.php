@@ -139,9 +139,9 @@
       <p>自社工場による一貫工程で、しっかりとした品質管理を行い、お客様にご満足頂ける本をお作りします。</p>
       <p>モノクロ/カラー、並製本/上製本など、仕様に応じた最適な方法で、印刷・製本工程を進めてまいります。</p>
       <p>株式会社 北斗プリント社の工場見学サイトは、こちらをご覧ください。</p>
-      <div class="attention margin-top-1dot5em">
-        <a class="arrow-link" href="http://www.hokuto-p.co.jp/factory/index.html" target="_blank">株式会社 北斗プリント社 工場見学（別ウィンドウで開きます）</a>
-      </div>
+      <a class="arrow-link" href="http://www.hokuto-p.co.jp/factory/index.html" target="_blank">
+        株式会社&nbsp;北斗プリント社&nbsp;工場見学（別ウィンドウで開きます）<span class="arrow-link__mark"></span>
+      </a>
     </section>
 
     <section>
@@ -156,7 +156,7 @@
           </div>
         </div>
       </div>
-      <div class="attention before-mark margin-top-1dot5em">
+      <div class="attention margin-top-1dot5em">
         <a class="arrow-link" href="<?php echo esc_url(home_url('/book')); ?>">北斗書房発刊書籍一覧はこちら</a>
       </div>
     </section>

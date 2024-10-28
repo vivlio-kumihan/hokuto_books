@@ -49,7 +49,7 @@
     <p class="floatleft"><img src="<?php echo get_template_directory_uri(); ?>/images/guide/guide-img07-6.png" alt="製本係" /></p>
     <p class="clr">自社工場による一貫工程で、しっかりとした品質管理を行い、お客様にご満足頂ける本をお作りします。</p>
     <p>モノクロ/カラー、並製本/上製本など、仕様に応じた最適な方法で、印刷・製本工程を進めてまいります。</p>
-    <p><a class="arrowLinks" href="http://www.hokuto-p.co.jp/factory/index.html" target="_blank">当社の工場見学サイト</a></p>
+    <a class="arrowLinks" href="http://www.hokuto-p.co.jp/factory/index.html" target="_blank">当社の工場見学サイト</a>
     <h4 class="clr">完成</h4>
     <p class="floatRight"><img src="<?php echo get_template_directory_uri(); ?>/images/guide/guide-img08.png" alt="" /></p>
     <p>世界中でただ1冊、お客様だけの本の完成です。</p>

@@ -5,7 +5,7 @@
   top: 60px;
   right: 0;
   width: 300px;
-  z-index: 1;
+  z-index: 0;
   .logo {
     display: flex;
     flex-direction: column;
@@ -65,7 +65,7 @@
   }
 
   &__btn {
-    position: fixed;
+    position: absolute;
     top: 1rem;
     right: 1rem;
     display: grid;
@@ -76,6 +76,7 @@
     background-color: unset;
     border: unset;
     border-radius: 10%;
+    z-index: 100;
     @include mq(lg) {
       display: none;
     }

@@ -27,11 +27,9 @@
     <p>大学の学術書論文集や研究報告書の制作で培った組版技術により、お客様の自費出版作品を、読みやすく、また見た目にも美しく仕上げます。</p>
     <p>株式会社 北斗プリント社では、編集・印刷・製本など本を作るために必要な設備をほぼ揃えており、当社で刊行した自費出版作品のほとんどを自社内で制作しております。</p>
     <p>株式会社 北斗プリント社の工場見学サイトは、こちらをご覧ください。</p>
-    <div class="attention margin-top-1dot5em">
-      <a class="arrow-link" href="http://www.hokuto-p.co.jp/factory/index.html" target="_blank">
-        株式会社&nbsp;北斗プリント社&nbsp;工場見学<span class="mq-sm-apear">へ</span><span class="mq-lg-apear">（別ウィンドウで開きます）</span>
-      </a>
-    </div>
+    <a class="arrow-link" href="http://www.hokuto-p.co.jp/factory/index.html" target="_blank">
+      株式会社&nbsp;北斗プリント社&nbsp;工場見学（別ウィンドウで開きます）<span class="arrow-link__mark"></span>
+    </a>
     <p>北斗書房では、原則として書店販売を行わない「私家版」を取り扱っております。販売目的の大量印刷をあえて行なわず、お客様が本当に必要とされる部数をお作りします。そのため、出版社と比較してより手ごろな費用で本をつくることができます。</p>
     <p>北斗書房は、本づくりのプロ集団として長年蓄積された信用とノウハウにより、細かいところにまで気配りの行き届いた本づくりを行います。</p>
     <div class="to-page-top"><a href="#page-top">上にもどる</a></div>
@@ -43,9 +41,9 @@
       <dt>「自費出版アドバイザー」とは</dt>
       <dd>良質な自費出版物制作を提供する「専門家」として、NPO法人自費出版ネットワークが認定する資格です。</dd>
     </dl>
-    <div class="attention margin-top-1dot5em">
-      <a class="arrow-link" href="http://www.jsjapan.net" target="_blank">NPO法人日本自費出版ネットワーク<span class="mq-sm-apear">へ</span><span class="mq-lg-apear">（別ウィンドウで開きます）</span></a>
-    </div>
+    <a class="arrow-link" href="http://www.jsjapan.net" target="_blank">
+      NPO法人日本自費出版ネットワーク（別ウィンドウで開きます）<span class="arrow-link__mark"></span>
+    </a>
     <p>北斗書房では、直接お会いして打ち合わせを行っております。</p>
     <p>社内にはこれまでお作りした作品も多数展示しておりますので、ご来社くださったお客様には作例をご覧いただくことができます。</p>
     <p>実際に完成品をご覧いただくことで、作品に対するイメージがより具体的になり、装丁やレイアウトの打ち合わせがスムーズに進みます。</p>

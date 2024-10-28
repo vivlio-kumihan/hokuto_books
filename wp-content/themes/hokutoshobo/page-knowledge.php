@@ -38,14 +38,14 @@
       <div class="note">※クリックするとそれぞれのジャンルに移動します</div>
       <div id="tabs-1-1">
         <h4 class="main__header4">エッセイ</h4>
-        <div class="image-wrapper">
+        <div class="image-wrapper margin-top-1em">
           <img class="alignright size-medium wp-image-606" src="http://localhost:8888/hokuto-bs/wp-content/uploads/2017/04/guide-img-essay-320x226.jpg" alt="エッセイイメージ" />
         </div>
         <p>エッセイとは「日常の出来事や世間の事象に自分の意見や感想を交え、自由な形式で書いたもの」と定義できます。</p>
         <p>このエッセイを、１冊の本にまとめたものを「エッセイ集」と呼びます。</p>
         <p>芸能人の自伝などでもよく見られるように、自分史として作成することもできます。</p>
         <h5 class="main__header5">原稿の書き方</h5>
-        <p>「長文はちょっと荷が重いけど、短い文章なら・・・」という方にエッセイはぴったりです。</p>
+        <p>「長文はちょっと荷が重いけど、短い文章なら…」という方にエッセイはぴったりです。</p>
         <p>エッセイの場合は「まず原稿を書いてみる」ことをお勧めしています。</p>
         <p>本全体の構成や前後関係などもあまり考えずに、書きたいことから書き進めます。</p>
         <p>文章量は、１本のエッセイで1,500～2,000字程度（A5判の本で3～4ページ位）もあれば充分です。</p>
@@ -61,13 +61,16 @@
         <p>「キーワード連想法」をお勧めします。</p>
         <p>これは、企画の会議などで行われる「ブレーンストーミング」と「KJ法」を応用したものです。</p>
         <p>エッセイ風自分史の場合ですと、進め方は次のようになります。</p>
-        <ol>
-          <li>キーワードの書き出し<br />
-            関連するキーワード（例：「学園祭」「初恋」「転勤」「初仕事」「幼馴染」など）を、思いつく限りできるだけたくさんカードに書き出します。</li>
-          <li>組み合わせ連想<br />
-            書いたカードを並べ変えて組み合わせながら色々と連想することで、エッセイの題材にできる具体的な内容を思い出していきます。 ひとつの出来事を思い出すと、そこから関連して色々と思い出されてくるものです。 忘れていたことを、あれこれ連想するなかで思い出す作業は、意外と楽しいものです。 はじめから文章にしようと思わずに、ゲーム感覚で取り組まれると良いでしょう。</li>
-        </ol>
-        <br />
+        <div class="flex-wrapper column margin-top-1em margin-bottom-1dot5em">
+          <dl class="main__description-list">
+            <dt>キーワードの書き出し</dt>
+            <dd>関連するキーワード（例：「学園祭」「初恋」「転勤」「初仕事」「幼馴染」など）を、思いつく限りできるだけたくさんカードに書き出します。</dd>
+          </dl>
+          <dl class="main__description-list">
+            <dt>組み合わせ連想</dt>
+            <dd>書いたカードを並べ変えて組み合わせながら色々と連想することで、エッセイの題材にできる具体的な内容を思い出していきます。 ひとつの出来事を思い出すと、そこから関連して色々と思い出されてくるものです。 忘れていたことを、あれこれ連想するなかで思い出す作業は、意外と楽しいものです。 はじめから文章にしようと思わずに、ゲーム感覚で取り組まれると良いでしょう。</dd>
+          </dl>
+        </div>
         <h5 class="main__header5">ワンポイントアドバイス</h5>
         <p>この方法の注意点は、原稿を書き上げた後の見直しをしっかりすることです。</p>
         <p>「とりあえず書いてみる」という書き方で進めると、年月日や場所などを曖昧なままにしてしまうことがよく起きます。</p>
@@ -78,7 +81,7 @@
       </div>
       <div id="tabs-1-2">
         <h4 class="main__header4">写真集／画集</h4>
-        <div class="image-wrapper"><img class="alignright size-medium wp-image-644" src="http://localhost:8888/hokuto-bs/wp-content/uploads/2017/04/guide-img-pictures-320x237.png" alt="写真集／画集イメージ" /></div>
+        <div class="image-wrapper margin-top-1em"><img class="alignright size-medium wp-image-644" src="http://localhost:8888/hokuto-bs/wp-content/uploads/2017/04/guide-img-pictures-320x237.png" alt="写真集／画集イメージ" /></div>
         <p>水彩画や油絵、イラストを趣味とされる方、あるいは写真を趣味とされる方は、自分の作品を画集や写真集としてまとめるのもひとつの方法です。</p>
         <p>画や写真には、文章とはまた違った伝達力があります。</p>
         <p>たとえ文章で伝えきれないことでも、1枚の絵や写真が雄弁に物語ることがあります。</p>
@@ -87,16 +90,16 @@
         <h5 class="main__header5">写真集の仕様について</h5>
         <p>写真集の原稿づくりは、前もって本の大きさや全体のページ数を含めた仕様をお決めになられることをお勧めします。<br />
           先に全体の完成イメージを定めることで、この後の原稿作成がやりやすくなります。</p>
-        <p><strong>ページ数</strong></p>
+        <h6 class="main__header6">ページ数</h6>
         <p>撮り溜められた写真の点数は膨大な数と思われますので、仕様を決めずに写真の選別を進めると「あれも載せたい、これも載せたい」となり、ページ数が増えてしまいがちです。<br />
           最初に「何ページの写真数にする、掲載写真は何点にする」と、全体の大枠を決めておくすることで、数多ある作品のなかから掲載写真を絞り込みやすくなります。</p>
-        <p><strong>大きさ</strong></p>
+        <h6 class="main__header6">大きさ</h6>
         <p>画集や写真集をお考えの場合は、本の大きさにひと工夫が必要です。<br />
           一般的な画集や写真集は、B5判やA4判で作られることが多いのですが、気軽に手に取ることができる本を目指すのでしたら、A5判やB6判など、文字主体の冊子でよく用いられる大きさで仕上げるのもひとつの方法です。<br />
           北斗書房では、「正方形の本」をお勧めしています。<br />
           縦長・横長どちらの絵や写真であっても、収まり良く仕上げることができるからです。<br />
           大きさと持ちやすさのバランスを考慮すると、18センチ位がおすすめです。</p>
-        <p><strong>用紙</strong></p>
+        <h6 class="main__header6">用紙</h6>
         <p>写真集や画集の場合は、コート紙・マットコート紙が適しています。<br />
           どちらの紙も、表面に白色顔料を塗って滑らかに加工した紙です。<br />
           表面に光沢があるものをコート紙、表面にツヤ消し加工を施したものをマットコート紙と呼びます。白色顔料を塗るのは、インクの発色を良くするためで、写真集や画集の本文用紙によく用いられます。</p>
@@ -104,8 +107,8 @@
         <p>制作の流れでは、一般的な文字校正とは別に「色校正」を行います。<br />
           色校正は、実際に試し刷りを行う本紙校正と、専用のプリンターで行う簡易色校正（プルーフ）の、２通りがあります。<br />
           再現の正確さやコストで特徴がありますので、どちらの方法で色校正を行うのかは、事前に打ち合わせを行います。</p>
-        <p><strong>［関連リンク］</strong></p>
-        <ul>
+        <h6 class="main__header6">［関連リンク］</h6>
+        <ul class="main__list">
           <li><a href="http://localhost:8888/hokuto-bs/news/jihisyuppan/681/">写真集制作のコツ</a></li>
           <li><a href="http://localhost:8888/hokuto-bs/news/jihisyuppan/645/">総天然色印刷―カラー印刷のお話</a></li>
           <li><a href="http://localhost:8888/hokuto-bs/news/jihisyuppan/649/">インクの三原色と光の三原色</a></li>
@@ -116,39 +119,40 @@
       </div>
       <div id="tabs-1-3">
         <h4 class="main__header4">自分史／自伝／伝記</h4>
-        <div class="image-wrapper"><img class="alignright size-medium wp-image-617" src="http://localhost:8888/hokuto-bs/wp-content/uploads/2017/04/guide-img-biography-320x222.jpg" alt="自分史イメージ" /></div>
+        <div class="image-wrapper margin-top-1em"><img class="alignright size-medium wp-image-617" src="http://localhost:8888/hokuto-bs/wp-content/uploads/2017/04/guide-img-biography-320x222.jpg" alt="自分史イメージ" /></div>
         <p>自分史は、「半生記」と「体験記」に分けられます。</p>
         <p>「半生記」は、ご誕生から現在までを、時間の流れに沿った構成になります。一方、「体験記」は、ご自身の体験や大きな出来事を主題として構成されます。</p>
         <p>いずれの場合にしましても、まず書きたい項目を箇条書きにしてみて、その中で特に伝えたい内容をお決めになられますと、全体の流れを決めやすくなります。</p>
         <p>自分史には様々な表現方法があり、弊社ブログのなかで詳しくご説明しております。<br />
           ぜひ、ご参照ください。</p>
-        <ul>
-          <li><a href="http://localhost:8888/hokuto-bs/news/jihisyuppan/168/">自分史とは？― 世界にただひとつの記録 ―</a></li>
-          <li><a href="http://localhost:8888/hokuto-bs/news/jihisyuppan/172/">自分史をつくる意味―自分史づくりで得られる７つのメリット―</a></li>
-          <li><a href="http://localhost:8888/hokuto-bs/news/jihisyuppan/178/">自分史の構成―時間の流れを追う？深く掘り下げる？―</a></li>
-          <li><a href="http://localhost:8888/hokuto-bs/news/info/223/">自分史いろいろ ― その１ エッセイ集自分史 ―</a></li>
-          <li><a href="http://localhost:8888/hokuto-bs/news/jihisyuppan/225/">自分史いろいろ ― その２　小説風自分史</a></li>
-          <li><a href="http://localhost:8888/hokuto-bs/news/jihisyuppan/234/">自分史いろいろ ― その３　詩歌（短歌、俳句、詩）で綴る</a></li>
-          <li><a href="http://localhost:8888/hokuto-bs/news/jihisyuppan/238/">自分史いろいろ ― その４　日記のススメ</a></li>
-          <li><a href="http://localhost:8888/hokuto-bs/news/info/242/">自分史いろいろ ― その５　画集／写真集／絵日記として</a></li>
-          <li><a href="http://localhost:8888/hokuto-bs/news/jihisyuppan/376/">「ミニ自分史」のすすめ</a></li>
+        <ul class="main__list">
+          <li><a href="<?php echo esc_url(home_url('/news/jihisyuppan/168/')); ?>">自分史とは？<br class="mq-sm-apeare">―世界にただひとつの記録―</a></li>
+          <li><a href="<?php echo esc_url(home_url('/news/jihisyuppan/172/')); ?>">自分史をつくる意味<br class="mq-sm-apeare">―自分史づくりで得られる７つのメリット―</a></li>
+          <li><a href="<?php echo esc_url(home_url('/news/jihisyuppan/178/')); ?>">自分史の構成<br class="mq-sm-apeare">―時間の流れを追う？深く掘り下げる？―</a></li>
+          <li><a href="<?php echo esc_url(home_url('/news/info/223/')); ?>">自分史いろいろ<br class="mq-sm-apeare">―その１&ensp;エッセイ集自分史―</a></li>
+          <li><a href="<?php echo esc_url(home_url('/news/jihisyuppan/225/')); ?>">自分史いろいろ<br class="mq-sm-apeare">―その２&ensp;小説風自分史</a></li>
+          <li><a href="<?php echo esc_url(home_url('/news/jihisyuppan/234/')); ?>">自分史いろいろ<br class="mq-sm-apeare">―その３&ensp;詩歌（短歌、俳句、詩）で綴る</a></li>
+          <li><a href="<?php echo esc_url(home_url('/news/jihisyuppan/238/')); ?>">自分史いろいろ<br class="mq-sm-apeare">―その４&ensp;日記のススメ</a></li>
+          <li><a href="<?php echo esc_url(home_url('/news/info/242/')); ?>">自分史いろいろ<br class="mq-sm-apeare">―その５&ensp;画集／写真集／絵日記として</a></li>
+          <li><a href="<?php echo esc_url(home_url('/news/jihisyuppan/376/')); ?>">「ミニ自分史」のすすめ</a></li>
         </ul>
-        <p>（本サイト内のブログに移動します）</p>
+        <div class="note">（本サイト内のブログに移動します）</div>
         <div class="to-page-top"><a href="#contents">目次にもどる</a></div>
       </div>
       <div id="tabs-1-4">
         <h4 class="main__header4">詩集／歌集／句集</h4>
-        <div class="image-wrapper"><img class="alignright size-medium wp-image-643" src="http://localhost:8888/hokuto-bs/wp-content/uploads/2017/04/guide-img-haiku-320x222.png" alt="詩集／歌集／句集イメージ" /></div>
+        <div class="image-wrapper margin-top-1em"><img class="alignright size-medium wp-image-643" src="http://localhost:8888/hokuto-bs/wp-content/uploads/2017/04/guide-img-haiku-320x222.png" alt="詩集／歌集／句集イメージ" /></div>
         <p>詩集や歌集には、一般的によく使われるレイアウトがあります。</p>
         <h5 class="main__header5">詩集</h5>
         <div class="image-wrapper"><a href="http://localhost:8888/hokuto-bs/wp-content/uploads/2012/05/guide-img-sishu-l.jpg"><img class="alignnone size-medium wp-image-217" title="詩集：本文サンプル" src="http://localhost:8888/hokuto-bs/wp-content/uploads/2012/05/guide-img-sishu-l-320x226.jpg" alt="詩集：本文サンプル" /></a></div>
         <p>本を開いた「見開き」の状態でレイアウトすることが一般的ですが、写真やイラストと連動したデザインをお考えのお客様もおられます。</p>
-        <p>※画像クリックで拡大表示されます。</p>
+        <div class="note">※画像クリックで拡大表示されます。</div>
         <h5 class="main__header5">歌集、句集</h5>
         <div class="image-wrapper"><a href="http://localhost:8888/hokuto-bs/wp-content/uploads/2012/05/guide-img-kasyu-l.jpg"><img class="alignnone size-medium wp-image-218" title="歌集（句集）：本文サンプル" src="http://localhost:8888/hokuto-bs/wp-content/uploads/2012/05/guide-img-kasyu-l-320x226.jpg" alt="歌集（句集）：本文サンプル" /></a></div>
         <p>個人でおつくりになる場合、1ページに3首（句）を入れる「3首（句）取り」または5首（句）入れる「5首（句）取り」が一般的です。同人結社で作られる同人誌の場合は、それぞれの同人誌で定められたレイアウトをお持ちです。</p>
         <p>詩集／歌集／句集いずれの場合でも、ご入稿は、原稿用紙にお書きになられた手書きのもの、ワードや一太郎などのワープロソフトでお作りになられたデータをご提供くださるもの、どちらの方法でも結構です。弊社で再レイアウトさせて頂き、バランスの良い美しい仕上がりでおつくりします。</p>
-        <p>※画像クリックで拡大表示されます。</p>
+        <div class="note">※画像クリックで拡大表示されます。</div>
+        <p></p>
       </div>
       <div class="to-page-top"><a href="#contents">目次にもどる</a></div>
     </section>
@@ -156,7 +160,7 @@
     <section>
       <h3 class="main__header3">仕様について</h3>
       <h4 class="main__header4">用紙</h4>
-      <p>紙の選択は、本の仕上りに大きく影響します。</p>
+      <p class="margin-top-dot75em">紙の選択は、本の仕上りに大きく影響します。</p>
       <p>小説やエッセイのような文字が主体の本と、画集や写真集に代表される図版が主体の本では、適切な紙は異なります。</p>
       <p>イメージ通りの本に仕上げるためにも、紙選びは大変重要です。</p>
       <h5 class="main__header5">上質紙</h5>
@@ -212,7 +216,7 @@
       <p>工程が複雑なため、他の製本方法と比べて時間が掛かしコストは高くなりますが、それに見合った高級感と耐久性があります。</p>
       <p>ボール紙に貼る表紙は、紙の他にも布を使用する事もできます。</p>
       <p>その場合は、「箔押し」という型押しでタイトルなどを布に印字します。</p>
-      <p>※画像クリックで拡大表示されます。</p>
+      <div class="note">※画像クリックで拡大表示されます。</div>
       <p class="floatLeft"><a href="http://localhost:8888/hokuto-bs/wp-content/uploads/2012/05/guide-jyoseihon01-l1.png"><img class="alignnone size-medium wp-image-221" title="上製本（開）" src="http://localhost:8888/hokuto-bs/wp-content/uploads/2012/05/guide-jyoseihon01-l1-320x224.png" alt="上製本（開）" /></a></p>
       <p class="pt40"><a href="http://localhost:8888/hokuto-bs/wp-content/uploads/2012/05/guide-jyoseihon02-l1.png"><img class="alignnone size-medium wp-image-222" title="上製本（綴じ状態）" src="http://localhost:8888/hokuto-bs/wp-content/uploads/2012/05/guide-jyoseihon02-l1-320x144.png" alt="上製本（綴じ状態）" /></a></p>
       <h5 class="main__header5">並製本</h5>
@@ -223,7 +227,7 @@
         上製本よりも工程が簡略なため、時間もコストを抑えることができます。</p>
       <p>また、本体の表紙の外側に、カバーを付ける場合が多いです。</p>
       <p>カバーには、ＰＰ加工と呼ばれる透明フィルムを貼り、見た目美しくまた汚れにくくします。</p>
-      <p>※画像クリックで拡大表示されます。</p>
+      <div class="note">※画像クリックで拡大表示されます。</div>
       <p class="floatLeft"><a href="http://localhost:8888/hokuto-bs/wp-content/uploads/2012/05/guide-namiseihon-img01-l1.png"><img class="alignnone size-medium wp-image-224" title="並製本（開）" src="http://localhost:8888/hokuto-bs/wp-content/uploads/2012/05/guide-namiseihon-img01-l1-320x224.png" alt="並製本（開）" /></a></p>
       <p class="pt40"><a href="http://localhost:8888/hokuto-bs/wp-content/uploads/2012/05/guide-namiseihon-img02-l1.png"><img class="alignnone size-medium wp-image-225" title="並製本（綴じ状態）" src="http://localhost:8888/hokuto-bs/wp-content/uploads/2012/05/guide-namiseihon-img02-l1-320x144.png" alt="並製本（綴じ状態）" /></a></p>
       <div class="to-page-top"><a href="#contents">目次にもどる</a></div>
@@ -258,12 +262,14 @@
       <h5 class="main__header5">引用</h5>
       <p>一定の条件を満たした場合は、自分の著作に他人の著作の一部を引用することは許されます。<br />
         著作権法第32条では、引用の定義を次のように定められています。</p>
-      <p>１．引用することが、オリジナルの文章（本文）を表現するために必要であること</p>
-      <p>２．主量的にも質的にも自分のオリジナルな文章が主であり、引用部分が従であること</p>
-      <p>３．引用部分とその他の部分が明確に区別し引用文は改変しないこと</p>
-      <p>４．引用された著作物の出典が明示されていること</p>
-      <p>この他、歌詞や写真など、著作物の種類によって気を付けるべき点は異なります。<br />
-        詳しくは、北斗書房スタッフにおたずね下さい。</p>
+      <ol class="main__order-list">
+        <li>引用することが、オリジナルの文章（本文）を表現するために必要であること</li>
+        <li>主量的にも質的にも自分のオリジナルな文章が主であり、引用部分が従であること</li>
+        <li>引用部分とその他の部分が明確に区別し引用文は改変しないこと</li>
+        <li>引用された著作物の出典が明示されていること</li>
+        <li>この他、歌詞や写真など、著作物の種類によって気を付けるべき点は異なります。
+      </ol>
+      <div class="note">詳しくは、北斗書房スタッフにおたずね下さい。</div>
       <div class="to-page-top"><a href="#contents">目次にもどる</a></div>
     </section>
   </div>

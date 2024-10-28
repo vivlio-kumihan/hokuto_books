@@ -29,7 +29,7 @@ function my_enqueue_styles() {
   // デフォルトのスタイルシート（style.css）
   wp_enqueue_style('hokutoshobo-style', get_stylesheet_uri());
 
-  // デスタイルのリセットCSS
+  // リセットCSS
   wp_enqueue_style('destyle', 'https://unpkg.com/destyle.css@4.0.0/destyle.min.css');
 
   // Google Fontsの事前接続とフォントの読み込み
@@ -37,6 +37,7 @@ function my_enqueue_styles() {
   wp_enqueue_style('google-fonts-preconnect2', 'https://fonts.gstatic.com', [], null, 'preconnect');
   wp_enqueue_style('noto-sans', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;500;900&display=swap');
   wp_enqueue_style('noto-serif', 'https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@400;600;900&display=swap');
+  wp_enqueue_style('roboto', 'https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
 
   // Font Awesome
   wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
