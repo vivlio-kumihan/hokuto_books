@@ -41,7 +41,7 @@
       <dt>「自費出版アドバイザー」とは</dt>
       <dd>良質な自費出版物制作を提供する「専門家」として、NPO法人自費出版ネットワークが認定する資格です。</dd>
     </dl>
-    <a class="arrow-link" href="http://www.jsjapan.net" target="_blank">
+    <a class="arrow-link margin-top-1em" href="http://www.jsjapan.net" target="_blank">
       NPO法人日本自費出版ネットワーク（別ウィンドウで開きます）<span class="arrow-link__mark"></span>
     </a>
     <p>北斗書房では、直接お会いして打ち合わせを行っております。</p>

@@ -3,100 +3,86 @@
 <?php get_header(); ?>
 
 <div class="main">
-  <div class="conBox" id="Access">
-    <h3>アクセスマップ</h3>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript">
-      google.maps.event.addDomListener(window, 'load', function() {
-        var mapdiv = document.getElementById('map_canvas');
-        var myOptions = {
-          zoom: 15,
-          center: new google.maps.LatLng(35.044094, 135.777145),
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-          scaleControl: true
-        };
-        var map = new google.maps.Map(mapdiv, myOptions);
-        var marker = new google.maps.Marker({
-          position: new google.maps.LatLng(35.044094, 135.777145),
-          map: map,
-          title: '北斗書房'
-        });
-        var infowindow = new google.maps.InfoWindow({
-          content: '<div class="mapMarker"><h4>北斗書房（北斗プリント社内）</h4><p>〒606-0864　京都府京都市左京区下鴨高木町38-2<br />TEL 075-791-6125 / FAX 075-791-7290</p></div>',
-          size: new google.maps.Size(320, 100)
-        });
-        google.maps.event.addListener(marker, 'click', function() {
-          infowindow.open(map, marker);
-        });
-      });
-    </script>
-    <div id="map_canvas"></div>
-    <h4>交通アクセス</h4>
-    <table>
-      <tbody>
-        <tr>
-          <th>JR・近鉄　京都駅から</th>
-          <th>阪急　四条烏丸駅から</th>
-        </tr>
-        <tr>
-          <td>
-            <h5>地下鉄烏丸線経由</h5>
-            <ul>
-              <li><strong>北大路駅で下車される場合</strong><br />
-                （地下鉄烏丸線）国際会議場行き → 約14分 → 北大路駅駅下車 → （市バス）北大路バスターミナル「赤のりば」204・206・北８系統 → 約10分 → 「下鴨高木町」バス停下車 </li>
-              <li><strong>松ヶ崎駅で下車される場合</strong><br />
-                （地下鉄烏丸線）国際会議場行き → 約14分 → 松ヶ崎駅下車 → 南へ徒歩10分 → 高木町交差点を左（東）へ徒歩30秒<br />
-                → 左（北）側</li>
-            </ul>
-          </td>
-          <td>
-            <h5>地下鉄烏丸線経由</h5>
-            <ul>
-              <li><strong>北大路駅で下車される場合</strong><br />
-                （地下鉄烏丸線）国際会議場行き → 約11分 → 北大路駅駅下車 → （市バス）北大路バスターミナル「赤のりば」204・206・北８系統 → 約10分 → 「下鴨高木町」バス停下車 </li>
-              <li><strong>松ヶ崎駅で下車される場合</strong><br />
-                （地下鉄烏丸線）国際会議場行き → 約11分 → 松ヶ崎駅下車 → 南へ徒歩10分 → 高木町交差点を左（東）へ徒歩30秒<br />
-                → 左（北）側</li>
-            </ul>
-            <p>&nbsp;</p>
-          </td>
-        </tr>
-        <tr>
-          <th><strong>京阪　出町柳駅から</strong></th>
-          <th>地下鉄　北大路駅・松ヶ崎駅から</th>
-        </tr>
-        <tr>
-          <td>
-            <ul>
-              <li><strong>京阪　出町柳駅前バス停より</strong><br />
-                （京都バス）32・34・35・37 → 約５～７分 → 高野橋東詰下車 → 西へ徒歩３分北</li>
-            </ul>
-            <p>※市バスは下鴨本通りを北行するため不適です。</p>
-          </td>
-          <td>
-            <ul>
-              <li><strong>地下鉄　北大路駅からお越しの場合</strong><br />
-                （市バス）北大路バスターミナル「赤のりば」204・206・北８系統 → 約10分 → 「下鴨高木町」バス停下車 </li>
-              <li><strong>地下鉄　松ヶ崎駅からお越しの場合</strong><br />
-                南へ徒歩10分 → 高木町交差点を左（東）へ徒歩30秒 → 左（北）側</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <h4>広域・詳細マップ</h4>
-    <ul class="map">
-      <li>
-        <h5>広域マップ</h5>
-        <p><a href="http://localhost:8888/hokuto-bs/wp-content/uploads/2012/07/map-l.png"><img src="http://localhost:8888/hokuto-bs/wp-content/uploads/2012/07/map-l-320x478.png" alt="広域マップ" title="広域マップ" class="alignnone size-medium wp-image-263" /></a></p>
-      </li>
-      <li>
-        <h5>詳細マップ</h5>
-        <p><a href="http://localhost:8888/hokuto-bs/wp-content/uploads/2012/07/map-zoom.png"><img src="http://localhost:8888/hokuto-bs/wp-content/uploads/2012/07/map-zoom-320x323.png" alt="詳細マップ" title="詳細マップ" class="alignnone size-medium wp-image-264" /></a></p>
-        <p>地図クリックで拡大表示されます。</p>
-        <p class="mapPrint"><a onclick="javascript:window.open('/print/map.html','map','width=700,height=800,scrollbars=yes');return false;" href="/print/map.html">地図の印刷はこちら</a></p>
-      </li>
-    </ul>
+  <div class="main__inner access">
+    <section>
+      <h3 class="main__header3">交通アクセス</h3>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.5050011034928!2d135.7745733764252!3d35.04411137279974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010838e1d4d157%3A0xc4e2aab5a1228d9b!2z44CSNjA2LTA4NjQg5Lqs6YO95bqc5Lqs6YO95biC5bem5Lqs5Yy65LiL6bSo6auY5pyo55S677yT77yY4oiS77ySIOWMl-aWl-ODl-ODquODs-ODiOekvg!5e0!3m2!1sja!2sjp!4v1730106345647!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <ul class="access-map">
+        <li class="access-map__route">
+          <div class="access-map__from-station">JR・近鉄&emsp;京都駅から</div>
+          <div class="access-map__via-line">地下鉄烏丸線経由</div>
+          <dl class="access-map__contents">
+            <dt>北大路駅で下車される場合</dt>
+            <dd>（地下鉄烏丸線）国際会議場行き&nbsp;→&nbsp;約14分&nbsp;→&nbsp;北大路駅駅下車&nbsp;→&nbsp;（市バス）北大路バスターミナル「赤のりば」204・206・北８系統&nbsp;→&nbsp;約10分&nbsp;→&nbsp;「下鴨高木町」バス停下車</dd>
+          </dl>
+          <dl class="access-map__contents">
+            <dt>松ヶ崎駅で下車される場合</dt>
+            <dd>（地下鉄烏丸線）国際会議場行き&nbsp;→&nbsp;約14分&nbsp;→&nbsp;松ヶ崎駅下車&nbsp;→&nbsp;南へ徒歩10分&nbsp;→&nbsp;高木町交差点を左（東）へ徒歩30秒<br />→ 左（北）側</dd>
+          </dl>
+        </li>
+        <li class="access-map__route">
+          <div class="access-map__from-station">阪急&emsp;四条烏丸駅から</div>
+          <div class="access-map__via-line">地下鉄烏丸線経由</div>
+          <dl class="access-map__contents">
+            <dt>北大路駅で下車される場合</dt>
+            </dt>
+            <dd>（地下鉄烏丸線）国際会議場行き&nbsp;→&nbsp;約11分&nbsp;→&nbsp;北大路駅駅下車&nbsp;→&nbsp;（市バス）北大路バスターミナル「赤のりば」204・206・北８系統&nbsp;→&nbsp;約10分&nbsp;→&nbsp;「下鴨高木町」バス停下車</dd>
+            </dd>
+          </dl>
+          <dl class="access-map__contents">
+            <dt>松ヶ崎駅で下車される場合</dt>
+            <dd>（地下鉄烏丸線）国際会議場行き&nbsp;→&nbsp;約11分&nbsp;→&nbsp;松ヶ崎駅下車&nbsp;→&nbsp;南へ徒歩10分&nbsp;→&nbsp;高木町交差点を左（東）へ徒歩30秒<br />→ 左（北）側</dd>
+          </dl>
+        </li>
+        <li class="access-map__route">
+          <div class="access-map__from-station">京阪&emsp;出町柳駅から</div>
+          <div class="access-map__via-line"></div>
+          <dl class="access-map__contents">
+            <dt class="margin-top-expand">京阪&emsp;出町柳駅前バス停より</dt>
+            <dd>（京都バス）32・34・35・37&nbsp;→&nbsp;約５～７分&nbsp;→&nbsp;高野橋東詰下車&nbsp;→&nbsp;西へ徒歩３分北<br />※市バスは下鴨本通りを北行するため不適です。</dd>
+          </dl>
+        </li>
+        <li class="access-map__route">
+          <div class="access-map__from-station">地下鉄&emsp;北大路駅・松ヶ崎駅から</div>
+          <div class="access-map__via-line"></div>
+          <dl class="access-map__contents">
+            <dt class="margin-top-expand">地下鉄&emsp;北大路駅からお越しの場合</dt>
+            <dd>（市バス）北大路バスターミナル「赤のりば」204・206・北８系統&nbsp;→&nbsp;約10分&nbsp;→&nbsp;「下鴨高木町」バス停下車</dd>
+          </dl>
+          <dl class="access-map__contents">
+            <dt>地下鉄&emsp;松ヶ崎駅からお越しの場合</dt>
+            <dd>南へ徒歩10分&nbsp;→&nbsp;高木町交差点を左（東）へ徒歩30秒&nbsp;→&nbsp;左（北）側</dd>
+          </dl>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h3 class="main__header3">広域・詳細マップ</h3>
+      <ul>
+        <li>
+          <a href="<?php echo get_template_directory_uri(); ?>/images/access/map-l.png" target="_blank">
+            <figure class="image-wrapper">
+              <figcaption>広域マップ</figcaption>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/access/map-l-320x478.png" alt="広域マップ" />
+            </figure>
+          </a>
+          <a href="<?php echo get_template_directory_uri(); ?>/images/access/map-zoom.png" target="_blank">
+            <figure class="image-wrapper">
+              <figcaption>詳細マップ</figcaption>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/access/map-zoom-320x323.png" alt="詳細マップ" />
+            </figure>
+          </a>
+        </li>
+        <div class="note">※地図クリックで別ページが開きます。拡大対応。</div>
+        <a class="arrow-link margin-top-1em" href="<?php echo get_template_directory_uri(); ?>/images/print-map.pdf" target="_blank">
+          地図のダウンロードと印刷
+          <span class="arrow-link__mark"></span>
+        </a>
+      </ul>
+    </section>
   </div>
 </div>
 

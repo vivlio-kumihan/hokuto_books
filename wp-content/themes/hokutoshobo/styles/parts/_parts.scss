@@ -1,41 +1,43 @@
 @use "../globals" as *;
 @use '../parts/common' as *;
 
-.question-bg {
-  display: inline-block;
-  position: relative;
-  margin-bottom: 1.5em;
-  padding: 10px 10px;
-  line-height: 1.3;
-  text-align: left;
-  background-color: #FFF;
-  border: $cTheme solid 2px;
-  &::before {
-    display: block;
-    position: absolute;
-    bottom: -20px;
-    left: 4em;
-    transform: translateX(-24%);
-    margin-left: -10px;
-    content: '';
-    border-width: 25px 0px 0px 25px;
-    border-style: solid;
-    border-color: #FFF transparent;
-    z-index: 1;
+.faq {
+  &__question-bg {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1.5em;
+    padding: 10px 10px;
+    line-height: 1.3;
+    text-align: left;
+    background-color: #fff;
+    border: $cTheme solid 2px;
+    &::before {
+      display: block;
+      position: absolute;
+      bottom: -20px;
+      left: 4em;
+      transform: translateX(-24%);
+      margin-left: -10px;
+      content: '';
+      border-width: 25px 0px 0px 25px;
+      border-style: solid;
+      border-color: #FFF transparent;
+      z-index: 1;
+    }
+    &::after {
+      display: block;
+      position: absolute;
+      bottom: -25px;
+      left: 4em;
+      margin-left: -14px;
+      content: '';
+      border-width: 25px 0px 0px 25px;
+      border-style: solid;
+      border-color: $cTheme transparent;
+      z-index: 0;
+    }
   }
-  &::after {
-    display: block;
-    position: absolute;
-    bottom: -25px;
-    left: 4em;
-    margin-left: -14px;
-    content: '';
-    border-width: 25px 0px 0px 25px;
-    border-style: solid;
-    border-color: $cTheme transparent;
-    z-index: 0;
-  }
-  &__contents {
+  &__question {
     position: relative;
     padding-left: 1.75em;
     font-feature-settings: "palt" 1;
@@ -48,6 +50,69 @@
       font-family: "Roboto", sans-serif;
       font-size: 1.5em;
       color: $cOrangeDk;
+    }
+  }
+  &__answer {
+    position: relative;
+    margin-bottom: 2em;
+    padding: 1em;
+    background-color: rgba($color: $cOrangeLt, $alpha: .4);
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      border-width: 2px 0 0 2px;
+      border-style: solid;
+      border-color: $cTheme $cTheme;
+      width: 50px;
+      height: 50px;
+    }
+    &::after {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      content: "";
+      border-width: 0 2px 2px 0;
+      border-style: solid;
+      border-color: $cTheme $cTheme;
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &__books {
+    display: flex;
+    gap: 1em;
+    & > li {
+      flex-basis: 0;
+      flex-grow: 1;
+      & > .image-wrapper {
+        margin-bottom: unset;
+      }
+      &:last-of-type {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+    }
+  }
+  & .note {
+    text-align: center;
+  }
+  &__menu {
+    display: flex;
+    gap: 3px;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    padding-top: 1em;
+    font-family: $fontGothic;
+    font-size: .8em;
+    font-weight: 900;
+    & > li {
+      padding: 1em;
+      text-align: center;
+      color: #fff;
+      background-color: $cTheme;
     }
   }
 }
