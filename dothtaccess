@@ -1,0 +1,22 @@
+# BEGIN WordPress
+RewriteEngine On
+RewriteBase /hokuto-bs/
+
+# これで book と news の wp-admin へのアクセスを許可
+RewriteCond %{REQUEST_URI} ^/hokuto-bs/(book|news)/wp-admin/ [NC]
+RewriteRule ^ - [L]
+
+# リクエストされたファイルが
+# 「存在するファイル」または「存在するディレクトリ」
+# である場合に、次のルールに進むための条件。
+# これにより、実在するファイルやディレクトリには、
+# リライトを適用しないという意図があることが多い。
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+# ^: すべてのリクエストに対して適用。
+# -: 「書き換えを行わない」
+# [L]: 該当するURLのリライト処理はここで終了。
+RewriteRule ^ - [L]
+RewriteRule ^(.*\.php)$ /hokuto-bs/$1 [L]
+RewriteRule . index.php [L]
+# END WordPress
