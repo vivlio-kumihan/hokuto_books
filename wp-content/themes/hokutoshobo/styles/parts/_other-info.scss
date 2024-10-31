@@ -1,0 +1,24 @@
+@use '../globals/' as *;
+@use '../parts/common' as *;
+
+.other-info {
+    width: 90%;
+    max-width: $contentMaxWidth;
+    margin: 0 auto;
+  &__banners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5em;
+    & > li {
+      flex-basis: calc((100% - 0.5em) / 2);
+      & .image-wrapper {
+        margin-bottom: unset;
+      }
+    }
+  }
+  &__facebook {
+    width: 100%;
+  }
+}

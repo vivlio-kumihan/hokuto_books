@@ -9,22 +9,36 @@
   <p>No posts found.</p>
 <?php endif; ?>
 
-<div class="other-info__banners">
-  <ul>
-    <li><a href="<?php echo esc_url(home_url('/safety/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/bt-safety.png" alt="安心・安全の証" /></a></li>
-    <li><a href="<?php echo esc_url(home_url('/contact/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/bt-contact.png" alt="お問い合わせ・資料請求はこちら" /></a></li>
-    <li><a href="https://www.adobe.com/jp/information/creativecloud/printshop.html" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/adobe_printshop_banner.png" alt="Adobe Creative Cloud出力対応店" /></a></li>
-  </ul>
-  <ul>
-    <li><a href="http://www.hokuto-p.co.jp" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/bt-hokuto.png" alt="株式会社北斗プリント社のサイト" width="230" height="80" /></a></li>
-    <li><a href="<?php echo esc_url(home_url('/asks/')); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/bt-asks.png" alt="株式会社北斗プリント社1F　あすくす" width="230" height="80" /></a></li>
-    <li><a href=" http://www.san-en.org/link/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/bnr/sanen.png" alt="起業家・経営者・若者の学びと未来の場。三縁の会" width="230" height="80" /></a></li>
-    <li>
-      <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fhokutoshobo&amp;width=260&amp;height=590&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=true&amp;show_border=false" 
-              scrolling="no" 
-              frameborder="0" 
-              style="border:none; overflow:hidden; width:260px; height:590px;" 
-              allowtransparency="true"></iframe>
-    </li>
-  </ul>
+<ul class="other-info__banners">
+  <li>
+    <a href="<?php echo esc_url(home_url('/safety/')); ?>">
+      <div class="image-wrapper">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/bt-safety.png" alt="安心・安全の証" />
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="<?php echo esc_url(home_url('/contact/')); ?>">
+      <div class="image-wrapper">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/bt-contact.png" alt="お問い合わせ・資料請求はこちら" />
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.adobe.com/jp/information/creativecloud/printshop.html" target="_blank">
+      <div class="image-wrapper">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/adobe_printshop_banner.png" alt="Adobe Creative Cloud出力対応店" />
+      </div>
+    </a>
+  </li>
+</ul>
+<div class="fb-page"
+  data-href="https://www.facebook.com/hokutoshobo"
+  data-tabs="timeline"
+  data-width="260"
+  data-height="590"
+  data-small-header="false"
+  data-adapt-container-width="true"
+  data-hide-cover="false"
+  data-show-facepile="true">
 </div>

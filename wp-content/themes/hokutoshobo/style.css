@@ -570,6 +570,14 @@ a {
 .main__list.for-only-links-with-image > li:not(:first-of-type), .main__order-list.for-only-links-with-image > li:not(:first-of-type) {
   margin-top: 0;
 }
+.main__main-copy {
+  display: none;
+}
+@media (min-width: 960px) {
+  .main__main-copy {
+    display: block;
+  }
+}
 .main__order-list {
   padding-left: 1em;
   list-style: decimal;
@@ -597,6 +605,26 @@ a {
   text-align: justify;
   line-height: 1.5;
   color: #333;
+}
+.main .self-publish-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.main .image-wrapper {
+  margin-bottom: unset;
+}
+.main .banners {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+.main .banners__list {
+  flex-basis: calc((100% - 0.5em) / 2);
+}
+
+.latest-books__wrapper {
+  display: none;
 }
 
 .staff {
@@ -1486,4 +1514,26 @@ a {
   text-align: center;
   color: #fff;
   background-color: #023163;
+}
+
+.other-info {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.other-info__banners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+.other-info__banners > li {
+  flex-basis: calc((100% - 0.5em) / 2);
+}
+.other-info__banners > li .image-wrapper {
+  margin-bottom: unset;
+}
+.other-info__facebook {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

@@ -11,7 +11,7 @@
       </tr>
       <tr>
         <th>代表取締役</th>
-        <td>西川　大祐</td>
+        <td>西川&emsp;大祐</td>
       </tr>
       <tr>
         <th>所在地</th>

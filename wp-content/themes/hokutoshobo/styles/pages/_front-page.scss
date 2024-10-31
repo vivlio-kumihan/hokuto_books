@@ -131,6 +131,12 @@
       }
     }
   }
+  &__main-copy {
+    display: none;
+    @include mq(lg) {
+      display: block;
+    }
+  }
   &__order-list {
     padding-left: 1em;
     list-style: decimal;
@@ -159,8 +165,29 @@
       color: #333;
     }
   }
+  & .self-publish-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  & .image-wrapper {
+    margin-bottom: unset;
+  }
+  & .banners {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
+    &__list {
+      flex-basis: calc((100% - .5em) / 2);
+    }
+  }
 }
 
+.latest-books {
+  &__wrapper {
+    display: none;
+  }
+}
 // #container {
 //   position: relative;
 //   background-color: $cWhite;
