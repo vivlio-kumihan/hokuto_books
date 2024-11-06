@@ -24,7 +24,7 @@
       </a>
     </section>
     <section>
-      <h3 class="main__header3">明日から変わる&emsp;我が社の経営</h3>
+      <h3 class="main__header3">明日から変わる&ensp;我が社の経営</h3>
       <h4 class="main__header4">髙野 壽則&ensp;<span class="font-sm">様</span></h4>
       <div class="flex-wrapper  margin-top-1dot5em">
         <div class="image-wrapper">
@@ -61,7 +61,7 @@
       </a>
     </section>
     <section>
-      <h3 class="main__header3">「足踏みしても&emsp;うしろへ引くな！！」を出版して</h3>
+      <h3 class="main__header3">「足踏みしても&ensp;うしろへ引くな！！」を出版して</h3>
       <h4 class="main__header4">オオミ&emsp;チカコ&ensp;<span class="font-sm">様</span></h4>
       <div class="flex-wrapper  margin-top-1dot5em">
         <div class="image-wrapper">
@@ -73,7 +73,7 @@
       <p>この本を作るにあたり、私の自己満足につきあい、家計からお金を出すことを承諾してくれた主人と、<br /> 完成までとても丁寧にお付き合いくださいました北斗書房の相生さんに感謝いたします。</p>
     </section>
     <section>
-      <h3 class="main__header3">「国学者&emsp;伴林光平の書」を自費出版して</h3>
+      <h3 class="main__header3">「国学者&ensp;伴林光平の書」を自費出版して</h3>
       <h4 class="main__header4">鈴木&emsp;純孝&ensp;<span class="font-sm">様</span></h4>
       <div class="flex-wrapper  margin-top-1dot5em">
         <div class="image-wrapper">
@@ -97,7 +97,7 @@
       </a>
     </section>
     <section>
-      <h3 class="main__header3">「フランソア喫茶室―京都に残る豪華客船公室の面影―」<br /> を出版して</h3>
+      <h3 class="main__header3">「フランソア喫茶室―京都に残る豪華客船公室の面影―」を出版して</h3>
       <h4 class="main__header4">佐藤&emsp;裕一&ensp;<span class="font-sm">様</span></h4>
       <div class="flex-wrapper  margin-top-1dot5em">
         <div class="image-wrapper">
@@ -141,6 +141,20 @@
       <p>心から感謝申し上げます。</p>
     </section>
   </div>
+
+  <aside class="other-info inside-front-page">
+    <?php
+    $args = array(
+      'post_type' => 'post',
+      // 最新の『n』件の投稿を取得
+      'posts_per_page' => 5,
+    );
+    $latest_posts = new WP_Query($args);
+
+    // データをテンプレートファイルに渡して表示
+    load_template(get_template_directory() . '/components/other-info.php', false, array('latest_posts' => $latest_posts));
+    ?>
+  </aside>
 </div>
 
 <?php get_footer(); ?>

@@ -84,6 +84,20 @@
       </ul>
     </section>
   </div>
+
+  <aside class="other-info inside-front-page">
+    <?php
+    $args = array(
+      'post_type' => 'post',
+      // 最新の『n』件の投稿を取得
+      'posts_per_page' => 5,
+    );
+    $latest_posts = new WP_Query($args);
+
+    // データをテンプレートファイルに渡して表示
+    load_template(get_template_directory() . '/components/other-info.php', false, array('latest_posts' => $latest_posts));
+    ?>
+  </aside>
 </div>
 
 <?php get_footer(); ?>

@@ -13,9 +13,6 @@ body {
   font-family: "Noto Serif JP", serif;
 }
 
-#global-container {
-}
-
 #container {
   position: relative;
   background-color: #fff;
@@ -287,7 +284,7 @@ a {
 }
 
 .image-wrapper {
-  margin-bottom: 1.5em;
+  margin-bottom: .8em;
   & > img {
     width: 100%;
     height: 100%;
@@ -436,6 +433,45 @@ a {
     justify-content: unset;
   }
 }
+
+.pre-mark {
+  &__orange-arrow {
+    padding-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-family: $fontGothic;
+    font-size: 13px;
+    @include mq(lg) {
+      justify-content: flex-start;
+    }
+    & > li {
+      position: relative;
+      &::before {
+        position: absolute;
+        @include bg($image: "./images/graph_triangle-within-circle.svg");
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        left: -18px;
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+  &__font-lg > a {
+    font-size: 16px;
+  }
+}
+
+.toggle-sm-hide-lg-appear {
+  display: none;
+  @include mq(lg) {
+    display: block;
+  }
+}
+
 // .modal {
 //   @extend .content-width;
 //   &__inner {

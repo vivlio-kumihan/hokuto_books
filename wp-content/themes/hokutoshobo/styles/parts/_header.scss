@@ -6,6 +6,7 @@
   @include mq(lg) {
     @include bg($image: "");
     display: block;
+    position: relative;
     margin: 0 auto;
     max-width: 1080px;
     width: 90%;

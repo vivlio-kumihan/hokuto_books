@@ -1,3 +1,8 @@
+# WPダッシュボードの接続設定
+* URL: http://www.hokutoshobo.jp/wp-admin/
+* ID: jhshktsb2016
+* PW: TKsL%yDj%7i977TGZO5n&OwI
+
 # fontawsome
 
 ```scss

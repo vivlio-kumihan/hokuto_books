@@ -10,8 +10,8 @@
                     <div class="logo-space__name"><span>北</span><span>斗</span><span>書</span><span>房</span></div>
                   </a>
                 </div>
-                <ul>
-                  <li><a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ</a></li>
+                <ul class="pre-mark__orange-arrow">
+                  <li class="pre-mark__font-lg"><a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ</a></li>
                   <li><a href="<?php echo esc_url(home_url('/privacy/index.html')); ?>" target="_blank">個人情報保護方針</a></li>
                 </ul>
               </div>
@@ -175,4 +175,5 @@
 
     <?php wp_footer(); ?>
     </body>
+
     </html>

@@ -337,7 +337,7 @@ __レイアウトするため台紙となるHTML（php）へphpを挿し込む__
 __front-page.php__
 
 ```php
-<div class="wrapper">
+<div class="main__contents-wrapper">
   <?php get_sidebar("left"); ?>
   ...
   ...
