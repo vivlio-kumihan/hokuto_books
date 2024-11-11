@@ -98,6 +98,10 @@ ul {
   }
 }
 
+li {
+  list-style-type: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -203,6 +207,10 @@ a {
   @include mq(lg) {
     font-size: 30px;
   }
+}
+
+.letter-space-dot25em {
+  letter-spacing: .25em
 }
 
 .global-menu {

@@ -9,8 +9,17 @@ function theme_slug_widgets_init()
 }
 add_action('widgets_init', 'theme_slug_widgets_init');
 
-// 投稿のサイドバーにアイキャッチ画像を付与。
-add_theme_support('post-thumbnails');
+// 投稿編集画面でアイキャッチ画像のメタボックスを有効にする
+add_action('after_setup_theme', function () {
+  add_theme_support('post-thumbnails');
+});
+
+function enable_post_thumbnail_for_post() {
+  add_post_type_support('post', 'thumbnail');
+}
+add_action('init', 'enable_post_thumbnail_for_post');
+
+
 
 // JavaScriptを読み込む
 function my_scripts()
@@ -61,3 +70,22 @@ add_action('wp_enqueue_scripts', 'my_enqueue_styles');
 // }
 
 // add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
+
+// post_has_archive()関数の定義
+function post_has_archive($args, $post_type)
+{
+  if ('post' == $post_type) {
+    $args['rewrite'] = true;
+    // 任意のスラッグ名を登録←アーカイブページが有効になる。
+    $args['has_archive'] = 'book';
+  }
+  return $args;
+}
+add_filter('register_post_type_args', 'post_has_archive', 10, 2);
+
+// 書籍タイトルをcontact form 7に送る。
+function my_wpcf7_dynamic_text($text) {
+    $text = isset($_GET[$text]) ? sanitize_text_field($_GET[$text]) : '';
+    return $text;
+}
+add_filter('wpcf7_dynamic_text', 'my_wpcf7_dynamic_text');

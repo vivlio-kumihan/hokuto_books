@@ -2203,19 +2203,33 @@ jQuery(this).addClass("closed");
 			'<dl id="dl_' . $id . '" class="dl_checkbox">' .
 			'<dt>'.$out_key.'</dt>' .
 			'<dd>';
-		
-		if ( !empty($label) && !$options['custom_field_template_replace_keys_by_labels'] && $cftnum == 0 )
-			$out_value .= '<p class="label">' . wp_kses_post( stripcslashes($label) ) . '</p>';
-		$out_value .=	'<label for="' . $id . '" class="selectit"><input id="' . $id . '" name="' . $name . '[' . $sid . '][' . $cftnum . ']" value="' . esc_attr(stripcslashes(trim($value))) . '"' . $checked . ' type="checkbox"' . $class . $style . $event_output . ' /> ';
-		if ( $valueLabel )
-			$out_value .= stripcslashes(trim($valueLabel));
-		else
-			$out_value .= stripcslashes(trim($value));
-		$out_value .= '</label> ';
 
-		$out .= $out_value.'</dd></dl>'."\n";
+    if (!empty($label) && (!isset($options['custom_field_template_replace_keys_by_labels']) || !$options['custom_field_template_replace_keys_by_labels']) && $cftnum == 0)
+      $out_value .= '<p class="label">' . wp_kses_post(stripcslashes($label)) . '</p>';
+    $out_value .= '<label for="' . $id . '" class="selectit"><input id="' . $id . '" name="' . $name . '[' . $sid . '][' . $cftnum . ']" value="' . esc_attr(stripcslashes(trim($value))) . '"' . $checked . ' type="checkbox"' . $class . $style . $event_output . ' /> ';
+
+    if ($valueLabel)
+      $out_value .= stripcslashes(trim($valueLabel));
+    else
+      $out_value .= stripcslashes(trim($value));
+    $out_value .= '</label> ';
+
+    $out .= $out_value . '</dd></dl>' . "\n";
+
+    return array($out, $out_key, $out_value);      
+		// if ( !empty($label) && !$options['custom_field_template_replace_keys_by_labels'] && $cftnum == 0 )
+		// 	$out_value .= '<p class="label">' . wp_kses_post( stripcslashes($label) ) . '</p>';
+		// $out_value .=	'<label for="' . $id . '" class="selectit"><input id="' . $id . '" name="' . $name . '[' . $sid . '][' . $cftnum . ']" value="' . esc_attr(stripcslashes(trim($value))) . '"' . $checked . ' type="checkbox"' . $class . $style . $event_output . ' /> ';
+
+		// if ( $valueLabel )
+		// 	$out_value .= stripcslashes(trim($valueLabel));
+		// else
+		// 	$out_value .= stripcslashes(trim($value));
+		// $out_value .= '</label> ';
+
+		// $out .= $out_value.'</dd></dl>'."\n";
 		
-		return array($out, $out_key, $out_value);
+		// return array($out, $out_key, $out_value);
 	}
 	
 	function make_radio( $name, $sid, $data, $post_id ) {
