@@ -1,0 +1,565 @@
+@use "../globals" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 100%; // => 16px
+  // ページのheaderにリンクを貼って、CSSでフォントファミリーを指定する。
+  // フォント・スタックで記述すること。
+  // 英語の書体なら『Kameron』にマッチ、日本語の書体は、2番目の『Noto Sans JP』にマッチする。
+  // 順に探していく仕様。
+  font-family: "Noto Serif JP", serif;
+}
+
+#container {
+  position: relative;
+  background-color: #fff;
+  transition: .5s;
+  z-index: 2;
+  // pointer-events: none;
+}
+
+// !!!!! WEBフォントの指定で2年前から変わったところがあるよう。!!!!!
+// 講義のような項目はなかった。
+// google fontsに『フォント名: CSS class for a variable style』という項目あり、
+// 以下のように設定してもいちいちクラスをつけるのは面倒でできない。
+// 何か意味があると思うのでここに記しておく。
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 900
+
+.noto-serif-jp {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  &__md {
+    font-weight: 600;
+  }
+}
+
+.noto-sans-jp {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  &__md {
+    font-weight: 500;
+  }
+}
+
+.kaisei-harunoumi-regular {
+  font-family: "Kaisei HarunoUmi", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.zen-old-mincho-regular {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.yuji-boku-regular {
+  font-family: "Yuji Boku", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.zen-old-mincho-regular {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+// image
+img {
+  // reset.cssで設定されているからトル
+  // max-width: 100%;
+  vertical-align: bottom;
+}
+
+ul {
+  padding: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// margin, padding
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+
+.mb-md {
+  margin-bottom: 30px !important;
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+
+  @include mq(lg) {
+    margin-bottom: 150px !important;
+  }
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+  @include mq(lg) {
+    padding-bottom: 150px !important;
+  }
+}
+
+.margin-top-1dot5em {
+  margin-top: 1.5em;
+}
+.margin-top-1em {
+  margin-top: 1em;
+}
+.margin-top-dot75em {
+  margin-top: .75em;
+}
+.margin-top-dot5em {
+  margin-top: .5em;
+}
+
+.margin-bottom-1dot5em {
+  margin-bottom: 1.5em;
+}
+.margin-bottom-1em {
+  margin-bottom: 1em;
+}
+.margin-bottom-dot75em {
+  margin-bottom: .75em;
+}
+.margin-bottom-dot5em {
+  margin-bottom: .5em;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  @include mq(lg) {
+    flex-direction: row;
+  }
+}
+
+#main-content {
+  position: relative;
+  z-index: 0;
+}
+
+// font
+.font-sm {
+  font-size: 12px;
+  @include mq(lg) {
+    font-size: 14px;
+  }
+}
+.font-md {
+  font-size: 18px;
+  @include mq(lg) {
+    font-size: 20px;
+  }
+}
+.font-lr {
+  font-size: 18px;
+  @include mq(lg) {
+    font-size: 24px;
+  }
+}
+.font-lg {
+  font-size: 21px;
+  @include mq(lg) {
+    font-size: 30px;
+  }
+}
+
+.letter-space-dot25em {
+  letter-spacing: .25em
+}
+
+.global-menu {
+  @extend .content-width;
+  display: none;
+  @include mq(lg) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    & > li {
+      flex-basis: calc(100% / 8);
+      height: 100%;
+      border-right: 1px solid #333;
+      &:first-of-type {
+        border-left: 1px solid #333;
+      }
+      & > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-weight: 900;
+        text-align: center;
+        color: $cBlackMd;
+        transition: .7s;
+        &:hover {
+          font-weight: 900;
+          color: #fff;
+          background-color: $cThemeMd;
+        }
+      }
+    }
+  }
+}
+
+.search {
+  position: relative;
+  width: 300px;
+  height: 30px;
+  margin-left: auto;
+  font-family: $fontGothic;
+  font-size: 13px;
+  font-weight: 500;
+  border: 2px solid $cTheme;
+  border-radius: 5px;
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 1em;
+  }
+  &__submit-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 0 10px;
+    color: #fff;
+    background-color: $cTheme;
+    border-radius: 0 2px 2px 0;
+  }
+}
+
+.subscript {
+  position: relative;
+  & > span {
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    font-size: 7px;
+    color: #333;
+  }
+}
+
+.image-wrapper {
+  margin-bottom: .8em;
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  & > figcaption {
+    text-align: center;
+    font-family: $fontGothic;
+    font-size: .8rem;
+  }
+}
+
+.mq-sm-apear {
+  display: inline-block;
+  @include mq(lg) {
+    display: none;
+  }
+}
+.mq-lg-apear {
+  display: none;
+  @include mq(lg) {
+    display: inline-block;
+  }
+}
+
+.note {
+  margin-top: .75em;
+  font-family: $fontGothic;
+  font-size: .8rem;
+  line-height: 1.2;
+  color: $cTheme;
+}
+
+.to-page-top {
+  display: flex;
+  justify-content:flex-end;
+  margin-top: 1em;
+  & > a {
+    position: relative;
+    display: inline-block;
+    padding-left: 1em;
+    padding: 6px 10px 6px 20px;
+    font-family: $fontGothic;
+    font-size: .7rem;
+    font-weight: 900;
+    line-height: 1;
+    font-feature-settings: "palt" 1;
+    color: #fff;
+    background-color: $cTheme;
+    border-radius: 5px;
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 8px;
+      content: "\f102";
+      font-size: 1em;
+      font-family: "Font Awesome 6 Free";
+      font-weight: bold;
+    }
+  }
+}
+
+.arrow-link {
+  display: block;
+  position: relative;
+  font-family: $fontGothic;
+  font-size: .8em;
+  font-weight: 900;
+  line-height: 1.4;
+  font-feature-settings: "palt" 1;
+  color: $cTheme;
+  &.put-right {
+    padding-right: 1em;
+    text-align: right;
+  }
+  &__mark {
+    position: relative;
+    display: inline-block;
+    height: 1em;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: -1.25em;
+      content: "\f08e";
+      font-size: 1em;
+      font-family: "Font Awesome 6 Free";
+      font-weight: bold;
+    }
+  }
+}
+
+.attention {
+  padding-right: 1em;
+  text-align: right;
+  & > a {
+    display: inline-block;
+    position: relative;
+    font-family: $fontGothic;
+    font-size: .8em;
+    font-weight: 900;
+    line-height: 1;
+    font-feature-settings: "palt" 1;
+    color: $cTheme;
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-45%);
+      right: -1.25em;
+      content: "\f08e";
+      font-size: 1em;
+      font-family: "Font Awesome 6 Free";
+      font-weight: bold;
+    }
+  }
+  &.before-mark {
+    padding-left: 1.25em;
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-40%);
+      left: 0;
+      content: "\f35a";
+      font-size: 1em;
+      font-family: "Font Awesome 6 Free";
+      font-weight: bold;
+      color: $cOrangeDk;
+    }
+    &::after {
+      content: "";
+    }
+  }
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  & > .image-wrapper {
+    width: 50%;
+    margin-bottom: 1.25em;
+    box-shadow: 2px 2px 5px #333;
+  }
+  &.column {
+    flex-direction: column;
+    justify-content: unset;
+  }
+}
+
+.pre-mark {
+  &__orange-arrow {
+    padding-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-family: $fontGothic;
+    font-size: 13px;
+    @include mq(lg) {
+      justify-content: flex-start;
+    }
+    & > li {
+      position: relative;
+      &::before {
+        position: absolute;
+        @include bg($image: "./images/graph_triangle-within-circle.svg");
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        left: -18px;
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+  &__font-lg > a {
+    font-size: 16px;
+  }
+}
+
+.toggle-sm-hide-lg-appear {
+  display: none;
+  @include mq(lg) {
+    display: block;
+  }
+}
+
+// .modal {
+//   @extend .content-width;
+//   &__inner {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100vh;
+//     padding: 80px 0 40px;
+//     background-color: rgba($color: $cBlackDeep, $alpha: .9);
+//     overflow-y: scroll;
+//     transform: translateX(-100%);
+//     transition: .5s;
+//     opacity: 0;
+//     z-index: 100;
+//     @include mq(md) {
+//       padding: 90px 0 60px;
+//     }
+//     @include mq(lg) {
+//       padding: 100px 0;
+//     }
+//     &.active {
+//       transform: translateX(0);
+//       opacity: 1;
+//     }
+//   }
+//   &__window {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 60px;
+//     flex-wrap: nowrap;    
+//   }
+//   &__image {
+//     flex-shrink: 0;
+//     width: 90%;
+//     aspect-ratio: 4/3;
+//     overflow: hidden;
+//     @include mq(lg) {
+//       width: 900px;
+//     }
+//     &.port {
+//       width: 75%;
+//       aspect-ratio: 3/4;
+//       @include mq(lg) {
+//         width: 650px;
+//       }
+//     }
+//     & img {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+//   }
+//   &__toggle-btn {
+//     position: fixed;
+//     top: 15px;
+//     right: 15px;
+//     margin: 0;
+//     padding: 10px 15px;
+//     color: $cWhite;
+//     background-color: $cTheme;
+//     border-radius: 5px;
+//     transition: .5s;
+//     transform: translateX(400%);
+//     visibility: hidden;
+//     opacity: 0;
+//     z-index: 101;
+//     @include mq(md) {
+//       top: 20px;
+//       right: 20px;
+//     }
+//     @include mq(lg) {
+//       top: 20px;
+//       right: 30px;
+//     }
+//     &.active {
+//       transform: translateX(0);
+//       visibility: visible;
+//       opacity: 1;
+//     }
+//   }
+// }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHRBWT2XTW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-DHRBWT2XTW');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template File</title>
+  <link rel="stylesheet" href="https://unpkg.com/destyle.css@4.0.0/destyle.min.css">
+</head>
+<body>
+  <template id="product-template">
+    <li class="product">
+      <div class="spec-wrapper">
+        <div class="product__image-wrapper">
+          <img class="product__image" />
+        </div>
+        <h2 class="product__name"></h2>
+        <ul class="product__types"></ul>
+        <h3 class="product__price"></h3>
+        <h3 class="product__weight"></h3>
+      </div>
+      <div class="btn-wrapper">
+        <button class="btn more-view">他の写真を見る</button>
+        <button class="btn toggle-btn slide-bg" data-action="ADD_TO_CART">一覧に追加</button>
+      </div>
+    </li>
+  </template>
+</body>
+</html>

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+@use 'styles/parts/common';
+
+@use "styles/pages/front-page";
+@use "styles/pages/feature";
+@use "styles/pages/faq";
+@use "styles/pages/access";
+@use "styles/pages/archive";
+@use "styles/pages/book-order";
+
+@use "styles/parts/header";
+@use "styles/parts/mobile-menu";
+@use "styles/parts/footer";
+@use "styles/parts/parts";
+@use "styles/parts/other-info";

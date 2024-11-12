@@ -1,0 +1,40 @@
+.book-order {
+  &__zip-number {
+    width: 100%;
+
+  }
+  & span {
+    display: block;
+  }
+  &__list {
+    & input[type="checkbox"] {
+      appearance: none; // デフォルトのチェックボックススタイルを無効にする
+      width: 15px;
+      height: 15px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      cursor: pointer;
+
+      /* チェック時のスタイル */
+      &:checked {
+        background-color: #4CAF50;
+        border-color: #4CAF50;
+      }
+
+      /* チェックマークの追加（疑似要素で） */
+      &:checked::after {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 12px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        position: relative;
+        left: 2px;
+        top: -2px;
+      }
+    }
+  }
+}

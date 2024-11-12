@@ -1,0 +1,50 @@
+@use '../globals/' as *;
+@use '../parts/common' as *;
+
+.staff {
+  margin-top: 2em;
+  &__title {
+    padding: .3em 0;
+    font-family: $fontGothic;
+    font-size: 1.3em;
+    line-height: 1;
+    font-weight: 900;
+    text-align: center;
+    font-feature-settings: "palt" 1;
+    color: #fff;
+    background-color: $cOrangeDk;
+  }
+}
+
+.profile {
+  margin-bottom: 1.5em;
+  &__person {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1em;
+    padding: 1em 0;
+    font-family: $fontGothic;
+    font-size: .9em;
+    line-height: 1;
+    font-weight: 500;
+    border-bottom: 1px solid $cOrangeDk;
+  }
+  &__name {
+    font-size: 1.2em;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__img {
+    width: 70%;
+    margin-bottom: unset;
+    margin: 0 auto;
+  }
+  &__other-info {
+    margin-top: unset;
+  }
+}

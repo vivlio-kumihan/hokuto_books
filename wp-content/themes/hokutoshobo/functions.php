@@ -1,95 +1,91 @@
 <?php
-
-//+++++++++++++++++++++++++++++++++
-//カスタムメニュー
-register_sidebar();
-
-
-//+++++++++++++++++++++++++++++++++
-//エディタ・スタイルシート
-add_editor_style();
-
-
-//+++++++++++++++++++++++++++++++++
-//投稿画像のwidthとheight指定無し設定
-
-function remove_hwstring_from_image_tag( $html, $id, $alt, $title, $align, $size ) {
-    list( $img_src, $width, $height ) = image_downsize($id, $size);
-    $hwstring = image_hwstring( $width, $height );
-    $html = str_replace( $hwstring, '', $html );
-    return $html;
+// ウィジェットの登録
+function theme_slug_widgets_init()
+{
+  register_sidebar(array(
+    'name' => 'サイドバー', //ウィジェットの名前を入力
+    'id' => 'sidebar', //ウィジェットに付けるid名を入力
+  ));
 }
-add_filter( 'get_image_tag', 'remove_hwstring_from_image_tag', 10, 6 );
+add_action('widgets_init', 'theme_slug_widgets_init');
 
+// 投稿編集画面でアイキャッチ画像のメタボックスを有効にする
+add_action('after_setup_theme', function () {
+  add_theme_support('post-thumbnails');
+});
 
-//+++++++++++++++++++++++++++++++++
-//固定ページで抜粋を使用できるようにする
-add_post_type_support( 'page', 'excerpt' );
-
-
-//+++++++++++++++++++++++++++++++++
-//文字数制限[...]消して...に
-function new_excerpt_more($more) {
-      return ' ...';
+function enable_post_thumbnail_for_post() {
+  add_post_type_support('post', 'thumbnail');
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_action('init', 'enable_post_thumbnail_for_post');
 
 
-//+++++++++++++++++++++++++++++++++
-//ウィジェットカテゴリーのカウントをaタグ内に表示
 
-add_filter( 'wp_list_categories', 'my_list_categories', 10, 2 );
-function my_list_categories( $output, $args ) {
-  return preg_replace('@</a>(.+?)\s*?<@', '\1</a><', $output );
+// JavaScriptを読み込む
+function my_scripts()
+{
+  // wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
+  wp_enqueue_script('latest-year-js', get_template_directory_uri() . '/scripts/libs/latest-year.js', array(), null, true);
+  wp_enqueue_script('hide-header-js', get_template_directory_uri() . '/scripts/libs/hide-header.js', array(), null, true);
+  wp_enqueue_script('mobile-menu-js', get_template_directory_uri() . '/scripts/libs/mobile-menu.js', array(), null, true);
+  wp_enqueue_script('monitor-line-js', get_template_directory_uri() . '/scripts/libs/monitor-line.js', array(), null, true);
+  wp_enqueue_script('main-js', get_template_directory_uri() . '/scripts/main.js', array(), null, true);
+  wp_enqueue_script('facebook-jssdk', 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0', array(), null, true);
 }
+add_action('wp_enqueue_scripts', 'my_scripts');
 
+// 外部スタイルシートとフォントの読み込み
+function my_enqueue_styles() {
+  // デフォルトのスタイルシート（style.css）
+  wp_enqueue_style('hokutoshobo-style', get_stylesheet_uri());
 
-//+++++++++++++++++++++++++++++++++
-//全ブログ記事一覧を表示できるようにする
+  // リセットCSS
+  wp_enqueue_style('destyle', 'https://unpkg.com/destyle.css@4.0.0/destyle.min.css');
 
-function get_recentposts_from_network( $args = null ) {
- 
-    $defaults = array( 'num' => 50, 'perblog' => 1, 'start' => 0 );
- 
-    $r = wp_parse_args( $args, $defaults );
- 
-    // 全ブログのBLOG_IDを取得
-    global $wpdb;
-    $blogs = $wpdb->get_results( $wpdb->prepare( "SELECT blog_id FROM wp_blogs ORDER BY blog_id" ) );
- 
-    if( is_array( $blogs ) ) { reset( $blogs );
- 
-    // 各ブログの最新記事を指定件数取得する
-    foreach( $blogs as $blog ) {
-    switch_to_blog( $blog->blog_id );
- 
-    $posts = get_posts( "numberposts=" . $r['perblog'] );
- 
-    if( $posts ) {
-        foreach( $posts as $post ) {
-            $recent_posts[] = $post->post_date;
-            $post->blog_id = $blog->blog_id;
-            $post_list[] = $post;
-        } // endforeach
-        unset( $posts );
-    } // endif ( $posts )
-        restore_current_blog();
-    } // endforeach
- 
-    // 投稿日時で並べ替える
-    arsort( $recent_posts );
-    reset( $recent_posts );
-    foreach( (array) $recent_posts as $key => $details ) {
-        $t[$key] = $post_list[$key];
-    } // endforeach
-        unset($recent_posts);
-        $recent_posts = $t;
-    } //endif ( is_array( $blogs ) )
- 
-    if( $recent_posts )
-        return array_slice( $recent_posts, $r['start'], $r['num'], true );
- 
-    return array();
+  // Google Fontsの事前接続とフォントの読み込み
+  wp_enqueue_style('google-fonts-preconnect1', 'https://fonts.googleapis.com', [], null, 'preconnect');
+  wp_enqueue_style('google-fonts-preconnect2', 'https://fonts.gstatic.com', [], null, 'preconnect');
+  wp_enqueue_style('noto-sans', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;500;900&display=swap');
+  wp_enqueue_style('noto-serif', 'https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@400;600;900&display=swap');
+  wp_enqueue_style('roboto', 'https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+  // Font Awesome
+  wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+  // Swiperのスタイルシート
+  wp_enqueue_style('swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css');
 }
+add_action('wp_enqueue_scripts', 'my_enqueue_styles');
 
-?>
+// // CSSを読み込む
+// function my_theme_enqueue_styles()
+// {
+//   // css-resetスタイルシートをテーマのフォルダから読み込む
+//   // wp_enqueue_style('css-reset', get_template_directory_uri() . '/styles/vendors/css-reset.css');
+//   // wp_enqueue_style('css-reset', get_template_directory_uri() . '/styles/vendors/swiper-bundle.min.css');
+//   // 外部のCSSファイルをHTTPSで読み込む例
+//   wp_enqueue_style('reset-css', 'https://unpkg.com/destyle.css@4.0.0/destyle.min.css', array(), null);
+//   // メインスタイルシートを読み込む
+//   wp_enqueue_style('main-stylesheet', get_stylesheet_uri());
+// }
+
+// add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
+
+// post_has_archive()関数の定義
+function post_has_archive($args, $post_type)
+{
+  if ('post' == $post_type) {
+    $args['rewrite'] = true;
+    // 任意のスラッグ名を登録←アーカイブページが有効になる。
+    $args['has_archive'] = 'book';
+  }
+  return $args;
+}
+add_filter('register_post_type_args', 'post_has_archive', 10, 2);
+
+// 書籍タイトルをcontact form 7に送る。
+function my_wpcf7_dynamic_text($text) {
+    $text = isset($_GET[$text]) ? sanitize_text_field($_GET[$text]) : '';
+    return $text;
+}
+add_filter('wpcf7_dynamic_text', 'my_wpcf7_dynamic_text');

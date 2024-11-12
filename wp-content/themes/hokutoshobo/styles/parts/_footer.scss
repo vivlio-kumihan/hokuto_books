@@ -1,0 +1,242 @@
+@use "../globals" as *;
+
+.footer {
+  font-family: $fontGothic;
+  color: #fff;
+  background-color: $cTheme;
+  &__information {
+    position: relative;
+    width: 90%;
+    max-width: $contentMaxWidth;
+    margin: 0 auto;
+  }
+  &__to-page-top {
+    position: absolute;
+    display: grid;
+    place-content: center;
+    top: -25px;
+    right: 0;
+    height: 25px;
+    padding: 0 30px 0 45px;
+    font-size: 12px;
+    color: #ccc;
+    background-color: $cTheme;
+    border-radius: 5px 5px 0 0;
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-35%);
+      left: 30px;
+      content: "\f077";
+      font-size: 10px;
+      font-family: "Font Awesome 6 Free";
+      font-weight: bold;
+      color: #ccc;
+    }
+  }
+  &__information-wrapper {
+    display: flex;
+    flex-direction: column;
+    @include mq(lg) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__links-wrapper {
+    padding: 20px 0 0;
+  }
+  &__links-in-page {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(9, auto);
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: .8rem;
+    font-weight: 200;
+    border-top: 1px dotted #aaa;
+    @include mq(lg) {
+      gap: unset;
+      column-gap: 1.5em;
+      margin-top: 0px;
+      padding-top: 0px;
+      border-top: unset;
+    }
+    & > li {
+      position: relative;
+      padding-left: 10px;
+      @include mq(lg) {
+        padding-right: 1.5em;
+        padding: 5px 1.5em 5px 10px;
+        border-right: 1px solid rgba(#fff, .4);
+      }
+      &::before {
+        position: absolute;
+        top: 0;
+        transform: translateY(50%);
+        left: 0;
+        content: "\f04b";
+        font-size: 7px;
+        font-family: "Font Awesome 6 Free";
+        font-weight: bold;
+        color: #fff;
+        @include mq(lg) {
+          top: 5px;
+        }
+      }
+    }
+    @include mq(lg) {
+      grid-template-rows: repeat(6, auto);
+    }
+  }
+  &__access {
+    padding: 20px 0 30px;
+    .btn-contact {
+      height: 40px;
+      background-color: #fff;
+      border-radius: 5px;
+      & > a {
+        color: $cTheme;
+      }
+    }
+    & .numbers {
+      @include mq(lg) {
+        margin-top: 10px;
+      }
+      & .tel-number {
+        font-size: 32px;
+        width: fit-content;
+        margin: 0 auto 5px;
+        text-align: center;
+        &__num {
+          margin-top: 4px;
+          padding-left: 30px;
+        }
+        &::before {
+          left: 0px;
+          transform: translateY(-15%);
+          font-size: 25px;
+        }
+      }
+      & .fax-number {
+        text-align: center;
+      }
+    }
+    & .address {
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 200;
+      line-height: 1.4;
+      text-align: center;
+      & > .zip-code {
+        position: relative;
+        margin: 0 auto 3px;
+        padding-right: 30px;
+        width: fit-content;
+        line-height: 1;
+        & > span {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 2px 3px;
+          font-size: 10px;
+          font-weight: 900;
+          color: $cTheme;
+          background-color: #fff;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+  &__middle {
+    padding: 1rem;
+    background-color: #fff;
+    @include mq(lg) {
+      padding: 20px 0;
+    }
+  }
+  &__banners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 20px;
+    @include mq(lg) {
+      gap: 20px;
+      & > li {
+        height: 45px;
+        &.subscript {
+          height: 65px;
+        }
+        & img {
+          height: 100%;
+        }
+      }
+    }
+  }
+  &__copy-right {
+    padding: 7px 0;
+    font-size: 10px; 
+    font-weight: 200;
+    text-align: center;
+  }
+}
+
+.logo-space.for-footer {
+  padding-top: 0;
+  color: #fff;
+
+  & .logo-space__name {
+    gap: 15px;
+    margin: 10px 0;
+    font-size: 2em;
+  }
+}
+
+// .footer__links-in-page {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr); // デフォルトで2列
+//   gap: 20px;
+
+//   ul {
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+
+//     li {
+
+//       // 2列の時にN字型に配置
+//       &:nth-child(odd) {
+//         grid-column: 1; // 奇数項目は1列目
+//       }
+
+//       &:nth-child(even) {
+//         grid-column: 2; // 偶数項目は2列目
+//       }
+//     }
+//   }
+
+//   // 1080px以上の画面幅では3列に変更
+//   @media (min-width: 1080px) {
+//     grid-template-columns: repeat(3, 1fr);
+
+//     ul {
+//       li {
+
+//         // 3列の場合のN字型配置
+//         &:nth-child(3n+1) {
+//           grid-column: 1; // 3n+1項目は1列目
+//         }
+
+//         &:nth-child(3n+2) {
+//           grid-column: 2; // 3n+2項目は2列目
+//         }
+
+//         &:nth-child(3n) {
+//           grid-column: 3; // 3n項目は3列目
+//         }
+//       }
+//     }
+//   }
+// }

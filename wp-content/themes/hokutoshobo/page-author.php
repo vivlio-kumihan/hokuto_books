@@ -1,24 +1,22 @@
-<?php
-/*
-Template Name: Page Author
-*/
-?>
+<?php /* Template Name: author */ ?>
+
 <?php get_header(); ?>
 
-<div id="Container">
-  <div id="Main">
-    <div class="conBox">
-      <div class="wrap">
-        <?php if(have_posts()): while(have_posts()): the_post(); ?>
-        <h3>
-          <?php the_title(); ?>
-        </h3>
-        <?php the_content(); ?>
-        <?php endwhile; endif; ?>
-      </div>
+<div id="page-top" class="main">
+  <div class="main__contents-wrapper">
+    <div class="main__inner">
+      <ul class="post-category">
+        hello
+        <?php
+        $categories = get_the_category();
+        if ($categories) {
+          echo '<li><a href="' . esc_url(get_category_link($categories[0]->term_id)) . '">' . $categories[0]->name . '</a></li>';
+        }
+        ?>
+      </ul>
+
     </div>
   </div>
-  <?php get_sidebar(); ?>
 </div>
+
 <?php get_footer(); ?>
-</body></html>

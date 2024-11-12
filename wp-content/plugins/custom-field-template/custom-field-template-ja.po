@@ -429,7 +429,7 @@ msgstr "右カラムの広告を隠す場合"
 
 #: custom-field-template/custom-field-template.php:1549
 msgid "I want to use a wider screen."
-msgstr "もっと広い画面を使いたい・・・。"
+msgstr "もっと広い画面を使いたい…。"
 
 #: custom-field-template/custom-field-template.php:1553
 msgid "In case that you would like to hide the donatione header notice."
