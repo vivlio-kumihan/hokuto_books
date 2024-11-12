@@ -1,0 +1,19 @@
+.category {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 2em;
+  &__list {
+    flex-basis: calc((100% - 1.5em) / 2);
+    & .image-wrapper {
+      box-shadow: 3px 3px 3px #aaa;
+
+    }
+  }
+  &__title {
+    margin-bottom: .5em;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.2;
+  }
+}

@@ -480,6 +480,28 @@ a {
   }
 }
 
+.selected-label.buy {
+  & > a {
+    display: block;
+    padding: 2px 5px;
+    font-family: $fontGothic;
+    font-size: 1em;
+    font-weight: 900;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 2px #333;
+    box-shadow: 3px 3px 3px #aaa;
+    background-color: $cOrangeDk;
+    border-radius: 5px;
+  }
+}
+
+.main__header3 {
+  & > .header-pre {
+    font-size: .8em;
+    color: #666;
+  }
+}
 // .modal {
 //   @extend .content-width;
 //   &__inner {

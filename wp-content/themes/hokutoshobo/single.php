@@ -113,7 +113,7 @@
                       $book_title = post_custom('book_title'); 
                     ?>
                       <div class="selected-label buy">
-                        <a href="<?php echo esc_url(site_url('/book-order/?book_title=' . urlencode($book_title))); ?>" class="order-button">
+                        <a href="<?php echo esc_url(site_url('/book-order/?book_title=' . urlencode($book_title))); ?>">
                           購入
                         </a>
                       </div>

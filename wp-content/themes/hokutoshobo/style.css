@@ -500,6 +500,25 @@ a {
   }
 }
 
+.selected-label.buy > a {
+  display: block;
+  padding: 2px 5px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1em;
+  font-weight: 900;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 2px #333;
+  box-shadow: 3px 3px 3px #aaa;
+  background-color: #E49D5B;
+  border-radius: 5px;
+}
+
+.main__header3 > .header-pre {
+  font-size: 0.8em;
+  color: #666;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -961,6 +980,25 @@ a {
   position: relative;
   left: 2px;
   top: -2px;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 2em;
+}
+.category__list {
+  flex-basis: calc((100% - 1.5em) / 2);
+}
+.category__list .image-wrapper {
+  box-shadow: 3px 3px 3px #aaa;
+}
+.category__title {
+  margin-bottom: 0.5em;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .header {
