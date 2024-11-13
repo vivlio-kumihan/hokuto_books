@@ -1,6 +1,33 @@
 @use "../globals" as *;
 @use '../parts/common' as *;
 
+.main.archive {
+  & .main__header3 {
+    padding-left: .75em;
+  }
+}
+
+.archive {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: .75em;
+    column-gap: 1em;
+    padding: 1em;
+    font-size: .95rem;
+    line-height: 1.2;
+    font-feature-settings: "palt" 1;
+    background-color: $cThemeTh;
+    &.author {
+      grid-template-rows: repeat(38, auto);
+    }
+    & > li {
+      padding: 0 .5em 0.5em;
+      border-bottom: 1px solid #fff;
+    }
+  }
+}
+
 .book-post {
   display: flex;
   justify-content: space-between;
@@ -30,54 +57,64 @@
     line-height: 1.2;
     text-align: center;
   }
-  &__pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .5em;
-    margin-top: 2em;
-    & > a,
-    & > span {
-      display: block;
-      height: fit-content;
-      padding: .15em .5em;
-      color: $cThemeTh;
-      background-color: $cThemeLt;
-      border-radius: 4px;
-      &.current {
-        color: #fff;
-        background-color: $cTheme;
-      }
-    }
-    & > .prev,
-    & > .next {
-      display: grid;
-      place-content: center;
-      position: relative;
-      font-size: .9em;
-      font-weight: 900;
-      color: $cTheme;
-      background-color: unset;
-      &::before,
-      &::after {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-45%);
-        font-size: 1.2em;
-        font-family: "Font Awesome 6 Free";
-        font-weight: bold;
-        color: $cThemeMd;
-      }
-    }
-    & > .prev::before {
-      left: -.8em;
-      content: "\f100";
-    }
-    & > .next::after {
-      right: -.8em;
-      content: "\f101";
-    }
-  }
 }
 
+.book-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5em;
+  margin-top: 2em;
 
+  & a,
+  & span {
+    display: block;
+    height: fit-content;
+    padding: .15em .5em;
+    color: $cThemeTh;
+    background-color: $cThemeLt;
+    border-radius: 4px;
+
+    &.current {
+      color: #fff;
+      background-color: $cTheme;
+    }
+  }
+
+  & .prev,
+  & .next {
+    display: grid;
+    place-content: center;
+    position: relative;
+    font-size: .9em;
+    font-weight: 900;
+    color: $cTheme;
+    background-color: unset;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-45%);
+      font-size: 1.2em;
+      font-family: "Font Awesome 6 Free";
+      font-weight: bold;
+      color: $cThemeMd;
+    }
+  }
+
+  & .prev::before {
+    left: -.8em;
+    content: "\f100";
+  }
+
+  & .next::after {
+    right: -.8em;
+    content: "\f101";
+  }
+
+  & .nav-links {
+    display: flex;
+    gap: .75em;
+  }
+}

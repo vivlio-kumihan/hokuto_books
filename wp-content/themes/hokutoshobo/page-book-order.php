@@ -7,8 +7,13 @@
     <div class="main__inner">
       <div class="book-order">
         <h3 class="main__header3 book-order__title">書籍注文</h3>
-        <div class="book-order__title">
-          <a href="<?php echo get_template_directory_uri(); ?>/images/privacy-policy.pdf" target="_blank">プライバシーポリシーの確認</a>
+        <div class="book-order__confirm-privacy">
+          <a href="<?php echo get_template_directory_uri(); ?>/images/privacy-policy.pdf" target="_blank">
+            <span>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/icon-PDF.png" alt="">
+            </span>
+            プライバシーポリシーの確認
+          </a>
         </div>
         <?php echo do_shortcode('[contact-form-7 id="0e928fe" title="書籍注文"]') ?>
       </div>
@@ -21,7 +26,7 @@
 
 <!-- contact form 7に貼り付けているphp -->
 <!-- 
-\<ul class=" book-order__form">
+<ul class=" book-order__form">
   <li class="book-order__list">
     <div class="book-order__entry">[checkbox* confirm "確認"]</div>
   </li>  
@@ -35,7 +40,7 @@
   </li>
   <li class="book-order__list">
     <div class="book-order__title">郵便番号（例：0000000）</div>
-    <div class="book-order__entry">[number* zip-number class:book-order__zip-number min:1000000 max:9999999 placeholder "0000000"]
+    <div class="book-order__entry">[number* zip-number class:book-order__zip-number min:1000000 max:9999999]
 
     </div>
   </li>
@@ -45,7 +50,7 @@
   </li>
   <li class="book-order__list">
     <div class="book-order__title">お電話番号（携帯可）（例：00-000-000）</div>
-    <div class="book-order__entry">[tel* tel autocomplete:tel placeholder "00-000-0000"]</div>
+    <div class="book-order__entry">[tel* tel autocomplete:tel]</div>
   </li>
   <li class="book-order__list">
     <div class="book-order__title">メールアドレス</div>
@@ -53,16 +58,16 @@
   </li>
   <li class="book-order__list">
     <div class="book-order__title">ご注文書籍名</div>
-    <div class="book-order__entry">[text* book-title]</div>
+    <div class="book-order__entry">[text* book_title default:get readonly]</div>
   </li>
   <li class="book-order__list">
-    <div class="book-order__title">数量</div>
-    <div class="book-order__entry">[number* quantity]部</div>
+    <div class="book-order__title">数量（部）</div>
+    <div class="book-order__entry">[number* quantity]</div>
   </li>
   <li class="book-order__list">
     <div class="book-order__title">その他ご要望</div>
     <div class="book-order__entry">[textarea request]</div>
   </li>
-  <li class="book-order__submit">[submit "送信"]</li>
+  <li class="book-order__submit">[submit "送　信"]</li>
 </ul>
 -->

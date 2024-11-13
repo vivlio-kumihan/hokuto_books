@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div id="page-top" class="main">
+<div id="page-top" class="main archive">
   <div class="main__contents-wrapper">
     <div class="main__inner">
       <h3 class="main__header3 letter-space-dot25em">書籍一覧</h3>
@@ -37,7 +37,7 @@
       </ul>
 
       <!-- ページネーション -->
-      <div class="book-post__pagination">
+      <div class="book-pagination">
         <?php
         echo paginate_links(array(
           'total' => $all_posts->max_num_pages,
@@ -50,6 +50,7 @@
     </div>
 
     <div class="main__inner">
+      <h3 class="main__header3 letter-space-dot25em">分類</h3>
       <?php
       // 親カテゴリーID 159 の子カテゴリーを取得
       $categories = get_categories(array(
@@ -57,7 +58,7 @@
         'hide_empty' => false, // 投稿がないカテゴリーも表示
       ));
 
-      echo '<ul>';
+      echo '<ul class="archive__list">';
       foreach ($categories as $category) {
         // カテゴリーリンクを取得
         $category_link = get_category_link($category->term_id);
@@ -70,6 +71,7 @@
     </div>
 
     <div class="main__inner">
+      <h3 class="main__header3 letter-space-dot25em">執筆者</h3>
       <?php
       $authors = [];
       $args = array(
@@ -117,7 +119,7 @@
       wp_reset_postdata();
 
       // リストに表示
-      echo '<ul>';
+      echo '<ul class="archive__list author">';
       foreach ($authors as $author) {
         // ID 225 の子カテゴリーを取得
         $categories = get_categories(array(

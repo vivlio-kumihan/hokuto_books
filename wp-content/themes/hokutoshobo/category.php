@@ -34,7 +34,10 @@
         echo '</ul>';
 
         // ページネーション（ページ分け）を表示
-        the_posts_pagination();
+        echo '<div class="book-pagination">';
+          the_posts_pagination();
+        echo '</div>';
+
       else :
         echo '<p>このジャンルには投稿がありません。</p>';
       endif;

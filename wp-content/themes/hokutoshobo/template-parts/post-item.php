@@ -23,7 +23,7 @@
   ?>
       <div class="selected-label buy">
         <a href="<?php echo esc_url(site_url('/book-order/?book_title=' . urlencode($book_title))); ?>">
-          購入
+          <span class="selected-label__icon">購入</span>
         </a>
       </div>
     <?php break;
@@ -35,11 +35,9 @@
     case 'amazon':
       $amazon_url = get_post_meta(get_the_ID(), 'book_amazon_url', true);
       if (!empty($amazon_url)) : ?>
-        <div class="selected-label buy-amazon">
+        <div class="selected-label buy amazon">
           <a href="<?php echo esc_url($amazon_url); ?>" target="_blank">
-            <div class="image-wrapper">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/btn/btn-amazon.png" alt="Amazon 詳細ページへ" />
-            </div>
+            <span class="selected-label__icon">Amazon</span>
           </a>
         </div>
       <?php endif;
