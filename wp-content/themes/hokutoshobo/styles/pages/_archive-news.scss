@@ -1,0 +1,10 @@
+@use "../globals" as *;
+@use '../parts/common' as *;
+
+.news {
+  & .book-pagination {
+    & .prev, & .next {
+      display: none;
+    }
+  }
+}

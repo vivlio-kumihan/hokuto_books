@@ -904,9 +904,11 @@ a {
   -moz-column-gap: 1em;
        column-gap: 1em;
   padding: 1em;
-  font-size: 0.95rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.9rem;
   line-height: 1.2;
   font-feature-settings: "palt" 1;
+  color: #01588C;
   background-color: #D7EBEA;
 }
 .archive__list.author {
@@ -1206,6 +1208,65 @@ a {
   font-size: 0.75em;
   color: #fff;
   background-color: #023163;
+}
+
+.news .book-pagination .prev, .news .book-pagination .next {
+  display: none;
+}
+
+#single.single h1 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.15em;
+  font-weight: 900;
+  color: #333;
+}
+#single.single .main__inner:not(:first-of-type) .main__header3 {
+  margin-top: 1.5em;
+}
+#single.single h4 {
+  margin: 1em 0 0.5em;
+  padding: 5px 0 5px 15px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1em;
+  font-weight: 900;
+  line-height: 1;
+  color: #023163;
+  background-color: #D7EBEA;
+  border-radius: 5px;
+  font-feature-settings: "palt" 1;
+}
+#single.single h5 {
+  margin-bottom: 1em;
+  padding: 0.25em;
+  font-size: 1em;
+  font-weight: 900;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #01588C;
+  border-bottom: 2px solid #62AED1;
+}
+#single.single p {
+  margin-top: unset;
+  margin-bottom: 0.75em;
+  font-size: 0.95rem;
+}
+#single.single a {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #01588C;
+  font-feature-settings: "palt" 1;
+}
+#single.single .archive__list a {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+#single.single .page-direction > .book-pagination {
+  margin-top: unset;
+}
+#single.single .page-direction a {
+  font-size: 0.85em;
+  font-weight: 500;
+  color: #fff;
 }
 
 .header {

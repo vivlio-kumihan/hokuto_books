@@ -1,0 +1,67 @@
+@use '../globals/' as *;
+@use '../parts/common' as *;
+
+#single.single {
+  & h1 {
+    font-family: $fontGothic;
+    font-size: 1.15em;
+    font-weight: 900;
+    color: #333;
+  }
+  & .main__inner:not(:first-of-type) {
+    & .main__header3 {
+      margin-top: 1.5em;
+    }
+  }
+  & h4 {
+    margin: 1em 0 .5em;
+    padding: 5px 0 5px 15px;
+    font-family: $fontGothic;
+    font-size: 1em;
+    font-weight: 900;
+    line-height: 1;
+    color: $cTheme;
+    background-color: $cThemeTh;
+    border-radius: 5px;
+    font-feature-settings: "palt" 1;
+  }
+  h5 {
+    margin-bottom: 1em;
+    padding: .25em;
+    font-size: 1em;
+    font-weight: 900;
+    font-family: $fontGothic;
+    color: $cThemeMd;
+    border-bottom: 2px solid $cThemeLt;
+
+  }
+  & p {
+    margin-top: unset;
+    margin-bottom: .75em;
+
+    font-size: .95rem;
+  }
+  & a {
+    font-family: $fontGothic;
+    font-size: .9em;
+    font-weight: 700;
+    color: $cThemeMd;
+    font-feature-settings: "palt" 1;
+  }
+  & .archive__list {
+    & a {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+  }
+  & .page-direction {
+    & > .book-pagination {
+      margin-top: unset;
+    }
+    & a {
+      font-size: .85em;
+      font-weight: 500;
+      color: #fff;
+    }
+  }
+}

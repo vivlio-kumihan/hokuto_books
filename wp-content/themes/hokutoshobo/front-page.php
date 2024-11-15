@@ -38,7 +38,7 @@
         <p>北斗書房はNPO法人自費出版ネットワーク会員です</p>
       </div>
     </div>
-  
+
     <!-- 最新の出版物インデックス -->
     <div class="latest-books">
       <div class="latest-books__wrapper">
@@ -47,26 +47,106 @@
         </a>
         <h3>最新の製作実績</h3>
         <p>北斗書房でおつくりいただいた自費出版作品を紹介します。</p>
-          <!-- 削除した -->
+        <!-- 削除した -->
         <p><a href="<?php echo home_url('/book/'); ?>">書籍一覧はこちら</a></p>
       </div>
     </div>
-  
+
+
+    <?php
+    $post_id = 2637; // 投稿のIDを指定
+    $args = array(
+      'post_type' => 'news', // カスタム投稿タイプ
+      'p' => $post_id,       // 投稿IDで指定
+      'posts_per_page' => 1,
+    );
+
+    $my_query = new WP_Query($args);
+
+    if ($my_query->have_posts()) :
+      while ($my_query->have_posts()) : $my_query->the_post();
+    ?>
+
+      <a href="<?php the_permalink(); ?>">
+        <div class="image-wrapper">
+          <?php the_post_thumbnail(); ?>
+        </div>
+      </a>
+
+    <?php
+      endwhile;
+    endif;
+    wp_reset_postdata(); // クエリ後にデータをリセット
+    ?>
+
+    <?php
+    $post_id = 2350; // 投稿のIDを指定
+    $args = array(
+      'post_type' => 'news', // カスタム投稿タイプ
+      'p' => $post_id,       // 投稿IDで指定
+      'posts_per_page' => 1,
+    );
+
+    $my_query = new WP_Query($args);
+
+    if ($my_query->have_posts()) :
+      while ($my_query->have_posts()) : $my_query->the_post();
+    ?>
+
+        <a href="<?php the_permalink(); ?>">
+          <div class="image-wrapper">
+            <?php the_post_thumbnail(); ?>
+          </div>
+        </a>
+
+    <?php
+      endwhile;
+    endif;
+    wp_reset_postdata(); // クエリ後にデータをリセット
+    ?>
+
+    <?php
+    $post_id = 803; // 投稿のIDを指定
+    $args = array(
+      'post_type' => 'news', // カスタム投稿タイプ
+      'p' => $post_id,       // 投稿IDで指定
+      'posts_per_page' => 1,
+    );
+
+    $my_query = new WP_Query($args);
+
+    if ($my_query->have_posts()) :
+      while ($my_query->have_posts()) : $my_query->the_post();
+    ?>
+
+        <a href="<?php the_permalink(); ?>">
+          <div class="image-wrapper">
+            <?php the_post_thumbnail(); ?>
+          </div>
+        </a>
+
+    <?php
+      endwhile;
+    endif;
+    wp_reset_postdata(); // クエリ後にデータをリセット
+    ?>
+
+
     <!-- 自費出版情報 -->
     <ul class="self-publish-info">
       <li class="self-publish-info__banner consultation">
-        <a href="<?php echo esc_url(home_url('/news/info/2631/')); ?>">
+        <!-- <a href="<?php echo esc_url(home_url('/news/info/2631/')); ?>">
           <div class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/images/baner_top-page02.jpg" alt="自費出版相談会のバナー">
           </div>
-        </a>
+        </a> -->
       </li>
       <li class="self-publish-info__banner news-letter">
-        <a href="<?php echo esc_url(home_url('/news/info/jihisyuppan/2350/')); ?>">
+        <!-- <a href="<?php echo esc_url(home_url('/news/info/jihisyuppan/2350/')); ?>">
           <div class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/images/baner_top-page01.jpg" alt="想いのカタチのバナー">
           </div>
-        </a>
+        </a> -->
       </li>
     </ul>
     <ul class="banners">
@@ -114,7 +194,7 @@
       </li>
     </ul>
   </div>
-  
+
   <aside class="other-info inside-front-page">
     <?php
     $args = array(
@@ -123,7 +203,7 @@
       'posts_per_page' => 5,
     );
     $latest_posts = new WP_Query($args);
-  
+
     // データをテンプレートファイルに渡して表示
     load_template(get_template_directory() . '/components/other-info.php', false, array('latest_posts' => $latest_posts));
     ?>

@@ -19,8 +19,6 @@ function enable_post_thumbnail_for_post() {
 }
 add_action('init', 'enable_post_thumbnail_for_post');
 
-
-
 // JavaScriptを読み込む
 function my_scripts()
 {

@@ -30,7 +30,7 @@
         <?php endwhile; ?>
       </ul>
     <?php else : ?>
-      <p>現在表示できる投稿はありません。</p>
+      <p>taxonomy.php => 現在表示できる投稿はありません。</p>
     <?php endif; ?>
   </div><!-- .content -->
 </main><!-- #main -->

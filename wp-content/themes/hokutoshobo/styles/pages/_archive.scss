@@ -14,9 +14,11 @@
     row-gap: .75em;
     column-gap: 1em;
     padding: 1em;
-    font-size: .95rem;
+    font-family: $fontGothic;
+    font-size: .9rem;
     line-height: 1.2;
     font-feature-settings: "palt" 1;
+    color: $cThemeMd;
     background-color: $cThemeTh;
     &.author {
       grid-template-rows: repeat(38, auto);
