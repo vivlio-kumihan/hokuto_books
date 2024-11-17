@@ -545,6 +545,99 @@ a {
   color: #666;
 }
 
+.pagination,
+.pagination > .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 2em;
+}
+.pagination .page-numbers, .pagination__to-archive, .pagination__prev-btn, .pagination__next-btn,
+.pagination > .nav-links .page-numbers,
+.pagination > .nav-links__to-archive,
+.pagination > .nav-links__prev-btn,
+.pagination > .nav-links__next-btn {
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.15em 0.5em;
+  font-weight: 900;
+  color: #D7EBEA;
+  background-color: #62AED1;
+  border-radius: 4px;
+}
+.pagination .page-numbers.prev, .pagination .page-numbers.next, .pagination__to-archive.prev, .pagination__to-archive.next, .pagination__prev-btn.prev, .pagination__prev-btn.next, .pagination__next-btn.prev, .pagination__next-btn.next,
+.pagination > .nav-links .page-numbers.prev,
+.pagination > .nav-links .page-numbers.next,
+.pagination > .nav-links__to-archive.prev,
+.pagination > .nav-links__to-archive.next,
+.pagination > .nav-links__prev-btn.prev,
+.pagination > .nav-links__prev-btn.next,
+.pagination > .nav-links__next-btn.prev,
+.pagination > .nav-links__next-btn.next {
+  display: grid;
+  place-content: center;
+  position: relative;
+  font-size: 0.9em;
+  font-weight: 900;
+  color: #023163;
+  background-color: unset;
+}
+.pagination .page-numbers.prev::before, .pagination .page-numbers.prev::after, .pagination .page-numbers.next::before, .pagination .page-numbers.next::after, .pagination__to-archive.prev::before, .pagination__to-archive.prev::after, .pagination__to-archive.next::before, .pagination__to-archive.next::after, .pagination__prev-btn.prev::before, .pagination__prev-btn.prev::after, .pagination__prev-btn.next::before, .pagination__prev-btn.next::after, .pagination__next-btn.prev::before, .pagination__next-btn.prev::after, .pagination__next-btn.next::before, .pagination__next-btn.next::after,
+.pagination > .nav-links .page-numbers.prev::before,
+.pagination > .nav-links .page-numbers.prev::after,
+.pagination > .nav-links .page-numbers.next::before,
+.pagination > .nav-links .page-numbers.next::after,
+.pagination > .nav-links__to-archive.prev::before,
+.pagination > .nav-links__to-archive.prev::after,
+.pagination > .nav-links__to-archive.next::before,
+.pagination > .nav-links__to-archive.next::after,
+.pagination > .nav-links__prev-btn.prev::before,
+.pagination > .nav-links__prev-btn.prev::after,
+.pagination > .nav-links__prev-btn.next::before,
+.pagination > .nav-links__prev-btn.next::after,
+.pagination > .nav-links__next-btn.prev::before,
+.pagination > .nav-links__next-btn.prev::after,
+.pagination > .nav-links__next-btn.next::before,
+.pagination > .nav-links__next-btn.next::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-45%);
+  font-size: 1.2em;
+  font-family: "Font Awesome 6 Free";
+  font-weight: bold;
+  color: #01588C;
+}
+.pagination .page-numbers.prev::before, .pagination__to-archive.prev::before, .pagination__prev-btn.prev::before, .pagination__next-btn.prev::before,
+.pagination > .nav-links .page-numbers.prev::before,
+.pagination > .nav-links__to-archive.prev::before,
+.pagination > .nav-links__prev-btn.prev::before,
+.pagination > .nav-links__next-btn.prev::before {
+  left: -0.8em;
+  content: "\f100";
+}
+.pagination .page-numbers.next::after, .pagination__to-archive.next::after, .pagination__prev-btn.next::after, .pagination__next-btn.next::after,
+.pagination > .nav-links .page-numbers.next::after,
+.pagination > .nav-links__to-archive.next::after,
+.pagination > .nav-links__prev-btn.next::after,
+.pagination > .nav-links__next-btn.next::after {
+  right: -0.8em;
+  content: "\f101";
+}
+.pagination .page-numbers.current, .pagination__to-archive.current, .pagination__prev-btn.current, .pagination__next-btn.current,
+.pagination > .nav-links .page-numbers.current,
+.pagination > .nav-links__to-archive.current,
+.pagination > .nav-links__prev-btn.current,
+.pagination > .nav-links__next-btn.current {
+  color: #fff;
+  background-color: #023163;
+}
+.pagination__to-archive,
+.pagination > .nav-links__to-archive {
+  background-color: #01588C;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -915,7 +1008,7 @@ a {
   grid-template-rows: repeat(38, auto);
 }
 .archive__list > li {
-  padding: 0 0.5em 0.5em;
+  padding: 0 0 0.75em 0.5em;
   border-bottom: 1px solid #fff;
 }
 
@@ -950,57 +1043,6 @@ a {
   font-size: 0.8em;
   line-height: 1.2;
   text-align: center;
-}
-
-.book-pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5em;
-  margin-top: 2em;
-}
-.book-pagination a, .book-pagination span {
-  display: block;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 0.15em 0.5em;
-  color: #D7EBEA;
-  background-color: #62AED1;
-  border-radius: 4px;
-}
-.book-pagination a.current, .book-pagination span.current {
-  color: #fff;
-  background-color: #023163;
-}
-.book-pagination .prev, .book-pagination .next {
-  display: grid;
-  place-content: center;
-  position: relative;
-  font-size: 0.9em;
-  font-weight: 900;
-  color: #023163;
-  background-color: unset;
-}
-.book-pagination .prev::before, .book-pagination .prev::after, .book-pagination .next::before, .book-pagination .next::after {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-45%);
-  font-size: 1.2em;
-  font-family: "Font Awesome 6 Free";
-  font-weight: bold;
-  color: #01588C;
-}
-.book-pagination .prev::before {
-  left: -0.8em;
-  content: "\f100";
-}
-.book-pagination .next::after {
-  right: -0.8em;
-  content: "\f101";
-}
-.book-pagination .nav-links {
-  display: flex;
-  gap: 0.75em;
 }
 
 .book-order__confirm-privacy {
@@ -1195,22 +1237,72 @@ a {
 .single__content p {
   font-size: 0.95em;
 }
-.single .page-direction > .book-pagination {
-  gap: 1em;
+
+.news__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25em;
 }
-.single .page-direction > .book-pagination a {
-  font-size: 0.9em;
-  font-weight: 900;
-  color: #023163;
+.news__headline {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+  line-height: 1;
 }
-.single .page-direction > .book-pagination > li:first-of-type a {
-  padding: 3px 10px;
-  font-size: 0.75em;
+.news__headline-inner-wrapped-anchor {
+  display: flex;
+  gap: 0.5em;
+}
+.news__headline-inner-wrapped-anchor .image-wrapper {
+  flex-basis: 35%;
+  margin-bottom: unset;
+  aspect-ratio: 3/2;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  overflow: hidden;
+}
+.news__contents {
+  flex-basis: 65%;
+  display: flex;
+  flex-direction: column;
+}
+.news__category {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.25em;
+  -moz-column-gap: 0.5em;
+       column-gap: 0.5em;
+}
+.news__category-item {
+  padding: 2px 4px;
+  font-size: 0.7em;
+  line-height: 1;
   color: #fff;
   background-color: #023163;
+  border-radius: 3px;
 }
-
-.news .book-pagination .prev, .news .book-pagination .next {
+.news__title {
+  margin-top: 0.25em;
+  font-size: 1.1em;
+  line-height: 1.25;
+  color: #333;
+}
+.news__text {
+  margin-top: 0.25em;
+}
+.news__text > p {
+  font-weight: 200;
+  line-height: 1.4;
+}
+.news__date {
+  margin-top: 0.5em;
+  padding: 3px 7px 3px 0;
+  font-size: 0.8em;
+  text-align: right;
+  color: #01588C;
+  background-color: #62AED1;
+  border-bottom-right-radius: 7px;
+}
+.news .pagination .prev, .news .pagination .next {
   display: none;
 }
 
@@ -1249,6 +1341,9 @@ a {
   margin-bottom: 0.75em;
   font-size: 0.95rem;
 }
+#single.single p img {
+  width: 100%;
+}
 #single.single a {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 0.9em;
@@ -1260,7 +1355,7 @@ a {
   font-size: 0.9rem;
   font-weight: 500;
 }
-#single.single .page-direction > .book-pagination {
+#single.single .page-direction > .pagination {
   margin-top: unset;
 }
 #single.single .page-direction a {

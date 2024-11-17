@@ -16,11 +16,15 @@
         echo '<h3 class="main__header3"><span class="header-pre">分類：</span> ' . esc_html($current_category->name) . '</h3>';
       }
 
+      // 現在のページ番号を取得
+      $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+
       // このジャンルに関連する投稿を取得
       $args = array(
         'post_type' => 'post',
-        'posts_per_page' => -1,
+        'posts_per_page' => 10,
         'category__in' => array($current_category->term_id),
+        'paged' => $paged, // ページ番号を追加
       );
 
       $query = new WP_Query($args);
@@ -33,11 +37,15 @@
         endwhile;
         echo '</ul>';
 
-        // ページネーション（ページ分け）を表示
-        echo '<div class="book-pagination">';
-          the_posts_pagination();
+        echo '<div class="pagination">';
+        // カスタムクエリのページネーションを正しく表示
+        echo paginate_links(array(
+          'total' => $query->max_num_pages,
+          'current' => $paged,
+          'prev_text' => '前へ',
+          'next_text' => '次へ',
+        ));
         echo '</div>';
-
       else :
         echo '<p>このジャンルには投稿がありません。</p>';
       endif;
@@ -45,6 +53,7 @@
       wp_reset_postdata();
       ?>
     </div>
+    
   </div>
 </div>
 

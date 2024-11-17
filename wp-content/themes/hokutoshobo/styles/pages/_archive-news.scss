@@ -2,8 +2,72 @@
 @use '../parts/common' as *;
 
 .news {
-  & .book-pagination {
-    & .prev, & .next {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25em;
+  }
+  &__headline {
+    font-family: $fontGothic;
+    font-size: 1rem;
+    line-height: 1;
+  }
+  &__headline-inner-wrapped-anchor {
+    display: flex;
+    gap: .5em;
+    & .image-wrapper {
+      flex-basis: 35%;
+      margin-bottom: unset;
+      aspect-ratio: 3/2;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      overflow: hidden; // 角丸にするためにつけた。
+    }
+  }
+  &__contents {
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__category {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: .25em;
+    column-gap: .5em;
+  }
+  &__category-item {
+    padding: 2px 4px;
+    font-size: .7em;
+    line-height: 1;
+    color: #fff;
+    background-color: $cTheme;
+    border-radius: 3px;
+  }
+  &__title {
+    margin-top: .25em;
+    font-size: 1.1em;
+    line-height: 1.25;
+    color: #333;
+  }
+  &__text {
+    margin-top: .25em;
+    & > p {
+      font-weight: 200;
+      line-height: 1.4;
+    }
+  }
+  &__date {
+    margin-top: .5em;
+    padding: 3px 7px 3px 0;
+    font-size: .8em;
+    text-align: right;
+    color: $cThemeMd;
+    background-color: $cThemeLt;
+    border-bottom-right-radius: 7px;
+  }
+  & .pagination {
+    & .prev,
+    & .next {
       display: none;
     }
   }

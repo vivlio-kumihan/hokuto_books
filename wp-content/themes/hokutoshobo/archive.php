@@ -37,7 +37,7 @@
       </ul>
 
       <!-- ページネーション -->
-      <div class="book-pagination">
+      <div class="pagination">
         <?php
         echo paginate_links(array(
           'total' => $all_posts->max_num_pages,

@@ -73,22 +73,4 @@
       font-size: .95em;
     }
   }
-  & .page-direction {
-    & > .book-pagination {
-      gap: 1em;
-      & a {
-        font-size: .9em;
-        font-weight: 900;
-        color: $cTheme;
-      }
-      & > li:first-of-type {
-        a {
-          padding: 3px 10px;
-          font-size: .75em;
-          color: #fff;
-          background-color: $cTheme;
-        }
-      } 
-    }
-  }
 } 

@@ -11,7 +11,7 @@
       </div>
 
       <div class="page-direction">
-        <ul class="book-pagination">
+        <ul class="pagination">
           <li>
             <a class="page-derection__to-index" href="<?php echo esc_url(home_url('/news')); ?>">
               記事一覧へ
@@ -27,16 +27,17 @@
       </div>
     </div>
 
-    <div class="main__inner">
-      <h3 class="main__header3 letter-space-dot25em">記事カテゴリー</h3>
+    <div class="main__inner news">
+      <h3 class="main__header3">記事カテゴリー</h3>
       <ul class="archive__list">
-        <li><a href="">すべて</a></li>
         <?php
         $taxonomy = 'blog_category'; // タクソノミーの名前を指定
         $terms = get_terms($taxonomy);
         if (!empty($terms) && !is_wp_error($terms)) { // エラーチェックを追加
           foreach ($terms as $term) {
-            echo '<li><a href="' . get_term_link($term) . '">' . $term->name . '</a></li>';
+            echo '<li><a href="' . get_term_link($term) . '">';
+            echo $term->name . '（' . $term->count . '）'; // 名前と投稿数を表示
+            echo '</a></li>';
           }
         }
         ?>

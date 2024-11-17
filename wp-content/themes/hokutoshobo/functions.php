@@ -70,6 +70,7 @@ add_action('wp_enqueue_scripts', 'my_enqueue_styles');
 // add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
 
 // post_has_archive()関数の定義
+// book用
 function post_has_archive($args, $post_type)
 {
   if ('post' == $post_type) {
@@ -80,6 +81,58 @@ function post_has_archive($args, $post_type)
   return $args;
 }
 add_filter('register_post_type_args', 'post_has_archive', 10, 2);
+
+// CPT UI用
+function modify_category_archive_query($query) {
+  // 管理画面以外、メインクエリの場合のみ変更
+  if (!is_admin() && $query->is_main_query()) {
+    // 'news' のカスタム投稿タイプのアーカイブの場合
+    if ($query->is_tax('blog_category') || $query->is_post_type_archive('news')) {
+      // 投稿数を10に設定
+      $query->set('posts_per_page', 10);
+    }
+  }
+}
+add_action('pre_get_posts', 'modify_category_archive_query');
+
+function register_news_post_type() {
+  register_post_type('news', array(
+    'label' => 'ブログ',
+    'public' => true,
+    'has_archive' => true, // アーカイブページを有効にする
+    'rewrite' => array('slug' => 'news', 'with_front' => false),
+    // 他の設定
+  ));
+}
+add_action('init', 'register_news_post_type');
+
+// excerptの[...]を...に変更
+function change_excerpt_more($more) {
+  return '...'; 
+}
+add_filter('excerpt_more', 'change_excerpt_more');
+
+// 変更したい文字数
+function custom_excerpt_length($length) {
+  return 40;
+}
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
+
+// newsのカテゴリー
+function register_blog_category_taxonomy()
+{
+  $args = array(
+    'hierarchical' => true,
+    'label' => 'カテゴリー',
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array('slug' => 'blog_category'),
+  );
+
+  register_taxonomy('blog_category', 'news', $args);
+}
+add_action('init', 'register_blog_category_taxonomy');
 
 // 書籍タイトルをcontact form 7に送る。
 function my_wpcf7_dynamic_text($text) {
