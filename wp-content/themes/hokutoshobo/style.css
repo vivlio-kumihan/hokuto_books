@@ -2178,6 +2178,11 @@ a {
   margin-top: 2.5em;
 }
 @media (min-width: 960px) {
+  .main__other-info {
+    margin-top: unset;
+  }
+}
+@media (min-width: 960px) {
   .main__other-info > .aside-contents {
     margin-top: unset;
   }

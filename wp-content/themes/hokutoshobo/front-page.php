@@ -36,6 +36,38 @@
       <p>北斗書房はNPO法人自費出版ネットワーク会員です</p>
     </div>
     <div class="top-page__slide">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="image-wrapper">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/slider/slider_advisor.png" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-wrapper">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/slider/slider_hokutoshobothink.png" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="image-wrapper">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/slider/slider_spcompany.png" />
+            </div>
+          </div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
     </div>
   </div>
 </div>

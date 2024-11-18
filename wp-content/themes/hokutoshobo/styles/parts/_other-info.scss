@@ -1,11 +1,12 @@
 @use '../globals/' as *;
 @use '../parts/common' as *;
 
-
-
 .main {
   &__other-info {
     margin-top: 2.5em;
+    @include mq(lg) {
+      margin-top: unset;
+    }
     & > .aside-contents {
       @include mq(lg) {
         margin-top: unset;

@@ -4,6 +4,7 @@ class FadeSlider {
     this.swiper = this._initSwiper();
   }
   _initSwiper() {
+    console.log("hello");
     return new Swiper(this.el, {
       effect: 'fade',
       loop: true,
