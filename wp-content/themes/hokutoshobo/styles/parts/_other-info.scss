@@ -1,36 +1,44 @@
 @use '../globals/' as *;
 @use '../parts/common' as *;
 
-.other-info {
-  margin-top: 2em;
-  &__banners {
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .5em;
-    @include mq(lg) {
-      flex-direction: column;
-    }
-    &.toggle-sm-hide-lg-appear {
-      display: none;
+
+
+.main {
+  &__other-info {
+    margin-top: 2.5em;
+    & > .aside-contents {
       @include mq(lg) {
-        display: flex;
+        margin-top: unset;
       }
     }
-    &.toggle-sm-appear-lg-hide {
-      @include mq(lg) {
-        display: none;
+    & .news {
+      &__list {
+        gap: .75em;
+        & .image-wrapper {
+          @include mq(lg) {
+            display: none;
+          }
+        }
       }
-    }
-    & > li {
-      flex-basis: calc((100% - .5em) / 2);
-      & .image-wrapper {
-        margin-bottom: unset;
+      &__headline {
+        padding-bottom: .75em;
+        border-bottom: 1px dotted #999;
       }
+      &__contents {
+        flex-basis: 100%;
+      }
+      &__title {
+        font-size: 1em;
+      }
+      &__date {
+        margin-top: .25em;
+        padding: 0;
+        background-color: unset;
+      }
+
     }
   }
-  & .main__header3.link-inner {
+  &__header3.link-inner {
     position: relative;
     & > .pre-mark__orange-arrow {
       position: absolute;
@@ -39,37 +47,32 @@
       right: 0;
     }
   }
-  &__latest-5-blogs {
+  &__other-info-banners {
     display: flex;
-    flex-direction: column;
-    gap: .5em;
-    font-family: $fontGothic;
-    font-size: 1rem;
-    color: $cLightBlue;
-    & > li {
-      padding-bottom: .5em;
-      border-bottom: 1px dotted #999;
-    }
-  }
-  &__blog-post-date {
-    font-size: .8em;
-    color: #aaa;
-  }
-  &__blog-title {
-    line-height: 1.5;
-  }
-  & > .flex-wrapper {
-    flex-direction: column;
-    gap: 2em;
-  }
-  &.inside-front-page {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .75em;
     @include mq(lg) {
+      flex-direction: column;
+      align-items: unset;
+      flex-wrap: unset;
+      row-gap: 1em;
+    }
+    & > li {
+      flex-basis: calc((100% - .75em) / 2);
+      @include mq(lg) {
+        flex-basis: unset;
+        height: 100%;
+      }
+      & .image-wrapper {
+        margin-bottom: unset;
+      }
     }
   }
 }
 
 .blog-index {
   @include mq(lg) {
-    display: none;
   }
 }

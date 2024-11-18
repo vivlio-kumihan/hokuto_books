@@ -11,14 +11,26 @@
   padding: 50px 0 60px;
   line-height: 1.5;
   z-index: 2;
-  @include mq(lg) {
-    flex-direction: row;
-    
-  }
-  &__inner {
-    &:not(:first-of-type) {
-      margin-top: 2rem;
+  &__contents-aside-wrapper {
+    @include mq(lg) {
+      display: flex;
+      gap: 2em;
     }
+  }
+  &__contents-wrapper {
+    flex-basis: calc((100% - 2em) / 1);
+  }
+  &__other-info {
+    flex-basis: calc((100% - 2em) / 2.5);
+    padding: 1em;
+    background-color: #eee;
+
+  }
+  &.front-page {
+    padding-bottom: 60px;
+  }
+  &__inner:not(:first-of-type) {
+    margin-top: 2.5em;
   }
   &__header3 {
     position: relative;
@@ -140,10 +152,23 @@
       }
     }
   }
+  &__slider {
+    display: none;
+    @include mq(lg) {
+      display: block;
+    }
+  }
   &__main-copy {
     display: none;
     @include mq(lg) {
       display: block;
+    }
+  }
+  &__main-copy.for-sm {
+    display: block;
+    color: #fff;
+    @include mq(lg) {
+      display: none;
     }
   }
   &__order-list {
@@ -179,21 +204,67 @@
     flex-direction: column;
     gap: 1em;
   }
-  & .banners {
+  & .featured-articles {
     display: flex;
-    flex-wrap: wrap;
-    gap: .5em;
-    &__list {
-      flex-basis: calc((100% - .5em) / 2);
+    flex-direction: column;
+    gap: 1em;
+    &__top-three {
+      display: flex;
+      gap: 1em;
     }
+    &__item {
+      box-shadow: 3px 3px 3px #999;
+      &.for-msword {
+        background-color: #e7c586;
+      }
+    }
+    & .main__header3 {
+      margin-bottom: unset;
+    }
+    & .image-wrapper {
+      height: 100%;
+      margin-bottom: unset;
+    }
+    & a {
+      & > .image-wrapper.welcome-msword-banner {
+        // width: 90%;
+        margin-bottom: unset;
+        margin: 0 auto;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+
   }
 }
 
 .latest-books {
-  &__wrapper {
-    display: none;
+  & .book-post {
+    margin: 1em 0;
+    &__list {
+      flex-basis: calc((100% - 1em) / 2);
+      @include mq(lg) {
+        flex-basis: calc((100% - 3em) / 3);
+      }
+    }
+  }
+  & .to-index {
+    @include mq(lg) {
+      width: fit-content;
+      padding: 3px 1em 7px;
+      // margin: 0 auto;
+    }
+  }
+  & .selected-label.buy > a {
+    @include mq(lg) {
+      width: fit-content;
+      padding: 3px 1em 7px 2.5em;
+      margin: 0 auto;
+    }
   }
 }
+
 // #container {
 //   position: relative;
 //   background-color: $cWhite;

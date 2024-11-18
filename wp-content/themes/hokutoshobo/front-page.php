@@ -18,7 +18,9 @@
           <span>60年の歴史と実績&nbsp;自費出版の北斗書房</span>
         </div>
       </div>
-      <div class="main__main-copy">
+    </div>
+    <div class="header__lower">
+      <div class="main__main-copy for-sm">
         <h2>日本古典文学の街、学問の街　京都 洛北　北斗書房で個人出版しませんか</h2>
         <p>歴史・社会・教育／趣味・実用書／文芸書・写真集／絵本・自費出版</p>
         <p>60年の歴史「本づくり」の専門会社</p>
@@ -26,189 +28,180 @@
       </div>
     </div>
   </header>
+  <div class="top-page__slider">
+    <div class="main__main-copy">
+      <h2>日本古典文学の街、学問の街　京都 洛北　北斗書房で個人出版しませんか</h2>
+      <p>歴史・社会・教育／趣味・実用書／文芸書・写真集／絵本・自費出版</p>
+      <p>60年の歴史「本づくり」の専門会社</p>
+      <p>北斗書房はNPO法人自費出版ネットワーク会員です</p>
+    </div>
+    <div class="top-page__slide">
+    </div>
+  </div>
 </div>
 
-<div class="main">
-  <div class="main__contents-wrapper">
-    <div class="top-page__slider">
-      <div class="main__main-copy">
-        <h2>日本古典文学の街、学問の街　京都 洛北　北斗書房で個人出版しませんか</h2>
-        <p>歴史・社会・教育／趣味・実用書／文芸書・写真集／絵本・自費出版</p>
-        <p>60年の歴史「本づくり」の専門会社</p>
-        <p>北斗書房はNPO法人自費出版ネットワーク会員です</p>
-      </div>
-    </div>
-
-    <!-- 最新の出版物インデックス -->
-    <div class="latest-books">
-      <div class="latest-books__wrapper">
-        <a href="<?php echo esc_url(home_url('/purchase')); ?>">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/bt-purchase.png" alt="自費出版のご購入方法" />
-        </a>
-        <h3>最新の製作実績</h3>
-        <p>北斗書房でおつくりいただいた自費出版作品を紹介します。</p>
-        <!-- 削除した -->
-        <p><a href="<?php echo home_url('/book/'); ?>">書籍一覧はこちら</a></p>
-      </div>
-    </div>
-
-
-    <?php
-    $post_id = 2637; // 投稿のIDを指定
-    $args = array(
-      'post_type' => 'news', // カスタム投稿タイプ
-      'p' => $post_id,       // 投稿IDで指定
-      'posts_per_page' => 1,
-    );
-
-    $my_query = new WP_Query($args);
-
-    if ($my_query->have_posts()) :
-      while ($my_query->have_posts()) : $my_query->the_post();
-    ?>
-
-      <a href="<?php the_permalink(); ?>">
-        <div class="image-wrapper">
-          <?php the_post_thumbnail(); ?>
+<div class="main front-page">
+  <div class="main__contents-aside-wrapper">
+    <div class="main__contents-wrapper">
+      <!-- 最新の出版物インデックス -->
+      <div class="main__inner latest-books">
+        <div class="latest-books__wrapper">
+          <h3 class="main__header3">
+            最新の製作実績
+          </h3>
+          <div class="main__catch">当書房でおつくりいただいた自費出版作品をご紹介</div>
+          <!-- 削除した -->
+          <ul class="book-post">
+            <?php
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $args = array(
+              'posts_per_page' => 6,
+              'paged' => $paged
+            );
+            $all_posts = new WP_Query($args);
+            ?>
+            <?php if ($all_posts->have_posts()) : ?>
+              <?php while ($all_posts->have_posts()) : $all_posts->the_post(); ?>
+                <?php if (has_post_thumbnail()) : ?>
+                  <li class="book-post__list">
+                    <a href="<?php the_permalink(); ?>">
+                      <div class="book-post__image-wrapper">
+                        <?php the_post_thumbnail('thumbnail'); ?>
+                      </div>
+                    <?php endif; ?>
+                    <div class="book-post__title">
+                      <?php the_title(); ?>
+                    </div>
+                    </a>
+                  </li>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+              <?php else : ?>
+                <p>投稿が見つかりませんでした。</p>
+              <?php endif; ?>
+          </ul>
+          <div class="btn-wrapper">
+            <a class="to-index" href="<?php echo home_url('/book/'); ?>">自費出版の書籍一覧はこちら</a>
+            <div class="selected-label buy">
+              <a href="<?php echo home_url('/purchase/'); ?> alt=" alt="自費出版のご購入方法"">
+              <span class=" selected-label__icon">自費出版のご購入方法</span>
+              </a>
+            </div>
+          </div>
         </div>
-      </a>
+      </div>
 
-    <?php
-      endwhile;
-    endif;
-    wp_reset_postdata(); // クエリ後にデータをリセット
-    ?>
-
-    <?php
-    $post_id = 2350; // 投稿のIDを指定
-    $args = array(
-      'post_type' => 'news', // カスタム投稿タイプ
-      'p' => $post_id,       // 投稿IDで指定
-      'posts_per_page' => 1,
-    );
-
-    $my_query = new WP_Query($args);
-
-    if ($my_query->have_posts()) :
-      while ($my_query->have_posts()) : $my_query->the_post();
-    ?>
-
-        <a href="<?php the_permalink(); ?>">
-          <div class="image-wrapper">
-            <?php the_post_thumbnail(); ?>
+      <div class="main__inner featured-articles">
+        <h3 class="main__header3">
+          注目記事
+        </h3>
+        <div class="featured-articles__top-three">
+          <!-- 注目記事 1 -->
+          <div class="flex-wrapper">
+            <a class="featured-articles__item" href="<?php echo esc_url(home_url('/novel-self-publish')); ?>">
+              <div class="image-wrapper">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/banner/banner-nobel.png" alt="">
+              </div>
+            </a>
+            <a class="featured-articles__item" href="<?php echo esc_url(home_url('/visual-self-publish')); ?>">
+              <div class="image-wrapper">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/banner/banner-camera.png" alt="">
+              </div>
+            </a>
           </div>
-        </a>
+          <!-- 注目記事 2 -->
+          <a class="featured-articles__item for-msword" href="<?php echo esc_url(home_url('/welcome-msword')); ?>">
+            <div class="image-wrapper welcome-msword-banner">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/banner/banner-msword.png" alt="">
+            </div>
+          </a>
+        </div>
+        <!-- 注目記事 3 -->
+        <!-- 自費出版相談会のバナー -->
+        <?php
+        $post_id = 2637; // 投稿のIDを指定
+        $args = array(
+          'post_type' => 'news', // カスタム投稿タイプ
+          'p' => $post_id,       // 投稿IDで指定
+          'posts_per_page' => 1,
+        );
 
-    <?php
-      endwhile;
-    endif;
-    wp_reset_postdata(); // クエリ後にデータをリセット
-    ?>
+        $my_query = new WP_Query($args);
 
-    <?php
-    $post_id = 803; // 投稿のIDを指定
-    $args = array(
-      'post_type' => 'news', // カスタム投稿タイプ
-      'p' => $post_id,       // 投稿IDで指定
-      'posts_per_page' => 1,
-    );
+        if ($my_query->have_posts()) :
+          while ($my_query->have_posts()) : $my_query->the_post();
+        ?>
+            <a class="featured-articles__item" href="<?php the_permalink(); ?>">
+              <div class="image-wrapper">
+                <?php the_post_thumbnail(); ?>
+              </div>
+            </a>
+        <?php
+          endwhile;
+        endif;
+        wp_reset_postdata(); // クエリ後にデータをリセット
+        ?>
 
-    $my_query = new WP_Query($args);
+        <!-- 想いのカタチのバナー -->
+        <?php
+        $post_id = 2350; // 投稿のIDを指定
+        $args = array(
+          'post_type' => 'news', // カスタム投稿タイプ
+          'p' => $post_id,       // 投稿IDで指定
+          'posts_per_page' => 1,
+        );
 
-    if ($my_query->have_posts()) :
-      while ($my_query->have_posts()) : $my_query->the_post();
-    ?>
+        $my_query = new WP_Query($args);
 
-        <a href="<?php the_permalink(); ?>">
-          <div class="image-wrapper">
-            <?php the_post_thumbnail(); ?>
-          </div>
-        </a>
+        if ($my_query->have_posts()) :
+          while ($my_query->have_posts()) : $my_query->the_post();
+        ?>
+            <a class="featured-articles__item" href="<?php the_permalink(); ?>">
+              <div class="image-wrapper">
+                <?php the_post_thumbnail(); ?>
+              </div>
+            </a>
+        <?php
+          endwhile;
+        endif;
+        wp_reset_postdata(); // クエリ後にデータをリセット
+        ?>
 
-    <?php
-      endwhile;
-    endif;
-    wp_reset_postdata(); // クエリ後にデータをリセット
-    ?>
+        <!-- 自費出版のご質問募集中!! のバナー -->
+        <?php
+        $post_id = 803; // 投稿のIDを指定
+        $args = array(
+          'post_type' => 'news', // カスタム投稿タイプ
+          'p' => $post_id,       // 投稿IDで指定
+          'posts_per_page' => 1,
+        );
 
+        $my_query = new WP_Query($args);
 
-    <!-- 自費出版情報 -->
-    <ul class="self-publish-info">
-      <li class="self-publish-info__banner consultation">
-        <!-- <a href="<?php echo esc_url(home_url('/news/info/2631/')); ?>">
-          <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/baner_top-page02.jpg" alt="自費出版相談会のバナー">
-          </div>
-        </a> -->
-      </li>
-      <li class="self-publish-info__banner news-letter">
-        <!-- <a href="<?php echo esc_url(home_url('/news/info/jihisyuppan/2350/')); ?>">
-          <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/baner_top-page01.jpg" alt="想いのカタチのバナー">
-          </div>
-        </a> -->
-      </li>
-    </ul>
-    <ul class="banners">
-      <li class="banners__list">
-        <a href="<?php echo esc_url(home_url('/establishment/')); ?>" target="_blank">
-          <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/bt-kinenshi.png" alt="創業記念誌作成" width="220" height="80" />
-          </div>
-        </a>
-      </li>
-      <li class="banners__list">
-        <a href="http://prodigi.jp/~bungeidojin/" target="_blank">
-          <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/bt-dojinshi.png" alt="文芸同人誌案内所" width="220" height="80" />
-          </div>
-        </a>
-      </li>
-      <li class="banners__list">
-        <a href="https://hokuto-p-co-jp.prm-ssl.jp/index.html" target="_blank">
-          <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/bt-hokuto.png" alt="株式会社北斗プリント社のサイト" width="220" height="80" />
-          </div>
-        </a>
-      </li>
-      <li class="banners__list">
-        <a href="https://hokuto-p-co-jp.prm-ssl.jp/asks/index.php" target="_blank">
-          <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/bt-asks.png" alt="株式会社北斗プリント社1F　あすくす" width="220" height="80" />
-          </div>
-        </a>
-      </li>
-      <li class="banners__list">
-        <a href="https://hokuto-p-co-jp.prm-ssl.jp/asks/nenga/index.php" target="_blank">
-          <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/bt-nenga.png" alt="京都デザイン,京都年賀状,年賀状印刷,株式会社北斗プリント社1F　あすくす" width="220" height="80" />
-          </div>
-        </a>
-      </li>
-      <li class="banners__list">
-        <a href=" http://www.san-en.org/link/" target="_blank">
-          <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/bnr/sanen.png" alt="起業家・経営者・若者の学びと未来の場。三縁の会" width="220" height="80" />
-          </div>
-        </a>
-      </li>
-    </ul>
+        if ($my_query->have_posts()) :
+          while ($my_query->have_posts()) : $my_query->the_post();
+        ?>
+            <a class="featured-articles__item" href="<?php the_permalink(); ?>">
+              <div class="image-wrapper">
+                <?php the_post_thumbnail(); ?>
+              </div>
+            </a>
+        <?php
+          endwhile;
+        endif;
+        wp_reset_postdata(); // クエリ後にデータをリセット
+        ?>
+      </div>
+    </div>
+
+    <aside class="main__other-info">
+      <?php
+      // データをテンプレートファイルに渡して表示
+      load_template(get_template_directory() . '/components/other-info.php', false);
+      ?>
+    </aside>
   </div>
 
-  <aside class="other-info inside-front-page">
-    <?php
-    $args = array(
-      'post_type' => 'post',
-      // 最新の『n』件の投稿を取得
-      'posts_per_page' => 5,
-    );
-    $latest_posts = new WP_Query($args);
-
-    // データをテンプレートファイルに渡して表示
-    load_template(get_template_directory() . '/components/other-info.php', false, array('latest_posts' => $latest_posts));
-    ?>
-  </aside>
 </div>
-
 
 <?php get_footer(); ?>

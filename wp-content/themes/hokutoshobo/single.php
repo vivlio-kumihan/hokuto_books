@@ -147,8 +147,8 @@
     </div>
     <div class="page-direction">
       <ul class="pagination">
-        <li class="pagination__to-archive">
-          <a class="page-derection__to-index" href="<?php echo esc_url(home_url('/book')) ?>">書籍一覧へ</a>
+        <li class="pagination__to-index page-numbers">
+          <a href="<?php echo esc_url(home_url('/book')) ?>">書籍一覧へ</a>
         </li>
         <!-- 前と次へがテレコになっているが、このWPの一連の投稿に関して見た目の感覚で合わせている。 -->
         <?php if (get_next_post()) : ?>

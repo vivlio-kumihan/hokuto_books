@@ -292,6 +292,7 @@ a {
 }
 
 .image-wrapper {
+  // height: 150px;
   margin-bottom: .8em;
   & > img {
     width: 100%;
@@ -480,6 +481,20 @@ a {
   }
 }
 
+.to-index {
+  display: block;
+  padding: 5px 0;
+  font-family: $fontGothic;
+  font-size: .9em;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 2px #333;
+  box-shadow: 3px 3px 3px #aaa;
+  background-color: $cTheme;
+  border-radius: 5px;
+}
+
 .selected-label.buy {
   & > a {
     display: block;
@@ -526,10 +541,19 @@ a {
   }
 }
 
-.main__header3 {
-  & > .header-pre {
-    font-size: .8em;
-    color: #666;
+.main {
+  &__header3 {
+    & > .header-pre {
+      font-size: .8em;
+      color: #666;
+    }
+  }
+  &__catch {
+    font-family: $fontGothic;
+    font-size: 1.05em;
+    line-height: 1.2;
+    color: $cTheme;
+    font-feature-settings: "palt" 1;
   }
 }
 
@@ -541,7 +565,7 @@ a {
   gap: .5em;
   margin-top: 2em;
   & .page-numbers,
-  &__to-archive,
+  &__to-index,
   &__prev-btn,
   &__next-btn {
     display: block;
@@ -571,6 +595,9 @@ a {
         color: $cThemeMd;
       }
     }
+    &.prev {
+      margin-left: 1em;
+    }
     &.prev::before {
       left: -.8em;
       content: "\f100";
@@ -584,8 +611,19 @@ a {
       background-color: $cTheme;
     }
   }
-  &__to-archive {
-    background-color: $cThemeMd;
+  &__to-index.page-numbers {
+    margin-right: .75em;
+    background-color: $cTheme;
+  }
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .75em;
+  @include mq(lg) {
+    justify-content: center;
+    flex-direction: row;
   }
 }
 

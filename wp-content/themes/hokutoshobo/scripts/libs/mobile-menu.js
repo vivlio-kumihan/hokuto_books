@@ -20,7 +20,7 @@ class MobileMenu {
     this.DOM.container.classList.toggle('menu-open');
   }
   _addEvent() {
-    this.DOM.btn.addEventListener(this.eventType, this._toggle.bind(this));
-    this.DOM.cover.addEventListener(this.eventType, this._toggle.bind(this));
+    this.DOM.btn?.addEventListener(this.eventType, this._toggle.bind(this));
+    this.DOM.cover?.addEventListener(this.eventType, this._toggle.bind(this));
   }
 }

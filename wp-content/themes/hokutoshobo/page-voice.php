@@ -142,7 +142,7 @@
     </section>
   </div>
 
-  <aside class="other-info inside-front-page">
+  <aside class="other-info">
     <?php
     $args = array(
       'post_type' => 'post',

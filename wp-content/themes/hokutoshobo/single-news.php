@@ -12,16 +12,16 @@
 
       <div class="page-direction">
         <ul class="pagination">
-          <li>
-            <a class="page-derection__to-index" href="<?php echo esc_url(home_url('/news')); ?>">
+          <li class="pagination__to-index page-numbers">
+            <a href="<?php echo esc_url(home_url('/news')); ?>">
               記事一覧へ
             </a>
           </li>
           <?php if (get_previous_post() !== '') : ?>
-            <li><?php previous_post_link('%link', '前の記事へ'); ?></li>
+            <li class="pagination__prev-btn"><?php previous_post_link('%link', '前へ'); ?></li>
           <?php endif; ?>
           <?php if (get_next_post() !== '') : ?>
-            <li><?php next_post_link('%link', '次の記事へ'); ?></li>
+            <li class="pagination__next-btn"><?php next_post_link('%link', '次へ'); ?></li>
           <?php endif; ?>
         </ul>
       </div>
