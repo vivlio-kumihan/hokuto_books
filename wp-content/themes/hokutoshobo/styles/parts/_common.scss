@@ -677,7 +677,11 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 2em 0;
   background-color: rgba($color: $cTheme, $alpha: .8);
+  @include mq(lg) {
+    padding: unset;
+  }
 }
 
 // .modal {

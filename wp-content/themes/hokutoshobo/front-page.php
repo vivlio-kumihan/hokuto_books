@@ -19,21 +19,6 @@
         </div>
       </div>
     </div>
-    <div class="header__lower">
-      <div class="top-page__main-copy for-sm">
-        <div>日本古典文学の街、学問の街</div>
-        <div>
-          京都 洛北
-          <span>文芸書・写真集／絵本・自費出版</span>
-          <span>歴史・社会・教育／趣味・実用書</span>
-        </div>
-        <div><span>北斗書房</span>で<br />個人出版しませんか</div>
-        <div>
-          60年の歴史「本づくり」の専門会社<br />
-          <span>北斗書房はNdivO法人自費出版ネットワーク会員です</span>
-        </div>
-      </div>
-    </div>
   </header>
   <div class="top-page__main-visual">
     <div class="top-page__slide-contents-wrapper">

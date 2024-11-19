@@ -262,83 +262,82 @@
     }
   }
   &__main-copy {
-    display: none;
-    @include mq(lg) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      font-size: 1rem;
-      font-weight: 900;
-      color: #fff;
-      font-feature-settings: "palt" 1;
-      & > .line {
-        margin-bottom: 10px;
-        &.one {
-          @include mq(lg) {
-            font-size: 1.3em;
-          }
-          @include mq(xl) {
-            font-size: 1.6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 900;
+    color: #fff;
+    font-feature-settings: "palt" 1;
+    & > .line {
+      margin-bottom: 10px;
+      &.one {
+        font-size: 1.3em;
+        @include mq(xl) {
+          font-size: 1.6em;
+        }
+      }
+    }
+    & > .line {
+      margin-bottom: 10px;
+      &.one {
+        font-size: 1.3em;
+        @include mq(xl) {
+          font-size: 1.6em;
+        }
+      }
+      &.two {
+        position: relative;
+        width: fit-content;
+        font-size: 1.8em;
+        & > .shoulder {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-55%);
+          left: calc(100% + .5em);
+          width: max-content;
+          font-size: .7rem;
+          line-height: 1.3;
+        }
+        @include mq(xl) {
+          font-size: 2em;
+          & > .shoulder {
+            left: calc(100% + .75em);
+            font-size: .8rem;
           }
         }
-        &.two {
-          @include mq(lg) {
-            position: relative;
-            width: fit-content;
-            font-size: 1.8em;
-            & > .shoulder {
-              position: absolute;
-              top: 50%;
-              transform: translateY(-55%);
-              left: calc(100% + .5em);
-              width: max-content;
-              font-size: .7rem;
-              line-height: 1.3;
-            }
-          }
-          @include mq(xl) {
-            font-size: 2em;
-            & > .shoulder {
-              left: calc(100% + .75em);
-              font-size: .8rem;
-            }
-          }
+      }
+      &.three {
+        font-size: 1.75em;
+        color: $cOrangeDk;
+        & > span {
+          font-size: 1.85em;
         }
-        &.three {
-          @include mq(lg) {
+        @include mq(xl) {
+          font-size: 2.2em;
+          color: $cOrangeDk;
+          & > span {
             font-size: 1.75em;
-            color: $cOrangeDk;
-            & > span {
-              font-size: 1.85em;
-            }
-          }
-          @include mq(xl) {
-            font-size: 2.2em;
-            color: $cOrangeDk;
-            & > span {
-              font-size: 1.75em;
-            }
           }
         }
-        &.four {
-          @include mq(lg) {
-            margin-bottom: unset;
-            font-size: .75em;
-            line-height: 1.4;
-            & > span {
-              font-size: 1.4em;
-            }
-          }
-          @include mq(xl) {
-            font-size: .9em;
-            line-height: 1.5;
-            & > span {
-              font-size: 1.55em;
-            }
+      }
+      &.four {
+        margin-bottom: unset;
+        font-size: .75em;
+        line-height: 1.4;
+        & > span {
+          font-size: 1.4em;
+        }
+        @include mq(xl) {
+          font-size: .9em;
+          line-height: 1.5;
+          & > span {
+            font-size: 1.55em;
           }
         }
       }
     }
+
   }  
   &__slide {
     @include mq(lg) {
