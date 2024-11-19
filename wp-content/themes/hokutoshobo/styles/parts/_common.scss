@@ -350,6 +350,42 @@ a {
   }
 }
 
+.image-wrapper.ami {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $cThemeTh;
+    width: 100%;
+    height: 70%;
+    z-index: -1;
+  }
+  & > img {
+    object-fit: contain;
+  }
+  // 以下は、個別の設定
+  &.company-office-building {
+    margin-bottom: 3em;
+    height: 500px;
+  }
+  &.profile-img {
+    height: 200px;
+  }
+  &.process {
+    height: 250px;
+  }
+  &.books {
+    margin-bottom: unset;
+    height: 300px;
+  }
+
+}
+
 .mq-sm-apear {
   display: inline-block;
   @include mq(lg) {

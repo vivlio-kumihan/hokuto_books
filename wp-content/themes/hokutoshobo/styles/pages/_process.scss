@@ -1,0 +1,16 @@
+.process {
+  & .main__contents-aside-wrapper {
+    margin-bottom: 3em;
+  }
+  & .equipment {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    // width: 85%;
+    margin: 0 auto;
+    & .image-wrapper {
+      flex-basis: calc((100% - 1em) / 2);
+    }
+  }
+}

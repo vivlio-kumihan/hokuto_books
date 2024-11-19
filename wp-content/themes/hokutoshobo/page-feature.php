@@ -18,10 +18,9 @@
       </div>
       <div id="60-ear-history" class="main__inner">
         <h3 class="main__header3">60年の歴史&nbsp;印刷会社が運営する「本づくり」の専門会社です</h3>
-        <figure class="image-wrapper company-office-building">
+        <figure class="image-wrapper ami company-office-building">
           <img src="<?php echo get_template_directory_uri(); ?>/images/feature/feature-img-company.png" alt="1975年頃会社外観" />
           <figcaption>1975年頃の当社</figcaption>
-          <div class="ami"></div>
         </figure>
         <p class="catch">自らの想いをカタチにしたい―</p>
         <p>北斗書房は、株式会社 北斗プリント社の自費出版部門として、そのような皆様の想いを「本」というカタチにしてまいりました。</p>
@@ -65,9 +64,8 @@
               <span class="profile__name">相生&nbsp;隆久</span>
             </div>
             <div class="profile__wrapper">
-              <div class="image-wrapper profile-img">
+              <div class="image-wrapper ami profile-img">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/staff/staff-aioi.png" alt="スタッフ：主任 相生隆久写真" />
-                <div class="ami"></div>
               </div>
               <ul class="main__list profile__other-info">
                 <li>一般社団法人&ensp;自分史活用協議会認定&ensp;<br class="mq-sm-apear" />自分史活用アドバイザー</li>
