@@ -671,6 +671,15 @@ a {
   }
 }
 
+.centering-vessel {
+  flex-basis: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba($color: $cTheme, $alpha: .8);
+}
+
 // .modal {
 //   @extend .content-width;
 //   &__inner {

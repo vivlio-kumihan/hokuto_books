@@ -29,6 +29,9 @@
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
+    gap: .75em;
     padding: 15px 0 15px 25px;
     font-weight: 600;
     transform: translate3d(0, 0, -1000px);
@@ -36,8 +39,9 @@
     opacity: 0;
   }
 
-  &__sub-item {
-    padding-left: 20px;
+  &__sub-link {
+    padding-left: 1em;
+    font-size: .95em;
   }
 
   &__link {

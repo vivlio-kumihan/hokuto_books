@@ -58,7 +58,7 @@
   </div>
 
   <div class="main__header3">
-    リンク情報
+    リンク情報・その他
   </div>
   <ul class="main__other-info-banners">
     <li>

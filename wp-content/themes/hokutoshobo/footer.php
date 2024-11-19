@@ -150,9 +150,19 @@
           </a>
         </li>
         <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="<?php echo esc_url(home_url('/knowledge')); ?>">
-            豆知識
-          </a>
+          <a class="mobile-menu__link" href="#">自費出版アラカルト</a>
+          <div class="mobile-menu__sub-link knowledge">
+            <a href="<?php echo esc_url(home_url('/knowledge')); ?>">自費出版の豆知識</a>
+          </div>
+          <div class="mobile-menu__sub-link novel-self-publish">
+            <a href="<?php echo esc_url(home_url('/novel-self-publish')); ?>">文字もの自費出版</a>
+          </div>
+          <div class="mobile-menu__sub-link visual-self-publish">
+            <a href="<?php echo esc_url(home_url('/visual-self-publish')); ?>">ビジュアル系自費出版</a>
+          </div>
+          <div class="mobile-menu__sub-link welcome-msword">
+            <a href="<?php echo esc_url(home_url('/welcome-msword')); ?>">データ入稿対応可能</a>
+          </div>
         </li>
         <li class="mobile-menu__item">
           <a class="mobile-menu__link" href="<?php echo esc_url(home_url('/voice')); ?>">

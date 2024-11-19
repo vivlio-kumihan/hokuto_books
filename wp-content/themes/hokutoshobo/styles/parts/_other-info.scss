@@ -29,7 +29,7 @@
         flex-basis: 100%;
       }
       &__title {
-        font-size: 1em;
+        font-size: .9em;
       }
       &__date {
         margin-top: .25em;
@@ -37,6 +37,12 @@
         background-color: unset;
       }
 
+    }
+    & .main__header3 {
+      font-size: 1.1em;
+      &::before {
+        background-color: $cOrangeDk;
+      }
     }
   }
   &__header3.link-inner {
@@ -73,7 +79,6 @@
   }
 }
 
-.blog-index {
-  @include mq(lg) {
-  }
+.fb-page {
+  margin-top: 1em;
 }
