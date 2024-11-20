@@ -7,7 +7,7 @@
     <div class="main__contents-wrapper">
       <div class="main__inner">
         <h3 class="main__header3">特定商取引法に基づく表記</h3>
-        <dl>
+        <dl class="infomation-chart">
           <div>
             <dt>販売業者名</dt>
             <dd>株式会社 北斗プリント社 </dd>

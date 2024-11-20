@@ -874,6 +874,41 @@ a {
   color: #023163;
 }
 
+.infomation-chart {
+  position: relative;
+  margin-top: 1.5em;
+  line-height: 1.25;
+  z-index: 1;
+}
+.infomation-chart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 13.5em;
+  height: 100%;
+  background-color: #D7EBEA;
+  z-index: -1;
+}
+.infomation-chart > div {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1em;
+       column-gap: 1em;
+  border-bottom: 1px dotted #333;
+}
+.infomation-chart > div:first-of-type {
+  border-top: 1px dotted #333;
+}
+.infomation-chart dt {
+  flex-basis: 14em;
+  padding-left: 1em;
+}
+.infomation-chart dd {
+  flex-basis: 70%;
+  padding: 1em 1em 1em 1em;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -2140,41 +2175,6 @@ a {
 .main.visual-self-publish .to-link-wrapper > .main__header6,
 .main.welcome-msword .to-link-wrapper > .main__header6 {
   margin-top: unset;
-}
-
-.transaction dl {
-  position: relative;
-  margin-top: 1.5em;
-  line-height: 1.25;
-  z-index: 1;
-}
-.transaction dl::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 13.5em;
-  height: 100%;
-  background-color: #D7EBEA;
-  z-index: -1;
-}
-.transaction dl > div {
-  display: flex;
-  align-items: center;
-  -moz-column-gap: 1em;
-       column-gap: 1em;
-  border-bottom: 1px dotted #333;
-}
-.transaction dl > div:first-of-type {
-  border-top: 1px dotted #333;
-}
-.transaction dl dt {
-  flex-basis: 14em;
-  padding-left: 1em;
-}
-.transaction dl dd {
-  flex-basis: 70%;
-  padding: 1em 1em 1em 1em;
 }
 
 .header {

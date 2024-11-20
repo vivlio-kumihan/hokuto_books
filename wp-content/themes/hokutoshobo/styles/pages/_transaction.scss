@@ -2,37 +2,4 @@
 @use '../parts/common' as *;
 
 .transaction {
-  & dl {
-    position: relative;
-    margin-top: 1.5em;
-    line-height: 1.25;
-    z-index: 1;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 13.5em;
-      height: 100%;
-      background-color: $cThemeTh;
-      z-index: -1;
-    }
-    & > div {
-      display: flex;
-      align-items: center;
-      column-gap: 1em;
-      border-bottom: 1px dotted #333;
-      &:first-of-type {
-        border-top: 1px dotted #333;
-      }
-    }
-    & dt {
-      flex-basis: 14em;
-      padding-left: 1em ;
-    }
-    & dd {
-      flex-basis: 70%;
-      padding: 1em 1em 1em 1em ;
-    }
-  }
 }
