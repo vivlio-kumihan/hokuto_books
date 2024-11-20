@@ -1,0 +1,47 @@
+@use '../globals/' as *;
+@use '../parts/common' as *;
+
+.knowleage {
+  & .image-wrapper.ami {
+    &.hardcover {
+      height: 270px;
+    }
+    &.softcover {
+      height: 270px;
+    }
+    &.isbn {
+      height: 240px;
+    }
+  }
+  & .flex-wrapper {
+    gap: 0;
+    padding-top: 10px;
+    @include mq(lg) {
+      gap: 1em;
+    }
+    &.ami::after {
+      transform: translateY(-50%);
+      height: 60%;
+    }
+    & > .image-wrapper {
+      margin-bottom: unset;
+      box-shadow: unset;
+      &.spread {
+        @include mq(lg) {
+          flex-basis: 55%;
+        }
+      }
+      &.gutter {
+        padding-right: 1em;
+        @include mq(lg) {
+          padding-right: 2em;
+        }
+        & > img {
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  @include mq(lg) {
+  }
+}

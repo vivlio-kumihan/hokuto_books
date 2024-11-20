@@ -19,6 +19,9 @@
   }
   &__contents-wrapper {
     flex-basis: calc((100% - 2em) / 1);
+    @include mq(lg) {
+      padding-bottom: 2rem;
+    }
   }
   &__other-info {
     padding: 1em;

@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="main">
+<div class="main knowleage">
   <div class="main__contents-aside-wrapper">
     <div class="main__contents-wrapper">
       <div class="main__inner">
@@ -82,30 +82,30 @@
             自費出版でよく用いられる製本方法には、大きくふたつあります。</p>
           <h5 class="main__header5">上製本</h5>
 
-          <div class="image-wrapper to-modal">
-            <img class="alignnone size-medium wp-image-220" title="上製本（閉）" src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon03-l1-320x320.png" alt="上製本（閉）" />
+          <div class="image-wrapper ami hardcover to-modal">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon03-l1-320x320.png" alt="上製本（閉）" />
           </div>
 
-          <p class="floatRight">
-          </p>
           <p>ハードカバーとも呼ばれ、紙に印刷した表紙をボール紙に貼り製本する方法です。</p>
           <p>上製本の場合、本文は背を糸で綴じる「糸綴じ」という方法で綴じます。頑丈で長持ちし、本を大きく開くことができます。</p>
           <p>工程が複雑なため、他の製本方法と比べて時間が掛かしコストは高くなりますが、それに見合った高級感と耐久性があります。</p>
           <p>ボール紙に貼る表紙は、紙の他にも布を使用する事もできます。</p>
           <p>その場合は、「箔押し」という型押しでタイトルなどを布に印字します。</p>
           <div class="note">※画像クリックで拡大表示されます。</div>
-          <img />
-          <div class="image-wrapper to-modal">
-            <img class="alignnone size-medium wp-image-221" title="上製本（開）" src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon01-l1-320x224.png" alt="上製本（開）" />
-          </div>
-          <div class="image-wrapper to-modal">
-            <img class="alignnone size-medium wp-image-222" title="上製本（綴じ状態）" src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon02-l1-320x144.png" alt="上製本（綴じ状態）" /></a>
+
+          <div class="flex-wrapper ami to-modal">
+            <div class="image-wrapper spread">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon01-l1-320x224.png" alt="上製本（開）" />
+            </div>
+            <div class="image-wrapper gutter">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon02-l1-320x144.png" alt="上製本（綴じ状態）" /></a>
+            </div>
           </div>
 
           <h5 id="about-binding-method" class="main__header5">並製本</h5>
 
-          <div class="image-wrapper to-modal">
-            <img class="alignnone size-medium wp-image-223" title="並製本（閉）" src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img03-l1-320x320.png" alt="並製本（閉）" /></a>
+          <div class="image-wrapper ami softcover to-modal">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img03-l1-320x320.png" alt="並製本（閉）" /></a>
           </div>
 
           <p>ソフトカバーとも呼ばれ、本文紙より厚めの紙で本文をくるむ方法です。</p>
@@ -116,12 +116,13 @@
           <p>カバーには、ＰＰ加工と呼ばれる透明フィルムを貼り、見た目美しくまた汚れにくくします。</p>
           <div class="note">※画像クリックで拡大表示されます。</div>
 
-          <div class="image-wrapper to-modal">
-            <img class="alignnone size-medium wp-image-224" title="並製本（開）" src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img01-l1-320x224.png" alt="並製本（開）" />
-          </div>
-          <div class="image-wrapper to-modal">
-            <img />
-            <img class="alignnone size-medium wp-image-225" title="並製本（綴じ状態）" src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img02-l1-320x144.png" alt="並製本（綴じ状態）" />
+          <div class="flex-wrapper ami to-modal">
+            <div class="image-wrapper spread">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img01-l1-320x224.png" alt="並製本（開）" />
+            </div>
+            <div class="image-wrapper gutter">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img02-l1-320x144.png" alt="並製本（綴じ状態）" />
+            </div>
           </div>
 
           <div class="to-page-top"><a href="#contents">目次にもどる</a></div>
@@ -129,7 +130,9 @@
 
         <section>
           <h3 id="about-isbn" class="main__header3">ISBNコードについて</h3>
-          <div class="image-wrapper"><img src="http://localhost:8888/hokuto-bs/common/img/guide/guide-img-isbn.png" alt="" /></div>
+          <div class="image-wrapper ami isbn">
+            <img src="http://localhost:8888/hokuto-bs/common/img/guide/guide-img-isbn.png" alt="" />
+          </div>
           <p>ISBNコードは正式には「国際標準図書番号」と呼ばれます。<br />
             世界中で発行される書籍の、発行国、出版社名、タイトルを記録するための「本の戸籍」のようなものです。<br />
             日本では1981年からこの国際団体に加盟し、出版物へのISBNの記載を推進しています。<br />
@@ -193,14 +196,11 @@
 
 
 
-  <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon01-l1.png" />
-  <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon02-l1-320x144.png" />
-  <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon02-l1.png" />
-
-  <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon03-l1.png" />
-
-  <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img01-l1.png" />
-
-  <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img02-l1.png" />
-  <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img03-l1-320x320.png" />
-  <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img03-l1.png" />
+  <!-- 
+<img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon01-l1.png" />
+<img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon02-l1.png" />
+<img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon03-l1.png" />
+<img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img01-l1.png" />
+<img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img02-l1.png" />
+<img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img03-l1.png" /> 
+-->

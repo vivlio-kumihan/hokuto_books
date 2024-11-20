@@ -366,10 +366,12 @@ a {
   font-size: 0.8rem;
 }
 
-.image-wrapper.ami {
+.image-wrapper.ami,
+.flex-wrapper.ami {
   position: relative;
 }
-.image-wrapper.ami::after {
+.image-wrapper.ami::after,
+.flex-wrapper.ami::after {
   position: absolute;
   content: "";
   top: 50%;
@@ -382,21 +384,26 @@ a {
   height: 70%;
   z-index: -1;
 }
-.image-wrapper.ami > img {
+.image-wrapper.ami > img,
+.flex-wrapper.ami > img {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.image-wrapper.ami.company-office-building {
+.image-wrapper.ami.company-office-building,
+.flex-wrapper.ami.company-office-building {
   margin-bottom: 3em;
   height: 500px;
 }
-.image-wrapper.ami.profile-img {
+.image-wrapper.ami.profile-img,
+.flex-wrapper.ami.profile-img {
   height: 200px;
 }
-.image-wrapper.ami.process {
+.image-wrapper.ami.process,
+.flex-wrapper.ami.process {
   height: 250px;
 }
-.image-wrapper.ami.books {
+.image-wrapper.ami.books,
+.flex-wrapper.ami.books {
   margin-bottom: unset;
   height: 300px;
 }
@@ -897,6 +904,11 @@ a {
 }
 .main__contents-wrapper {
   flex-basis: calc((100% - 2em) / 1);
+}
+@media (min-width: 960px) {
+  .main__contents-wrapper {
+    padding-bottom: 2rem;
+  }
 }
 .main__other-info {
   padding: 1em;
@@ -1966,6 +1978,49 @@ a {
   }
 }
 
+.knowleage .image-wrapper.ami.hardcover {
+  height: 270px;
+}
+.knowleage .image-wrapper.ami.softcover {
+  height: 270px;
+}
+.knowleage .image-wrapper.ami.isbn {
+  height: 240px;
+}
+.knowleage .flex-wrapper {
+  gap: 0;
+  padding-top: 10px;
+}
+@media (min-width: 960px) {
+  .knowleage .flex-wrapper {
+    gap: 1em;
+  }
+}
+.knowleage .flex-wrapper.ami::after {
+  transform: translateY(-50%);
+  height: 60%;
+}
+.knowleage .flex-wrapper > .image-wrapper {
+  margin-bottom: unset;
+  box-shadow: unset;
+}
+@media (min-width: 960px) {
+  .knowleage .flex-wrapper > .image-wrapper.spread {
+    flex-basis: 55%;
+  }
+}
+.knowleage .flex-wrapper > .image-wrapper.gutter {
+  padding-right: 1em;
+}
+@media (min-width: 960px) {
+  .knowleage .flex-wrapper > .image-wrapper.gutter {
+    padding-right: 2em;
+  }
+}
+.knowleage .flex-wrapper > .image-wrapper.gutter > img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .header {
   display: none;
 }
@@ -2554,7 +2609,7 @@ a {
 }
 
 .main__other-info {
-  margin-top: 2.5em;
+  margin-top: 2em;
 }
 @media (min-width: 960px) {
   .main__other-info {
