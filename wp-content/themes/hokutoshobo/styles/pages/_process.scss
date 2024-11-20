@@ -2,9 +2,6 @@
 @use '../parts/common' as *;
 
 .process {
-  & .main__contents-aside-wrapper {
-    margin-bottom: 3em;
-  }
   & .equipment {
     @include mq(lg) {
       display: flex;
@@ -14,6 +11,16 @@
       & .image-wrapper {
         flex-basis: calc((100% - 1em) / 2);
       }
+    }
+  }
+  & .image-wrapper.ami,
+  & .flex-wrapper.ami {
+    &.process {
+      height: 250px;
+    }
+    &.books {
+      margin-bottom: unset;
+      height: 300px;
     }
   }
 }

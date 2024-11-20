@@ -1,6 +1,43 @@
 @use '../globals/' as *;
 @use '../parts/common' as *;
 
+.main.feature {
+  & .image-wrapper.ami {
+    &.company-office-building {
+      height: 300px;
+      margin-bottom: 2em;
+      @include mq(lg) {
+        margin-bottom: 3em;
+        height: 500px;
+      }
+    }
+    &.profile-img {
+      height: 200px;
+      @include mq(lg) {
+        height: 300px;
+      }
+    }
+    &.self-pulished-books {
+      @include mq(lg) {
+        height: 350px;
+      }
+    }
+  }
+  & .main__description-list > dt {
+    font-size: 1rem;
+    @include mq(lg) {
+      font-size: 1.1rem;
+    }
+  }
+  & .main__description-list > dd {
+    font-size: .8rem;
+    @include mq(lg) {
+      font-size: .9rem;
+    }
+  }
+}
+
+
 .staff {
   margin-top: 2em;
   &__title {
@@ -39,11 +76,6 @@
     flex-direction: column;
     gap: 20px;
   }
-  // &__img {
-  //   width: 70%;
-  //   margin-bottom: unset;
-  //   margin: 0 auto;
-  // }
   &__other-info {
     margin-top: unset;
   }

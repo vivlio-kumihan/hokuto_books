@@ -369,23 +369,7 @@ a {
   }
   & > img {
     object-fit: contain;
-  }
-  // 以下は、個別の設定
-  &.company-office-building {
-    margin-bottom: 3em;
-    height: 500px;
-  }
-  &.profile-img {
-    height: 200px;
-  }
-  &.process {
-    height: 250px;
-  }
-  &.books {
-    margin-bottom: unset;
-    height: 300px;
-  }
-
+  }     
 }
 
 .mq-sm-apear {

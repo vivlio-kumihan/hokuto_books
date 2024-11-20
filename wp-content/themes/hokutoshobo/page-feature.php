@@ -83,7 +83,7 @@
       <div id="about-self-publishing" class="main__inner">
         <h3 class="main__header3">北斗書房の考える「自費出版」</h3>
         <div class="catch margin-bottom-dot75em">あえて、紙の本にこだわります</div>
-        <figure class="image-wrapper">
+        <figure class="image-wrapper ami self-pulished-books">
           <img src="<?php echo get_template_directory_uri(); ?>/images/feature/feature-img01.png" alt="紙の本イメージ" />
         </figure>
         <p>北斗書房の母体は印刷会社です。</p>

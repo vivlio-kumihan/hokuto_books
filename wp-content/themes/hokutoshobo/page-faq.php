@@ -55,7 +55,7 @@
                 </ul>
                 <div class="note">※画像クリックで拡大表示されます。</div>
 
-                <h5 class="main__header5">ソフトカバー（並製本）</h5>
+                <h5 class="main__header5 faq__heading-soft-cover">ソフトカバー（並製本）</h5>
                 <ul class="faq__books">
                   <li>
                     <div class="image-wrapper">
