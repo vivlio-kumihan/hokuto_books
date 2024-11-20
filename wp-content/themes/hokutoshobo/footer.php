@@ -19,7 +19,7 @@
                 <li><a href="/">ホーム</a></li>
                 <li><a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ</a></li>
                 <li><a href="<?php echo esc_url(home_url('/access')); ?>">アクセスマップ</a></li>
-                <li><a href="<?php echo esc_url(home_url('/calendar/index.html')); ?>" target="_blank">営業カレンダー</a></li>
+                <li><a href="http://www.hokuto-p.co.jp/calendar/index.html" target="_blank">営業カレンダー</a></li>
                 <li><a href="<?php echo esc_url(home_url('/transaction')); ?>">特定商取引法に基づく表記</a></li>
                 <li><a href="<?php echo esc_url(home_url('/sitemap')); ?>">サイトマップ</a></li>
                 <li><a href="<?php echo esc_url(home_url('/feature')); ?>">当社の特徴</a></li>

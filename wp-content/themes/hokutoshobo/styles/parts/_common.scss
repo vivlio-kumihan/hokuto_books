@@ -593,7 +593,7 @@ a {
     & > a {
       padding: .5px 5px .5px 1.5em;
       font-size: 1.1em;
-      background-color: $cAmaxonCol;
+      background-color: $cAmazonCol;
       & > span {
         &::before {
           transform: translateY(-50%);
@@ -788,4 +788,11 @@ a {
       opacity: 1;
     }
   }
+}
+
+.pre-header {
+  font-family: $fontGothic;
+  font-size: .9rem;
+  font-feature-settings: "palt" 1;
+  color: $cTheme;
 }

@@ -1,0 +1,49 @@
+@use '../globals/' as *;
+@use '../parts/common' as *;
+
+.main.novel-self-publish,
+.main.visual-self-publish,
+.main.welcome-msword {
+  & .image-wrapper.ami {
+    margin-top: 1.5em;
+    height: 300px;
+    &.color-chart {
+      margin-top: .5em;
+      height: 250px;
+    }
+    &.msword-image {
+      height: 400px;
+    }
+    &.msword-image-lg {
+      height: 600px;
+      margin-top: unset;
+    }
+  }
+  & .between-charts {
+    margin: 1.75em 0 1em;
+  }
+  & .visual-self-publish {
+    height: 300px;
+  }
+  & .flex-wrapper > .image-wrapper {
+    margin: .75em 0 .5em;
+    margin-bottom: unset;
+  }
+  // & .main__list {
+  //   & > li::before {
+  //     position: unset;
+  //   }
+  // }
+  .to-link-wrapper {
+    margin-top: 1em;
+    padding: 1.5em 2em;
+    background-color: rgba($color: $cOrangeLt, $alpha: .3);
+    border: 1px dotted $cOrangeDk;
+    border-radius: 20px;
+    & > .main__header6 {
+      margin-top: unset;
+    }
+  }
+}
+
+// class=" about-personal-history"

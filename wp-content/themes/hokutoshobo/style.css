@@ -867,6 +867,13 @@ a {
   opacity: 1;
 }
 
+.pre-header {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.9rem;
+  font-feature-settings: "palt" 1;
+  color: #023163;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -965,15 +972,25 @@ a {
   color: #023163;
   border-bottom: 2px solid #01588C;
 }
+@media (min-width: 960px) {
+  .main__header5 {
+    font-size: 1.15em;
+  }
+}
 .main__header6 {
-  margin: 1em 0 0.5em;
-  font-size: 0.9em;
+  margin: 1em 0 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.05em;
   font-weight: 900;
+  text-align: center;
+  color: #023163;
+  font-feature-settings: "palt" 1;
 }
 .main section:not(:first-of-type) {
   margin-top: 2em;
 }
 .main p {
+  margin-top: 0.75em;
   font-size: 0.9rem;
   line-height: 1.7;
 }
@@ -981,9 +998,6 @@ a {
   .main p {
     font-size: 1rem;
   }
-}
-.main p:not(:first-of-type) {
-  margin-top: 0.75em;
 }
 .main .catch {
   margin-top: 0.75em;
@@ -1004,7 +1018,7 @@ a {
 }
 .main__list > li::before, .main__order-list > li::before {
   position: absolute;
-  top: 4px;
+  top: 3.5px;
   left: 0;
   content: "";
   width: 0.8em;
@@ -1049,6 +1063,19 @@ a {
   padding-left: 0;
 }
 .main__order-list > li::before {
+  position: unset;
+}
+.main__list.remove-mark > li {
+  padding-left: 0;
+}
+.main__list.remove-mark > li > .title {
+  margin-bottom: 0.25em;
+  font-weight: 900;
+}
+.main__list.remove-mark > li > .content {
+  padding-left: 1em;
+}
+.main__list.remove-mark > li::before {
   position: unset;
 }
 .main__description-list {
@@ -2061,6 +2088,95 @@ a {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.main.novel-self-publish .image-wrapper.ami,
+.main.visual-self-publish .image-wrapper.ami,
+.main.welcome-msword .image-wrapper.ami {
+  margin-top: 1.5em;
+  height: 300px;
+}
+.main.novel-self-publish .image-wrapper.ami.color-chart,
+.main.visual-self-publish .image-wrapper.ami.color-chart,
+.main.welcome-msword .image-wrapper.ami.color-chart {
+  margin-top: 0.5em;
+  height: 250px;
+}
+.main.novel-self-publish .image-wrapper.ami.msword-image,
+.main.visual-self-publish .image-wrapper.ami.msword-image,
+.main.welcome-msword .image-wrapper.ami.msword-image {
+  height: 400px;
+}
+.main.novel-self-publish .image-wrapper.ami.msword-image-lg,
+.main.visual-self-publish .image-wrapper.ami.msword-image-lg,
+.main.welcome-msword .image-wrapper.ami.msword-image-lg {
+  height: 600px;
+  margin-top: unset;
+}
+.main.novel-self-publish .between-charts,
+.main.visual-self-publish .between-charts,
+.main.welcome-msword .between-charts {
+  margin: 1.75em 0 1em;
+}
+.main.novel-self-publish .visual-self-publish,
+.main.visual-self-publish .visual-self-publish,
+.main.welcome-msword .visual-self-publish {
+  height: 300px;
+}
+.main.novel-self-publish .flex-wrapper > .image-wrapper,
+.main.visual-self-publish .flex-wrapper > .image-wrapper,
+.main.welcome-msword .flex-wrapper > .image-wrapper {
+  margin: 0.75em 0 0.5em;
+  margin-bottom: unset;
+}
+.main.novel-self-publish .to-link-wrapper,
+.main.visual-self-publish .to-link-wrapper,
+.main.welcome-msword .to-link-wrapper {
+  margin-top: 1em;
+  padding: 1.5em 2em;
+  background-color: rgba(253, 245, 198, 0.3);
+  border: 1px dotted #E49D5B;
+  border-radius: 20px;
+}
+.main.novel-self-publish .to-link-wrapper > .main__header6,
+.main.visual-self-publish .to-link-wrapper > .main__header6,
+.main.welcome-msword .to-link-wrapper > .main__header6 {
+  margin-top: unset;
+}
+
+.transaction dl {
+  position: relative;
+  margin-top: 1.5em;
+  line-height: 1.25;
+  z-index: 1;
+}
+.transaction dl::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 13.5em;
+  height: 100%;
+  background-color: #D7EBEA;
+  z-index: -1;
+}
+.transaction dl > div {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1em;
+       column-gap: 1em;
+  border-bottom: 1px dotted #333;
+}
+.transaction dl > div:first-of-type {
+  border-top: 1px dotted #333;
+}
+.transaction dl dt {
+  flex-basis: 14em;
+  padding-left: 1em;
+}
+.transaction dl dd {
+  flex-basis: 70%;
+  padding: 1em 1em 1em 1em;
+}
+
 .header {
   display: none;
 }
@@ -2460,6 +2576,7 @@ a {
   color: #ccc;
   background-color: #023163;
   border-radius: 5px 5px 0 0;
+  z-index: 100;
 }
 .footer__to-page-top::before {
   position: absolute;
