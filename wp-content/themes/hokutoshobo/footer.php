@@ -12,27 +12,26 @@
                 </div>
                 <ul class="pre-mark__orange-arrow">
                   <li class="pre-mark__font-lg"><a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ</a></li>
-                  <li><a href="<?php echo esc_url(home_url('/privacy/index.html')); ?>" target="_blank">個人情報保護方針</a></li>
+                  <li><a href="http://www.hokuto-p.co.jp/privacy/index.html" target="_blank">個人情報保護方針</a></li>
                 </ul>
               </div>
               <ul class="footer__links-in-page">
-                <li><a href="/">ホーム</a></li>
-                <li><a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ</a></li>
+                <li><a href="<?php echo esc_url(home_url('/sitemap')); ?>">サイトマップ</a></li>
                 <li><a href="<?php echo esc_url(home_url('/access')); ?>">アクセスマップ</a></li>
                 <li><a href="http://www.hokuto-p.co.jp/calendar/index.html" target="_blank">営業カレンダー</a></li>
                 <li><a href="<?php echo esc_url(home_url('/transaction')); ?>">特定商取引法に基づく表記</a></li>
-                <li><a href="<?php echo esc_url(home_url('/sitemap')); ?>">サイトマップ</a></li>
+                <li><a href="<?php echo esc_url(home_url('/')); ?>">ホーム</a></li>
                 <li><a href="<?php echo esc_url(home_url('/feature')); ?>">当社の特徴</a></li>
-                <li><a href="<?php echo esc_url(home_url('/book')); ?>">書籍一覧</a></li>
                 <li><a href="<?php echo esc_url(home_url('/price')); ?>">ご参考価格・ご予算例</a></li>
-                <li><a href="<?php echo esc_url(home_url('/voice')); ?>">お客さまの声</a></li>
-                <li><a href="<?php echo esc_url(home_url('/contact')); ?>">資料請求</a></li>
-                <li><a href="<?php echo esc_url(home_url('/purchase')); ?>">自費出版ご購入方法</a></li>
-                <li><a href="<?php echo esc_url(home_url('/melmaga')); ?>">自費出版メルマガ</a></li>
                 <li><a href="<?php echo esc_url(home_url('/process')); ?>">自費出版制作の流れ</a></li>
+                <li><a href="<?php echo esc_url(home_url('/voice')); ?>">お客さまの声</a></li>
                 <li><a href="<?php echo esc_url(home_url('/news')); ?>">最新情報一覧</a></li>
+                <li><a href="<?php echo esc_url(home_url('/book')); ?>">書籍一覧</a></li>
+                <li><a href="<?php echo esc_url(home_url('/purchase')); ?>">自費出版ご購入方法</a></li>
                 <li><a href="<?php echo esc_url(home_url('/publish')); ?>">自費出版ニュース</a></li>
                 <li><a href="<?php echo esc_url(home_url('/links')); ?>">自費出版関連リンク集</a></li>
+                <li><a href="<?php echo esc_url(home_url('/melmaga')); ?>">自費出版メルマガ</a></li>
+                <li><a href="<?php echo esc_url(home_url('/contact')); ?>">お問い合わせ・資料請求</a></li>
               </ul>
             </div>
             <div class="footer__access">

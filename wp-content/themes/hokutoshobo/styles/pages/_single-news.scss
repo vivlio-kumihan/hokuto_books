@@ -66,4 +66,11 @@
       color: #fff;
     }
   }
+  & .blog-index {
+    display: none;
+  }
+
+  & .aside-contents>.main__header3 {
+    margin: 0 0 1em;
+  }
 }

@@ -2,24 +2,34 @@
 
 <?php get_header(); ?>
 
-<div id="page-top" class="main">
-  <div class="main__contents-wrapper">
-    <div class="main__inner">
-      <div class="book-order">
-        <h3 class="main__header3 book-order__title">書籍注文</h3>
-        <div class="book-order__confirm-privacy">
-          <a href="<?php echo get_template_directory_uri(); ?>/images/privacy-policy.pdf" target="_blank">
-            <span>
-              <img src="<?php echo get_template_directory_uri(); ?>/images/icon-PDF.png" alt="">
-            </span>
-            プライバシーポリシーの確認
-          </a>
+<div id="page-top" class="main book-order">
+  <div class="main__contents-aside-wrapper">
+    <div class="main__contents-wrapper">
+      <div class="main__inner">
+        <div class="book-order">
+          <h3 class="main__header3 book-order__title">書籍注文</h3>
+          <div class="book-order__confirm-privacy">
+            <a href="<?php echo get_template_directory_uri(); ?>/images/privacy-policy.pdf" target="_blank">
+              <span>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/icon-PDF.png" alt="">
+              </span>
+              プライバシーポリシーの確認
+            </a>
+          </div>
+          <?php echo do_shortcode('[contact-form-7 id="0e928fe" title="書籍注文"]') ?>
         </div>
-        <?php echo do_shortcode('[contact-form-7 id="0e928fe" title="書籍注文"]') ?>
       </div>
     </div>
+
+    <aside class="main__other-info">
+      <?php
+      // データをテンプレートファイルに渡して表示
+      load_template(get_template_directory() . '/components/other-info.php', false);
+      ?>
+    </aside>
   </div>
 </div>
+
 
 <?php get_footer(); ?>
 

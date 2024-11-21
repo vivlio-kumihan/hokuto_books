@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div id="page-top" class="main feature">
+<div id="page-top" class="main faq">
   <div class="main__contents-aside-wrapper">
     <div class="main__contents-wrapper">
       <div class="main__inner">

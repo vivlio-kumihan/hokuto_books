@@ -984,6 +984,63 @@ a {
   border-bottom: 1px solid #023163;
 }
 
+.tel-fax {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  font-size: 2.25rem;
+  line-height: 1;
+  font-weight: 900;
+}
+@media (min-width: 960px) {
+  .tel-fax {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+.tel-fax span {
+  margin-right: 0.25em;
+  font-size: 0.7em;
+}
+.tel-fax__fax {
+  font-size: 0.7em;
+}
+
+.contact-item {
+  margin-top: 1em;
+}
+.contact-item__business-Hours, .contact-item__adress {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 960px) {
+  .contact-item__business-Hours, .contact-item__adress {
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
+}
+.contact-item__business-Hours span, .contact-item__adress span {
+  font-size: 0.9em;
+}
+.contact-item__adress {
+  margin-top: 0.75em;
+}
+@media (min-width: 960px) {
+  .contact-item__adress {
+    margin-top: 0.25em;
+  }
+}
+
+.main .cancel-display-block {
+  display: inline;
+}
+
+.color-attention {
+  color: #ff4000;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -1754,8 +1811,10 @@ a {
   color: #01588C;
   background-color: #D7EBEA;
 }
-.archive__list.author {
-  grid-template-rows: repeat(38, auto);
+@media (min-width: 960px) {
+  .archive__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .archive__list > li {
   padding: 0 0 0.75em 0.5em;
@@ -1775,7 +1834,7 @@ a {
 }
 @media (min-width: 960px) {
   .book-post__list {
-    flex-basis: calc((100% - 6em) / 7);
+    flex-basis: calc((100% - 2em) / 3);
   }
 }
 .book-post__image-wrapper {
@@ -1887,6 +1946,11 @@ a {
 .book-order__entry:not(:first-of-type) input, .book-order__entry:not(:first-of-type) textarea {
   padding: 0.5em;
 }
+.book-order__upload-file > p {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.8em;
+  color: #333;
+}
 .book-order__submit {
   display: grid;
   place-content: center;
@@ -1896,6 +1960,8 @@ a {
   border-radius: 5px;
 }
 .book-order__submit p {
+  margin-top: unset;
+  line-height: 1;
   font-size: 1em;
   font-weight: 900;
 }
@@ -1926,10 +1992,34 @@ a {
 .main.single .main__inner {
   margin-top: 0.75em;
 }
+.main.single .book-info__ami {
+  position: relative;
+}
+.main.single .book-info__ami::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 70%;
+  background-color: #fdf5c6;
+  z-index: -1;
+}
 .main.single .book-info__image-wrapper {
   margin: 0 auto;
   width: 60vw;
-  box-shadow: 5px 5px 7px #aaa;
+  box-shadow: 5px 5px 15px #999;
+}
+@media (min-width: 600px) {
+  .main.single .book-info__image-wrapper {
+    width: 40vw;
+  }
+}
+@media (min-width: 960px) {
+  .main.single .book-info__image-wrapper {
+    width: 350px;
+  }
 }
 .main.single .book-info__image-wrapper > img {
   width: 100%;
@@ -1945,10 +2035,16 @@ a {
   border-bottom: 1px dotted #aaa;
 }
 .main.single .book-info__spec > dl > dt {
-  flex-basis: 15%;
+  flex-basis: 25%;
   font-size: 0.85em;
 }
+@media (min-width: 960px) {
+  .main.single .book-info__spec > dl > dt {
+    flex-basis: 15%;
+  }
+}
 .main.single .book-info__spec > dl > dd {
+  width: 100%;
   font-size: 0.9em;
 }
 .main.single .book-info__spec > dl > dd.price {
@@ -1963,8 +2059,16 @@ a {
 .main.single .book-info__spec > dl:not(:first-of-type) {
   margin-top: 0.5em;
 }
+@media (min-width: 960px) {
+  .main.single .book-info__spec > dl > dt, .main.single .book-info__spec > dl > dd {
+    font-size: 1em;
+  }
+}
 .main.single .book-info__spec .selected-label.buy.how-to {
   margin-top: 1.5em;
+}
+.main.single .selected-label.buy > a {
+  padding: 3px 15px 3px 30px;
 }
 
 .single__headline {
@@ -2055,6 +2159,12 @@ a {
 .news .pagination .prev, .news .pagination .next {
   display: none;
 }
+.news .blog-index {
+  display: none;
+}
+.news .aside-contents > .main__header3 {
+  margin: 0 0 1em;
+}
 
 #single.single h1 {
   font-family: "Noto Sans JP", sans-serif;
@@ -2112,6 +2222,12 @@ a {
   font-size: 0.85em;
   font-weight: 500;
   color: #fff;
+}
+#single.single .blog-index {
+  display: none;
+}
+#single.single .aside-contents > .main__header3 {
+  margin: 0 0 1em;
 }
 
 @media (min-width: 960px) {

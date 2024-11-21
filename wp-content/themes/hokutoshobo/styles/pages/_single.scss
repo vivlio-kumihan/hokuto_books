@@ -6,10 +6,30 @@
     margin-top: .75em;
   }
   & .book-info {
+    &__ami {
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 70%;
+        background-color: $cOrangeLt;
+        z-index: -1;
+      }
+    }
     &__image-wrapper {
       margin: 0 auto;
       width: 60vw;
-      box-shadow: 5px 5px 7px #aaa;
+      box-shadow: 5px 5px 15px #999;
+      @include mq(md) {
+        width: 40vw;
+      }
+      @include mq(lg) {
+        width: 350px;
+      }
       & > img {
         width: 100%;
         height: 100%;
@@ -23,10 +43,14 @@
         padding-bottom: .5em;
         border-bottom: 1px dotted #aaa;
         & > dt {
-          flex-basis: 15%;
+          flex-basis: 25%;
           font-size: .85em;
+          @include mq(lg) {
+            flex-basis: 15%;
+          }
         }
         & > dd {
+          width: 100%;
           font-size: .9em;
           &.price {
             display: flex;
@@ -41,12 +65,20 @@
         &:not(:first-of-type) {
           margin-top: .5em;
         }
+        & > dt,
+        & > dd {
+          @include mq(lg) {
+            font-size: 1em;
+          }
+        }
       }
       .selected-label.buy.how-to {
         margin-top: 1.5em;
       }
     }
-
+  }
+  & .selected-label.buy > a {
+    padding: 3px 15px 3px 30px;
   }
 }
 

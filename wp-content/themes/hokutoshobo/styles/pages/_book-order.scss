@@ -96,6 +96,14 @@
       padding: .5em;
     }
   }
+  &__upload-file {
+    & > p {
+      font-family: $fontGothic;
+      font-size: .8em;
+      color: #333;
+
+    }
+  }
   &__submit {
     display: grid;
     place-content: center;
@@ -104,6 +112,8 @@
     background-color: $cTheme;
     border-radius: 5px;
     & p {
+      margin-top: unset;
+      line-height: 1;
       font-size: 1em;
       font-weight: 900;
     }

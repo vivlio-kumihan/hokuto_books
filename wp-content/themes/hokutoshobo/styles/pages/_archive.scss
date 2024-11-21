@@ -20,8 +20,8 @@
     font-feature-settings: "palt" 1;
     color: $cThemeMd;
     background-color: $cThemeTh;
-    &.author {
-      grid-template-rows: repeat(38, auto);
+    @include mq(lg) {
+      grid-template-columns: repeat(3, 1fr);
     }
     & > li {
       padding: 0 0 0.75em .5em;
@@ -41,7 +41,7 @@
     flex-basis: calc((100% - 1.5em) / 2);
     @include mq(lg) {
       // gap数かける開けたい値：6 × 1em = 6em
-      flex-basis: calc((100% - 6em) / 7);
+      flex-basis: calc((100% - 2em) / 3);
     }
   }
   &__image-wrapper {

@@ -2,26 +2,109 @@
 
 <?php get_header(); ?>
 
-<div class="main">
-  <div class="conBox">
-    <h3>お電話でのお問い合わせはこちら</h3>
-    <p><img src="/common/img/contact/contact-tel-no.png" alt="TEL 075-791-6125 / FAX 075-791-7290" /></p>
-    <p class="time">受付時間9：00〜19：00<br />
-      <a class="arrow" href="/calendar/">当社の営業カレンダーはこちら</a>
-    </p>
-    <p>〒606-8540 京都市左京区下鴨高木町38-2<br />
-      <a class="arrow" href="/access/">アクセスマップはこちら</a>
-    </p>
-  </div>
-  <div id="Contact" class="conBox">
-    <h3>お問い合わせ、ニュースレターのお申し込みはコチラ</h3>
-    <h4>お問い合わせフォーム</h4>
-    <p>下記の「個人情報保護方針」をご確認の上、同意いただける場合は<strong>「個人情報保護方針に同意する」</strong>にチェックを入れてください。</p>
-    <div class="privacyFla"><object data="http://www.hokutoshobo.jp/wp-content/uploads/2014/04/privacy.pdf" type="application/pdf" width="660" height="200" title="個人情報保護方針"></object><!--object width="660" height="200" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="quality" value="high" /><param name="SCALE" value="noborder" /><param name="src" value="/common/swf/privacy.swf" /><param name="pluginspage" value="http://www.macromedia.com/go/getflashplayer" /><param name="scale" value="noborder" /><embed width="660" height="200" type="application/x-shockwave-flash" src="/common/swf/privacy.swf" quality="high" scale="noborder" pluginspage="http://www.macromedia.com/go/getflashplayer" scale="noborder" /> </object--></div>
-    <p><span style="color: red;">※</span> は入力必須項目です。<br />
-      　ニュースレターの定期配布をご希望の方は、「お問い合わせ内容」にご記入ください。</p>
-    <div id="trust-form" class="contact-form">[contact-form-7 id="797" title="お問い合わせ 添付機能付き"]</div>
+<div class="main contact">
+  <div class="main__contents-aside-wrapper">
+    <div class="main__contents-wrapper">
+      <div class="main__inner">
+        <h3 class="main__header3">お電話でのお問い合わせはこちら</h3>
+        <ul class="tel-fax">
+          <li class="tel-fax__tel">
+            <span>TEL</span>075-791-6125
+          </li>
+          <li class="tel-fax__fax">
+            <span>FAX</span>075-791-7290
+          </li>
+        </ul>
+
+        <div class="contact-item">
+          <div class="contact-item__business-Hours">
+            <div><span>受付時間</span>&ensp;9：00〜19：00</div>
+            <a class="arrow-link" href="http://www.hokuto-p.co.jp/calendar/index.html" target="_blank">
+              当社の営業カレンダーはこちら<span class="arrow-link__mark"></span>
+            </a>
+          </div>
+          <div class="contact-item__adress">
+            <div>〒606-8540 京都市左京区下鴨高木町38-2</div>
+            <a class="arrow-link" href="<?php echo esc_url(home_url('/access')); ?>">
+              アクセスマップはこちら<span class="arrow-link__mark"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="main__inner">
+        <div class="book-order">
+          <h3 class="main__header3 book-order__title">お問い合わせ、ニュースレターのお申し込みはコチラ</h3>
+          <p>下記の「個人情報保護方針」をご確認の上、同意いただける場合は<strong>「個人情報保護方針に同意する」</strong>にチェックを入れてください。</p>
+          <p><span class="cancel-display-block color-attention">※</span>は入力必須項目です。<br />ニュースレターの定期配布をご希望の方は、「お問い合わせ内容」にご記入ください。</p>
+
+          <div class="book-order__confirm-privacy">
+            <a href="<?php echo get_template_directory_uri(); ?>/images/privacy-policy.pdf" target="_blank">
+              <span>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/icon-PDF.png" alt="">
+              </span>
+              プライバシーポリシーの確認
+            </a>
+          </div>
+
+          <?php echo do_shortcode('[contact-form-7 id="b39c655" title="お問い合わせ 添付機能付き"]') ?>
+        </div>
+      </div>
+    </div>
+
+    <aside class="main__other-info">
+      <?php
+      // データをテンプレートファイルに渡して表示
+      load_template(get_template_directory() . '/components/other-info.php', false);
+      ?>
+    </aside>
   </div>
 </div>
 
 <?php get_footer(); ?>
+
+
+<!-- contact form 7に貼り付けているphp -->
+
+<!-- 
+<ul class=" book-order__form">
+  <li class="book-order__list">
+    <div class="book-order__entry">[checkbox* confirm "確認※"]</div>
+  </li>
+  <li class="book-order__list">
+    <div class="book-order__title">お名前※</div>
+    <div class="book-order__entry">[text* your-name autocomplete:name]</div>
+  </li>
+  <li class="book-order__list">
+    <div class="book-order__title">フリガナ※</div>
+    <div class="book-order__entry">[text* name-ruby autocomplete:ruby]</div>
+  </li>
+  <li class="book-order__list">
+    <div class="book-order__title">お電話番号（携帯可）（例：00-000-000）</div>
+    <div class="book-order__entry">[tel* tel autocomplete:tel]</div>
+  </li>
+  <li class="book-order__list">
+    <div class="book-order__title">郵便番号（例：0000000）</div>
+    <div class="book-order__entry">[number* zip-number class:book-order__zip-number min:1000000 max:9999999]
+    </div>
+  </li>
+  <li class="book-order__list">
+    <div class="book-order__title">ご住所</div>
+    <div class="book-order__entry">[text* address]</div>
+  </li>
+  <li class="book-order__list">
+    <div class="book-order__title">メールアドレス※</div>
+    <div class="book-order__entry">[email* email autocomplete:email]</div>
+  </li>
+  <li class="book-order__list">
+    <div class="book-order__title">その他ご要望</div>
+    <div class="book-order__entry">[textarea request]</div>
+  </li>
+  <li class="book-order__list">
+    <div class="book-order__title">ファイル・アップロード</div>
+    <div class="book-order__upload-file">ファイル1（サイズ: 最大3MB）<br>[file file-01 limit:3mb class:file]</div>
+    <div class="book-order__upload-file">ファイル2（サイズ: 最大3MB）<br>[file file-02 limit:3mb class:file]</div>
+  </li>
+  <li class="book-order__submit">[submit "送　信"]</li>
+</ul> 
+-->
