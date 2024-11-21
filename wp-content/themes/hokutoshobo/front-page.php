@@ -117,8 +117,8 @@
           <div class="btn-wrapper">
             <a class="to-index" href="<?php echo home_url('/book/'); ?>">自費出版の書籍一覧はこちら</a>
             <div class="selected-label buy">
-              <a href="<?php echo home_url('/purchase/'); ?> alt=" alt="自費出版のご購入方法"">
-              <span class=" selected-label__icon">自費出版のご購入方法</span>
+              <a href="<?php echo home_url('/purchase/'); ?>" alt="自費出版のご購入方法"">
+                <span class=" selected-label__icon">自費出版のご購入方法</span>
               </a>
             </div>
           </div>

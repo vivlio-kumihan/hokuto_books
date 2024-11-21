@@ -260,6 +260,7 @@
         </div>
       </div>
     </div>
+    
     <aside class="main__other-info">
       <?php
       // データをテンプレートファイルに渡して表示

@@ -1,0 +1,13 @@
+@use '../globals/' as *;
+@use '../parts/common' as *;
+
+.main.wp-search {
+  & .main__header5 {
+    margin: 1em 0 .5em;
+    text-align: left;
+    line-height: 1.4;
+  }
+  & .entry-summary {
+    padding-left: .5em;
+  }
+}
