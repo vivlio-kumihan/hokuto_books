@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="main">
+<div id="page-top" class="main">
   <div class="main__contents-wrapper">
     <div class="main__inner">
       <?php

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="top-page">
+<div id="page-top" class="top-page">
   <header class="header for-top-page-main-visual">
     <div class="header__upper">
       <div class="logo-space">
@@ -46,33 +46,30 @@
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
-              <div class="image-wrapper">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/slider/slider_advisor.png" />
-              </div>
+              <a href="<?php echo esc_url(home_url('/process')); ?>">
+                <div class="image-wrapper">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/slider/slider_advisor.png" alt="Slider Image 1" />
+                </div>
+              </a>
             </div>
             <div class="swiper-slide">
-              <div class="image-wrapper">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/slider/slider_hokutoshobothink.png" />
-              </div>
+              <a href="<?php echo esc_url(home_url('/knowledge/')); ?>">
+                <div class="image-wrapper">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/slider/slider_hokutoshobothink.png" alt="Slider Image 2" />
+                </div>
+              </a>
             </div>
             <div class="swiper-slide">
-              <div class="image-wrapper">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/slider/slider_spcompany.png" />
-              </div>
+              <a href="<?php echo esc_url(home_url('/feature/')); ?>">
+                <div class="image-wrapper">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/slider/slider_spcompany.png" alt="Slider Image 3" />
+                </div>
+              </a>
             </div>
-            ...
           </div>
-          <!-- If we need pagination -->
-          <!-- <div class="swiper-pagination"></div> -->
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-
-          <!-- If we need scrollbar -->
-          <!-- <div class="swiper-scrollbar"></div> -->
         </div>
       </div>
+
     </div>
   </div>
 </div>

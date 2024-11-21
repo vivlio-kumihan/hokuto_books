@@ -1,6 +1,8 @@
     <footer class="footer">
       <div class="footer__information">
-        <div class="footer__to-page-top"><a href="#Top">ページトップへ</a></div>
+        <div class="footer__to-page-top">
+          <a href="#page-top">ページトップへ</a>
+        </div>
         <div class="footer__top">
           <div class="footer__information-wrapper">
             <div class="footer__links-wrapper">

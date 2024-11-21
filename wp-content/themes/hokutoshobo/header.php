@@ -10,6 +10,9 @@
 <div id="global-container"> <!-- start #global-container -->
   <div id="container"> <!-- start #container -->
     <div class="mobile-menu__cover"></div>
+    <div class="mobile-to-page-top">
+      <a href="#page-top">トップへ</a>
+    </div>
     <header class="header">
       <div class="header__upper">
         <div class="logo-space">

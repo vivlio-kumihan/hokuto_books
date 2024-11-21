@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="main novel-self-publish">
+<div id="page-top" class="main novel-self-publish">
   <div class="main__contents-aside-wrapper">
     <div class="main__contents-wrapper">
       <div class="main__inner">

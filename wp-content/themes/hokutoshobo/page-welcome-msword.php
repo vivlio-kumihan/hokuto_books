@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="main welcome-msword">
+<div id="page-top" class="main welcome-msword">
   <div class="main__contents-aside-wrapper">
     <div class="main__contents-wrapper">
       <div class="main__inner">
@@ -59,7 +59,7 @@
           </div>
 
           <p class="between-charts">文書の大きさがA5判に変更されました。</p>
-          
+
           <div class="image-wrapper ami msword-image-lg">
             <img src="<?php echo get_template_directory_uri(); ?>/images/article/page-novel-welcome-msword-03.png" />
           </div>

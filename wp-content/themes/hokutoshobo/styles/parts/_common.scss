@@ -19,6 +19,29 @@ body {
   transition: .5s;
   z-index: 2;
   // pointer-events: none;
+  & > .mobile-to-page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: .5em 1em;
+    color: #fff;
+    font-family: $fontGothic;
+    font-size: .8em;
+    font-weight: 900;
+    font-feature-settings: "palt" 1;
+    background-color: rgba($color: $cTheme, $alpha: .9);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  .fixed-icon img {
+    width: 80%;
+    height: auto;
+  }
 }
 
 // !!!!! WEBフォントの指定で2年前から変わったところがあるよう。!!!!!

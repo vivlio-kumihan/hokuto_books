@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="main price">
+<div id="page-top" class="main price">
   <div class="main__contents-aside-wrapper">
     <div class="main__contents-wrapper">
       <div class="main__inner">
@@ -26,7 +26,7 @@
         </ul>
       </div>
     </div>
-    
+
     <aside class="main__other-info">
       <?php
       // データをテンプレートファイルに渡して表示

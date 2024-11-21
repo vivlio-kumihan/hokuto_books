@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="main">
+<div id="page-top" class="main">
   <div class="conBox">
     <h3>並製本お見積プラン</h3>
     <div id="tabs">

@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="main transaction">
+<div id="page-top" class="main transaction">
   <div class="main__contents-aside-wrapper">
     <div class="main__contents-wrapper">
       <div class="main__inner">

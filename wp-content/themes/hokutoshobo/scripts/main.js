@@ -4,6 +4,8 @@ class Main {
     this.HideHeader = new HideHeader();
     this.MonitorLine = new MonitorLine();
     this.fadeSlider = new FadeSlider('.swiper');
+    this.fadeSlider.autoStart();
+    new Modal();
     this._init();
   }
   _init() {

@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="main knowleage">
+<div id="page-top" class="main knowleage">
   <div class="main__contents-aside-wrapper">
     <div class="main__contents-wrapper">
       <div class="main__inner">
@@ -165,9 +165,9 @@
             <li>3. 引用部分とその他の部分が明確に区別し引用文は改変しないこと</li>
             <li>4. 引用された著作物の出典が明示されていること</li>
             <li>5. この他、歌詞や写真など、著作物の種類によって気を付けるべき点は異なります。
-          </ol>
-          <div class="note">詳しくは、北斗書房スタッフにおたずね下さい。</div>
-          <div class="to-page-top"><a href="#contents">目次にもどる</a></div>
+              </ol>
+              <div class="note">詳しくは、北斗書房スタッフにおたずね下さい。</div>
+              <div class="to-page-top"><a href="#contents">目次にもどる</a></div>
         </section>
       </div>
     </div>
@@ -197,7 +197,7 @@
 
 
 
-  <!-- 
+<!-- 
 <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon01-l1.png" />
 <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon02-l1.png" />
 <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon03-l1.png" />

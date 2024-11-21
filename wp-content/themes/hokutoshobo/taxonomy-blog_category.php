@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- 新着情報のカテゴリー一覧 -->
-<div class="main news category">
+<div id="page-top" class="main news category">
   <div class="main__contents-wrapper">
     <div class="main__inner">
       <h3 class="main__header3"><?php single_term_title(); ?></h3>
@@ -47,18 +47,18 @@
         <!-- ページネーション -->
         <div class="pagination">
           <span class="page-numbers pagination__to-index inner-categor">
-              <a href="<?php echo esc_url(home_url('/news')); ?>">
-                記事一覧へ
-              </a>
-            </span>
-            <?php
-            echo paginate_links([
-              'total' => $wp_query->max_num_pages, // 最大ページ数
-              'current' => max(1, get_query_var('paged')), // 現在のページ
-              'prev_text' => '前へ',  // 前ページリンクテキスト
-              'next_text' => '次へ',  // 次ページリンクテキスト
-            ]);
-            ?>
+            <a href="<?php echo esc_url(home_url('/news')); ?>">
+              記事一覧へ
+            </a>
+          </span>
+          <?php
+          echo paginate_links([
+            'total' => $wp_query->max_num_pages, // 最大ページ数
+            'current' => max(1, get_query_var('paged')), // 現在のページ
+            'prev_text' => '前へ',  // 前ページリンクテキスト
+            'next_text' => '次へ',  // 次ページリンクテキスト
+          ]);
+          ?>
         </div>
 
       <?php else : ?>
