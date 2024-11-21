@@ -82,8 +82,8 @@
             自費出版でよく用いられる製本方法には、大きくふたつあります。</p>
           <h5 class="main__header5">上製本</h5>
 
-          <div class="image-wrapper ami hardcover to-modal">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon03-l1-320x320.png" alt="上製本（閉）" />
+          <div class="image-wrapper ami hardcover">
+            <img class=" to-modal" data-name="上製本書影" src=" <?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon03-l1-320x320.png" alt="上製本（閉）" />
           </div>
 
           <p>ハードカバーとも呼ばれ、紙に印刷した表紙をボール紙に貼り製本する方法です。</p>
@@ -93,19 +93,19 @@
           <p>その場合は、「箔押し」という型押しでタイトルなどを布に印字します。</p>
           <div class="note">※画像クリックで拡大表示されます。</div>
 
-          <div class="flex-wrapper ami to-modal">
+          <div class="flex-wrapper ami">
             <div class="image-wrapper spread">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon01-l1-320x224.png" alt="上製本（開）" />
+              <img class=" to-modal" data-name="上製本開く" src=" <?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon01-l1-320x224.png" alt="上製本（開）" />
             </div>
             <div class="image-wrapper gutter">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon02-l1-320x144.png" alt="上製本（綴じ状態）" /></a>
+              <img class="to-modal" data-name="上製本開く" src=" <?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon02-l1-320x144.png" alt="上製本（綴じ状態）" /></a>
             </div>
           </div>
 
           <h5 id="about-binding-method" class="main__header5">並製本</h5>
 
-          <div class="image-wrapper ami softcover to-modal">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img03-l1-320x320.png" alt="並製本（閉）" /></a>
+          <div class="image-wrapper ami softcover">
+            <img class="to-modal" data-name="並製本書影" src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img03-l1-320x320.png" alt="並製本（閉）" /></a>
           </div>
 
           <p>ソフトカバーとも呼ばれ、本文紙より厚めの紙で本文をくるむ方法です。</p>
@@ -116,12 +116,12 @@
           <p>カバーには、ＰＰ加工と呼ばれる透明フィルムを貼り、見た目美しくまた汚れにくくします。</p>
           <div class="note">※画像クリックで拡大表示されます。</div>
 
-          <div class="flex-wrapper ami to-modal">
+          <div class="flex-wrapper ami">
             <div class="image-wrapper spread">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img01-l1-320x224.png" alt="並製本（開）" />
+              <img class="to-modal" data-name="並製本開く" src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img01-l1-320x224.png" alt="並製本（開）" />
             </div>
             <div class="image-wrapper gutter">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img02-l1-320x144.png" alt="並製本（綴じ状態）" />
+              <img class="to-modal" data-name="並製本開く" src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img02-l1-320x144.png" alt="並製本（綴じ状態）" />
             </div>
           </div>
 
@@ -182,11 +182,37 @@
 
   <div class="modal">
     <button class="btn modal__toggle-btn">戻&ensp;る</button>
-    <div class="modal__inner ">
+    <div class="modal__inner" data-to-modal-matched-name="上製本書影">
       <div class="modal__window">
         <div class="modal__image">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/bnr-jsjapan.png" />
-          <img src="./images/event_makiwara_1_81D0412@0.5x.jpg" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon03-l1.png" />
+        </div>
+      </div>
+    </div>
+    <div class="modal__inner" data-to-modal-matched-name="上製本開く">
+      <div class="modal__window">
+        <div class="modal__image">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon01-l1.png" />
+        </div>
+        <div class="modal__image">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon02-l1.png" />
+        </div>
+      </div>
+    </div>
+    <div class="modal__inner" data-to-modal-matched-name="並製本書影">
+      <div class="modal__window">
+        <div class="modal__image">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img03-l1.png" />
+        </div>
+      </div>
+    </div>
+    <div class="modal__inner" data-to-modal-matched-name="並製本開く">
+      <div class="modal__window">
+        <div class="modal__image">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img01-l1.png" />
+        </div>
+        <div class="modal__image">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img02-l1.png" />
         </div>
       </div>
     </div>

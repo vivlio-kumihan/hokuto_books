@@ -2,14 +2,14 @@
 
 class Modal {
   constructor() {
-    this.btns = document.querySelectorAll(".to-modal > .btn");
+    this.toModals = document.querySelectorAll(".to-modal");
     this.modals = document.querySelectorAll(".modal__inner");
     this.toggle = document.querySelector(".modal__toggle-btn");
     this._init();
   }
 
   _init() {
-    this.btns.forEach(btn => {
+    this.toModals.forEach(btn => {
       btn.addEventListener("click", (e) => {
         const dataName = e.target.dataset.name;
         this.modals.forEach(modal => {
