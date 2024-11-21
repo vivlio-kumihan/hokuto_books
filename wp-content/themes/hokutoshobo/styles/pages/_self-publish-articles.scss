@@ -15,8 +15,11 @@
       height: 400px;
     }
     &.msword-image-lg {
-      height: 600px;
+      height: 400px;
       margin-top: unset;
+      @include mq(lg) {
+        height: 600px;
+      }
     }
   }
   & .between-charts {
@@ -29,11 +32,6 @@
     margin: .75em 0 .5em;
     margin-bottom: unset;
   }
-  // & .main__list {
-  //   & > li::before {
-  //     position: unset;
-  //   }
-  // }
   .to-link-wrapper {
     margin-top: 1em;
     padding: 1.5em 2em;
@@ -46,4 +44,21 @@
   }
 }
 
-// class=" about-personal-history"
+.main.novel-self-publish,
+.main.welcome-msword {
+  & .image-wrapper.ami {
+    margin-top: 1em;
+    height: 200px;
+    @include mq(lg) {
+      margin-top: 1.5em;
+      height: 300px;
+    }
+    & > img {
+      object-fit: cover;
+      @include mq(lg) {
+        object-fit: contain;
+      }
+    }
+
+  }
+}

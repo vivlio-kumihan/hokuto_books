@@ -415,6 +415,10 @@ a {
   line-height: 1.2;
   color: #023163;
 }
+.note.indent-minus {
+  padding-left: 1em;
+  text-indent: -1em;
+}
 
 .to-page-top {
   display: flex;
@@ -631,6 +635,35 @@ a {
   content: "\f270";
   font-size: 1.15em;
   font-family: "Font Awesome 6 Brands";
+}
+.selected-label.buy.only-mark {
+  display: inline;
+  line-height: 1;
+}
+.selected-label.buy.only-mark > a {
+  display: inline-block;
+  padding: 3px 8px 3px 25px;
+  font-size: 12px;
+  text-shadow: unset;
+  box-shadow: unset;
+}
+
+.into-selected-label {
+  position: relative;
+  display: inline-block;
+  width: 4em;
+  height: 1em;
+}
+@media (min-width: 960px) {
+  .into-selected-label {
+    margin: 0 -0.2em 0 0.25em;
+  }
+}
+.into-selected-label > .selected-label.buy.only-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .main__header3 > .header-pre {
@@ -878,17 +911,28 @@ a {
   position: relative;
   margin-top: 1.5em;
   line-height: 1.25;
+  font-size: 0.9em;
   z-index: 1;
+}
+@media (min-width: 960px) {
+  .infomation-chart {
+    font-size: 0.95em;
+  }
 }
 .infomation-chart::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 13.5em;
+  width: 9em;
   height: 100%;
   background-color: #D7EBEA;
   z-index: -1;
+}
+@media (min-width: 960px) {
+  .infomation-chart::after {
+    width: 12.5em;
+  }
 }
 .infomation-chart > div {
   display: flex;
@@ -901,12 +945,43 @@ a {
   border-top: 1px dotted #333;
 }
 .infomation-chart dt {
-  flex-basis: 14em;
-  padding-left: 1em;
+  flex-basis: 10em;
+  padding: 1em;
+}
+@media (min-width: 960px) {
+  .infomation-chart dt {
+    flex-basis: 14em;
+  }
 }
 .infomation-chart dd {
   flex-basis: 70%;
-  padding: 1em 1em 1em 1em;
+  padding: 1em;
+}
+
+.payee {
+  display: flex;
+  justify-content: center;
+}
+.payee > div {
+  flex-basis: 1;
+}
+.payee > div:not(:first-of-type) {
+  border-left: 1px solid #023163;
+}
+.payee dt, .payee dd {
+  text-align: center;
+  padding: 0.25em 0.75em;
+}
+@media (min-width: 960px) {
+  .payee dt, .payee dd {
+    padding: 0.25em 2em;
+  }
+}
+.payee dt {
+  font-size: 0.9em;
+  color: #023163;
+  background-color: #D7EBEA;
+  border-bottom: 1px solid #023163;
 }
 
 .main {
@@ -2143,8 +2218,15 @@ a {
 .main.novel-self-publish .image-wrapper.ami.msword-image-lg,
 .main.visual-self-publish .image-wrapper.ami.msword-image-lg,
 .main.welcome-msword .image-wrapper.ami.msword-image-lg {
-  height: 600px;
+  height: 400px;
   margin-top: unset;
+}
+@media (min-width: 960px) {
+  .main.novel-self-publish .image-wrapper.ami.msword-image-lg,
+  .main.visual-self-publish .image-wrapper.ami.msword-image-lg,
+  .main.welcome-msword .image-wrapper.ami.msword-image-lg {
+    height: 600px;
+  }
 }
 .main.novel-self-publish .between-charts,
 .main.visual-self-publish .between-charts,
@@ -2175,6 +2257,49 @@ a {
 .main.visual-self-publish .to-link-wrapper > .main__header6,
 .main.welcome-msword .to-link-wrapper > .main__header6 {
   margin-top: unset;
+}
+
+.main.novel-self-publish .image-wrapper.ami,
+.main.welcome-msword .image-wrapper.ami {
+  margin-top: 1em;
+  height: 200px;
+}
+@media (min-width: 960px) {
+  .main.novel-self-publish .image-wrapper.ami,
+  .main.welcome-msword .image-wrapper.ami {
+    margin-top: 1.5em;
+    height: 300px;
+  }
+}
+.main.novel-self-publish .image-wrapper.ami > img,
+.main.welcome-msword .image-wrapper.ami > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 960px) {
+  .main.novel-self-publish .image-wrapper.ami > img,
+  .main.welcome-msword .image-wrapper.ami > img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+.melmaga .logo-magmag {
+  margin-left: 0.5em;
+  height: 1.5em;
+}
+.melmaga .infomation-chart {
+  margin: 1em 0 1.5em;
+}
+
+.sample-mail-text {
+  margin-top: 1em;
+  font-size: 0.65rem;
+}
+@media (min-width: 600px) {
+  .sample-mail-text {
+    font-size: 1rem;
+  }
 }
 
 .header {

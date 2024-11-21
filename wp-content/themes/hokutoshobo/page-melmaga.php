@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="main">
+<div class="main melmaga">
   <div class="main__contents-aside-wrapper">
     <div class="main__contents-wrapper">
       <div class="main__inner">
@@ -20,7 +20,14 @@
           </div>
           <div>
             <dt>まぐまぐマガジンID</dt>
-            <dd>0000107844<a href="http://www.mag2.com/" target="_blank"><img class="bnrMag2" src="http://www.hokuto-p.co.jp/common/img/_mglogo.gif" alt="まぐまぐ" border="0" height="31" widdt="88" /></a></dd>
+            <dd>
+              <a href="http://www.mag2.com/" target="_blank">
+                <span>
+                  0000107844
+                  <img class="logo-magmag" src="<?php echo get_template_directory_uri(); ?>/images/logo_magmag@0.5x.png" alt="まぐまぐ" />
+                </span>
+              </a>
+            </dd>
           </div>
           <div>
             <dt>発行周期</dt>
@@ -38,13 +45,13 @@
           </div>
           <div>
             <dt valign="top">バックナンバー</dt>
-            <dd><a class="arrowLinks" href="http://archive.mag2.com/0000107844/index.html" target="_blank">すべて公開</a></dd>
+            <dd><a href="http://archive.mag2.com/0000107844/index.html" target="_blank">すべて公開</a></dd>
           </div>
         </dl>
-        <p><a class="arrowLinks" href="http://www.mag2.com/m/0000107844.html" target="_blank">メールマガジンの登録・解除はこちら</a> <br />
+        <!-- <p><a href="http://www.mag2.com/m/0000107844.html" target="_blank">メールマガジンの登録・解除はこちら</a> <br /> -->
         </p>
         <h4 class="main__header4">メルマガサンプル</h4>
-        <pre>
+        <pre class="sample-mail-text">
 サンプル号
 □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
 □□□□ </p>

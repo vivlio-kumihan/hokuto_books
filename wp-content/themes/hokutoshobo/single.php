@@ -108,11 +108,9 @@
                 $book_title = post_custom('book_title');
               ?>
                 <div class="selected-label buy">
-                  <div class="selected-label buy">
-                    <a href="<?php echo esc_url(site_url('/book-order/?book_title=' . urlencode($book_title))); ?>">
-                      <span class="selected-label__icon">購入</span>
-                    </a>
-                  </div>
+                  <a href="<?php echo esc_url(site_url('/book-order/?book_title=' . urlencode($book_title))); ?>">
+                    <span class="selected-label__icon">購入</span>
+                  </a>
                 </div>
               <?php elseif ($book_order === 'sold-out') : ?>
                 <div class="selected-label sold-out">絶版</div>

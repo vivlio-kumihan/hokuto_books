@@ -50,13 +50,16 @@
             <li>2. 「サイズ」ボタンをクリックすると、大きさを選択できます。</li>
             <li>3. 希望する紙の大きさを選んでクリックします。</li>
           </ul>
+
           <div class="image-wrapper ami msword-image">
             <img src="<?php echo get_template_directory_uri(); ?>/images/article/page-novel-welcome-msword-01.png" />
           </div>
           <div class="image-wrapper ami msword-image">
             <img src="<?php echo get_template_directory_uri(); ?>/images/article/page-novel-welcome-msword-02.png" />
           </div>
+
           <p class="between-charts">文書の大きさがA5判に変更されました。</p>
+          
           <div class="image-wrapper ami msword-image-lg">
             <img src="<?php echo get_template_directory_uri(); ?>/images/article/page-novel-welcome-msword-03.png" />
           </div>

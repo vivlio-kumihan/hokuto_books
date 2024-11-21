@@ -1,0 +1,20 @@
+@use '../globals/' as *;
+@use '../parts/common' as *;
+
+.melmaga {
+  & .logo-magmag {
+    margin-left: .5em;
+    height: 1.5em;
+  }
+  & .infomation-chart {
+    margin: 1em 0 1.5em;
+  }
+
+}
+.sample-mail-text {
+  margin-top: 1em;
+  font-size: .65rem;
+  @include mq(md) {
+    font-size: 1rem;
+  }
+}
