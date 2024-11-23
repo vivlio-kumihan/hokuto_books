@@ -21,24 +21,24 @@ wp-content/updraft/*
 # Configuration
 wp-config.php
 
-# Example themes
-/wp-content/themes/twenty*/
-
 # Example plugin
-/wp-content/plugins/hello.php
+/wp-content/plugins/
 
 # Uploads
 /wp-content/uploads/
 /wp-content/updraft/
+
+# Plugins フォルダ全体を無視
+
+# 特定のファイル形式を無視
+*.zip
+*.tar.gz
 
 # Log files
 *.log
 
 # htaccess
 /.htaccess
-
-# remove fat file
-php-cgi-5.2.8.core
 
 # my remove
 .DS_Store
