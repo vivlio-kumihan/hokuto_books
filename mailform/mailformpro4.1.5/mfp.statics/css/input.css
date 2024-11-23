@@ -1,9 +1,0 @@
-form#mailformpro input,form#mailformpro textarea {
-	padding: 3px;
-	font-size: 14px;
-	vertical-align: middle;
-}
-form#mailformpro select {
-	vertical-align: middle;
-	font-size: 14px;
-}
