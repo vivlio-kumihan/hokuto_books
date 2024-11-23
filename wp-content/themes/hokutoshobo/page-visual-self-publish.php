@@ -62,7 +62,7 @@
         <div class="image-wrapper ami color-chart">
           <img src="<?php echo get_template_directory_uri(); ?>/images/article/page-visual-self-publish-02.jpg" />
         </div>
-        <p>左の図は「人間の眼が認識できる範囲」「RGBで再現できる範囲」「CMYKで再現できる範囲」を表したものです。ご覧のとおり、RGBとCMYKでは表現できる色の領域が異なります。人間の眼で認識できる色の範囲が最も広く、その次に範囲が広いのはRGB、CMYKはほとんどの部分でRGBの再現域より狭くなります。</p>
+        <p>上の図は「人間の眼が認識できる範囲」「RGBで再現できる範囲」「CMYKで再現できる範囲」を表したものです。ご覧のとおり、RGBとCMYKでは表現できる色の領域が異なります。人間の眼で認識できる色の範囲が最も広く、その次に範囲が広いのはRGB、CMYKはほとんどの部分でRGBの再現域より狭くなります。</p>
         <p>RGBからCMYKに変換する際に、CMYKの再現域を超えた色は、CMYKの再現域で最も近い色に置き換えられます。</p>
         <div class="flex-wrapper">
           <div class="image-wrapper">
