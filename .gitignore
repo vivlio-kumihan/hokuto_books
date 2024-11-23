@@ -6,17 +6,21 @@
 # Note: if you want to stage/commit WP core files
 # you can delete this whole section/until Configuration.
 /wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
 /wp-includes/
 /index.php
 /license.txt
 /readme.html
 /wp-*.php
 /xmlrpc.php
-wp-content/updraft/*
+/wp-content/ai1wm-backups/
+/wp-content/blogs.dir/
+/wp-content/languages/
+/wp-content/plugins/
+/wp-content/siteguard/
+/wp-content/updraft/
+/wp-content/upgrade/
+/wp-content/upgrade-temp-backup/
+/wp-content/uploads/
 
 # Configuration
 wp-config.php
@@ -43,15 +47,3 @@ wp-config.php
 # my remove
 .DS_Store
 tmp/
-
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-/wp-content/plugins
-
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
