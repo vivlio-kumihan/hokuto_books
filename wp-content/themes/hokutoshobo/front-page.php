@@ -45,6 +45,13 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
+            <div class="swiper-slide mq-lg-apear">
+              <a href="<?php echo esc_url(home_url('/')); ?>">
+                <div class="image-wrapper">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/slider/slider_beautiful-constellations-blue-sky@0.25x.png" alt="Slider Image 1" />
+                </div>
+              </a>
+            </div>
             <div class="swiper-slide">
               <a href="<?php echo esc_url(home_url('/process')); ?>">
                 <div class="image-wrapper">
@@ -77,11 +84,35 @@
 <div class="main front-page">
   <div class="main__contents-aside-wrapper">
     <div class="main__contents-wrapper">
+      <div class="main__inner featured-articles">
+        <div class="featured-articles__top-three">
+          <!-- 注目記事 1 -->
+          <div class="flex-wrapper">
+            <a class="featured-articles__item" href="<?php echo esc_url(home_url('/novel-self-publish')); ?>">
+              <div class="image-wrapper">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/banner/banner-nobel.png" alt="">
+              </div>
+            </a>
+            <a class="featured-articles__item" href="<?php echo esc_url(home_url('/visual-self-publish')); ?>">
+              <div class="image-wrapper">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/banner/banner-camera.png" alt="">
+              </div>
+            </a>
+          </div>
+          <!-- 注目記事 2 -->
+          <a class="featured-articles__item for-msword" href="<?php echo esc_url(home_url('/welcome-msword')); ?>">
+            <div class="image-wrapper welcome-msword-banner">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/banner/banner-msword.png" alt="">
+            </div>
+          </a>
+        </div>
+      </div>
+
       <!-- 最新の出版物インデックス -->
       <div class="main__inner latest-books">
         <div class="latest-books__wrapper">
           <h3 class="main__header3">
-            最新の製作実績
+            最新の制作実績
           </h3>
           <div class="main__catch">当書房でおつくりいただいた自費出版作品をご紹介</div>
           <!-- 削除した -->
@@ -129,27 +160,7 @@
         <h3 class="main__header3">
           注目記事
         </h3>
-        <div class="featured-articles__top-three">
-          <!-- 注目記事 1 -->
-          <div class="flex-wrapper">
-            <a class="featured-articles__item" href="<?php echo esc_url(home_url('/novel-self-publish')); ?>">
-              <div class="image-wrapper">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/banner/banner-nobel.png" alt="">
-              </div>
-            </a>
-            <a class="featured-articles__item" href="<?php echo esc_url(home_url('/visual-self-publish')); ?>">
-              <div class="image-wrapper">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/banner/banner-camera.png" alt="">
-              </div>
-            </a>
-          </div>
-          <!-- 注目記事 2 -->
-          <a class="featured-articles__item for-msword" href="<?php echo esc_url(home_url('/welcome-msword')); ?>">
-            <div class="image-wrapper welcome-msword-banner">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/banner/banner-msword.png" alt="">
-            </div>
-          </a>
-        </div>
+
         <!-- 注目記事 3 -->
         <!-- 自費出版相談会のバナー -->
         <?php

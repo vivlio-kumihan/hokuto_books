@@ -2451,6 +2451,95 @@ a {
   padding-left: 0.5em;
 }
 
+@media (min-width: 960px) {
+  .price-list br {
+    display: none;
+  }
+}
+.price-list .main__header4 {
+  line-height: 1.3;
+  text-align: center;
+}
+.price-list__tab-menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #ccc;
+}
+.price-list__tab-menu > li {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 1em;
+  line-height: 1.1;
+  text-align: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  cursor: pointer;
+}
+.price-list__tab-menu > li > span {
+  font-size: 0.9em;
+}
+.price-list__tab-menu > li.active {
+  background-color: #fff;
+  font-weight: bold;
+  border-top: 2px solid #007bff;
+}
+.price-list__content {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #fff;
+}
+.price-list__panel {
+  display: none;
+}
+.price-list__panel.active {
+  display: block;
+}
+.price-list__spec > dl {
+  display: flex;
+  padding: 0.5em 0;
+  border-bottom: 1px dotted #023163;
+}
+.price-list__spec > dl > dt {
+  flex-basis: 20%;
+}
+.price-list__title, .price-list__total {
+  margin-top: 1em;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.1em;
+  line-height: 1;
+}
+.price-list__title > span, .price-list__total > span {
+  font-size: 0.8em;
+}
+.price-list__total {
+  margin: 0.5em 0 1em;
+}
+.price-list__estimate tr {
+  display: grid;
+  -moz-column-gap: 0.25em;
+       column-gap: 0.25em;
+  justify-content: center;
+  grid-template-columns: 40px 65px 95px 95px;
+}
+.price-list__estimate tr:last-of-type {
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+  border-top: 2px solid #999;
+}
+.price-list__estimate tr > th {
+  text-align: center;
+}
+.price-list__estimate tr > td:nth-of-type(1), .price-list__estimate tr > td:nth-of-type(2) {
+  text-align: center;
+}
+.price-list__estimate tr > td:nth-of-type(3), .price-list__estimate tr > td:nth-of-type(4) {
+  text-align: right;
+}
+
 .header {
   display: none;
 }

@@ -3,8 +3,9 @@ class Main {
     this.LatestYear = new LatestYear();
     this.HideHeader = new HideHeader();
     this.MonitorLine = new MonitorLine();
-    this.fadeSlider = new FadeSlider('.swiper');
-    this.fadeSlider.autoStart();
+    this.FadeSlider = new FadeSlider('.swiper');
+    this.FadeSlider.autoStart();
+    this.PriceList = new PriceList();
     new Modal();
     this._init();
   }

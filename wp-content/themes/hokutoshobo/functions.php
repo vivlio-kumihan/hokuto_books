@@ -27,6 +27,7 @@ function my_scripts()
   wp_enqueue_script('hide-header-js', get_template_directory_uri() . '/scripts/libs/hide-header.js', array(), null, true);
   wp_enqueue_script('mobile-menu-js', get_template_directory_uri() . '/scripts/libs/mobile-menu.js', array(), null, true);
   wp_enqueue_script('monitor-line-js', get_template_directory_uri() . '/scripts/libs/monitor-line.js', array(), null, true);
+  wp_enqueue_script('price-list-js', get_template_directory_uri() . '/scripts/libs/price-list.js', array(), null, true);
   wp_enqueue_script('modal-js', get_template_directory_uri() . '/scripts/libs/modal.js', array(), null, true);
   wp_enqueue_script('fade-slider-js', get_template_directory_uri() . '/scripts/vendors/swiper-bundle.min.js', array(), null, true);
   wp_enqueue_script('swiper-bundle-min-js', get_template_directory_uri() . '/scripts/libs/fade-slider.js', array(), null, true);

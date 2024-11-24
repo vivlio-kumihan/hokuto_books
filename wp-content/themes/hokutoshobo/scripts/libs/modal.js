@@ -7,7 +7,7 @@ class Modal {
     this.toggle = document.querySelector(".modal__toggle-btn");
     this._init();
   }
-
+  
   _init() {
     this.toModals.forEach(btn => {
       btn.addEventListener("click", (e) => {

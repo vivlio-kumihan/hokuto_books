@@ -1,0 +1,102 @@
+@use '../globals/' as *;
+@use '../parts/common' as *;
+
+.price-list {
+  & br {
+    @include mq(lg) {
+      display: none;
+    }
+  }    
+  .main__header4 {
+    line-height: 1.3;
+    text-align: center;
+  }
+  // タブ
+  &__tab-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #ccc;
+    & > li {
+      width: 100%;
+      padding: 5px 0;
+      font-size: 1em;
+      line-height: 1.1;
+      text-align: center;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      border-bottom: none;
+      cursor: pointer;
+      & > span {
+        font-size: .9em;
+      }
+      &.active {
+        background-color: #fff;
+        font-weight: bold;
+        border-top: 2px solid #007bff;
+      }
+    }
+  }
+    
+  // 内容
+  &__content {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+  }
+  &__panel {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &__spec {
+    & > dl {
+      display: flex;
+      padding: .5em 0;
+      border-bottom: 1px dotted $cTheme;
+      & > dt {
+        flex-basis: 20%;
+      }
+    }
+  }
+  &__title,
+  &__total {
+    margin-top: 1em;
+    font-family: $fontGothic;
+    font-size: 1.1em;
+    line-height: 1;
+    & > span {
+      font-size: .8em;
+    }
+  }
+  &__total {
+    margin: .5em 0 1em;
+  }
+  &__estimate {
+    & tr {
+      display: grid;
+      column-gap: .25em;
+      justify-content: center;
+      grid-template-columns: 40px 65px 95px 95px;
+      &:last-of-type {
+        margin-top: .5em;
+        padding-top: .5em;
+        border-top: 2px solid #999;
+      }
+      & > th {
+        text-align: center;
+      }
+      & > td:nth-of-type(1),
+      & > td:nth-of-type(2) {
+        text-align: center;
+      }
+      & > td:nth-of-type(3),
+      & > td:nth-of-type(4) {
+        text-align: right;
+      }
+    }
+  }
+}
