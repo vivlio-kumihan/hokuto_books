@@ -52,14 +52,33 @@
       display: block;
     }
   }
+  &__outer {
+    @include mq(lg) {
+      display: flex;
+      gap: 1em;
+    }
+  }
   &__spec {
+    @include mq(lg) {
+      flex-basis: calc(45% - .5em);
+      margin: 0 auto;
+      font-size: .95em;
+    }
     & > dl {
       display: flex;
       padding: .5em 0;
       border-bottom: 1px dotted $cTheme;
       & > dt {
-        flex-basis: 20%;
+        flex-basis: 25%;
       }
+      & > dd {
+        flex-basis: 75%;
+      }
+    }
+  }
+  &__inner {
+    @include mq(lg) {
+      flex-basis: calc(55% - .5em);
     }
   }
   &__title,
@@ -68,6 +87,10 @@
     font-family: $fontGothic;
     font-size: 1.1em;
     line-height: 1;
+    @include mq(lg) {
+      margin-top: unset;
+      padding-left: 1.25em;
+    }
     & > span {
       font-size: .8em;
     }
@@ -76,11 +99,14 @@
     margin: .5em 0 1em;
   }
   &__estimate {
+    width: 100%;
     & tr {
       display: grid;
-      column-gap: .25em;
       justify-content: center;
-      grid-template-columns: 40px 65px 95px 95px;
+      grid-template-columns: 15% 20% 30% 35%;
+      @include mq(lg) {
+        grid-template-columns: 20% 20% 30% 30%;
+      }
       &:last-of-type {
         margin-top: .5em;
         padding-top: .5em;

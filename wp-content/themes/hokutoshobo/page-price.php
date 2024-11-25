@@ -12,13 +12,13 @@
           <p>以下の御見積プランは、自費出版でよくある「自分史」の、標準的な仕様とご参考価格となります。</p>
           <p>このプランに無い仕様に関しましては、お客様のご予算をお伺いしながらその都度御見積いたしますので、どうぞお気軽にご相談下さい。</p>
         </div>
-        <ul class="main__list for-only-links-with-image">
-          <li>
+        <ul class="main__list for-only-links">
+          <li class="for-only-links__soft-cover">
             <a href="<?php echo esc_url(home_url('/price/namiseihon/')); ?>">
               並製本お見積プラン
             </a>
           </li>
-          <li>
+          <li class="for-only-links__hard-cover">
             <a href="<?php echo esc_url(home_url('/price/jyoseihon/')); ?>">
               上製本お見積プラン
             </a>

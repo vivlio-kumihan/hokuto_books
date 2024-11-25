@@ -150,7 +150,7 @@
     & > li:not(:first-of-type) {
       margin-top: .5em;
     }
-    &.for-only-links-with-image {
+    &.for-only-links {
       display: flex;
       justify-content: center;
       gap: 10px;
@@ -166,7 +166,6 @@
         font-size: .9em;
         font-weight: 900;
         line-height: 1;
-        border: 2px solid $cTheme;
         &::before {
           position: absolute;
           width: 0;
@@ -175,6 +174,20 @@
           margin-top: 0;
         }
       }
+    }  
+  }
+  & .for-only-links {
+    &__soft-cover, 
+    &__hard-cover {
+      padding: 2em 0;
+      color: #fff;
+      border-radius: 10px;
+    }
+    &__soft-cover {
+      background-color: $cOrangeHd;
+    }
+    &__hard-cover {
+      background-color: $cTheme;
     }
   }
   &__order-list {
