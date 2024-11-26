@@ -2513,7 +2513,7 @@ a {
 }
 .price-list__tab-menu > li {
   width: 100%;
-  padding: 5px 0;
+  padding: 10px 0;
   font-size: 1em;
   line-height: 1.1;
   text-align: center;
@@ -2524,6 +2524,11 @@ a {
 }
 .price-list__tab-menu > li > span {
   font-size: 0.9em;
+}
+@media (min-width: 960px) {
+  .price-list__tab-menu > li > span {
+    margin-left: 0.25em;
+  }
 }
 .price-list__tab-menu > li.active {
   background-color: #fff;
@@ -2591,6 +2596,11 @@ a {
 .price-list__estimate {
   width: 100%;
 }
+.price-list__estimate > tbody {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+}
 .price-list__estimate tr {
   display: grid;
   justify-content: center;
@@ -2602,7 +2612,6 @@ a {
   }
 }
 .price-list__estimate tr:last-of-type {
-  margin-top: 0.5em;
   padding-top: 0.5em;
   border-top: 2px solid #999;
 }
