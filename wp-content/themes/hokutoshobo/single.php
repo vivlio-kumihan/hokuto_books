@@ -139,6 +139,42 @@
                 <?php endif; ?>
               </dd>
             </dl>
+
+            <div class="custom-field">
+              <?php
+              // 出力したいカスタムフィールド名を配列で定義
+              $fields = [
+                'page1_body',
+                'page2_title',
+                'page2_body',
+                'page3_title',
+                'page3_body',
+                'page4_title',
+                'page4_body',
+                'page5_title',
+                'page5_body',
+              ];
+
+              // 各カスタムフィールドをループしてチェック＆出力
+              foreach ($fields as $field) {
+                $value = get_post_meta(get_the_ID(), $field, true); // カスタムフィールドの値を取得
+                if (!empty($value)) {
+                  // 特定のタイトルフィールドはカスタムクラスで囲む
+                  if (strpos($field, '_title') !== false) {
+                    echo '<div class="custom-field__title">';
+                    echo wp_kses_post($value); // HTMLタグを安全に解釈して出力
+                    echo '</div>';
+                  } else {
+                    // それ以外は通常の出力
+                    echo '<div class="custom-field__item">';
+                    echo wp_kses_post($value);
+                    echo '</div>';
+                  }
+                }
+              }
+              ?>
+            </div>
+
             <div class="selected-label buy how-to">
               <a href="<?php echo esc_url(home_url('"/purchase')); ?>">
                 <span>自費出版ご購入お申し込み方法</span>
@@ -147,6 +183,7 @@
           </div>
         </div>
       </div>
+
       <div class="page-direction">
         <ul class="pagination">
           <li class="pagination__to-index page-numbers">
@@ -174,3 +211,6 @@
 
 
 <?php get_footer(); ?>
+
+
+

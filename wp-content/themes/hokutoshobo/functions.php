@@ -142,3 +142,12 @@ function my_wpcf7_dynamic_text($text) {
     return $text;
 }
 add_filter('wpcf7_dynamic_text', 'my_wpcf7_dynamic_text');
+
+// この警告は、All in One SEOプラグインが翻訳を読み込むタイミングが早すぎるために発生しているものです。
+// 具体的には、_load_textdomain_just_in_time関数が推奨される「init アクション以降」に翻訳を読み込むべきところで、
+// それ以前に読み込まれていることが原因です。
+// もしAll in One SEOのコードに問題がある場合、以下のカスタムコードで一時的に回避できます。
+// ということだったが、効果なし。
+// add_action('init', function () {
+//   load_plugin_textdomain('all-in-one-seo-pack', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+// });

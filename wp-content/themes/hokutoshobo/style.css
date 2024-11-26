@@ -2126,6 +2126,39 @@ a {
   font-size: 0.95em;
 }
 
+.custom-field {
+  margin-top: 2em;
+  padding: 2em;
+  border: 2px solid #E49D5B;
+  border-radius: 10px;
+}
+.custom-field__title {
+  margin: 2em 0 0.5em;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.1em;
+  font-weight: 900;
+  color: #023163;
+}
+.custom-field__item > p:first-of-type {
+  margin-top: unset;
+}
+.custom-field__item > ul {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1em;
+  color: #023163;
+}
+.custom-field__item > ul > li {
+  padding-left: 1.25em;
+  position: relative;
+}
+.custom-field__item > ul > li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "●";
+  color: rgba(228, 157, 91, 0.8);
+}
+
 .news__list {
   display: flex;
   flex-direction: column;

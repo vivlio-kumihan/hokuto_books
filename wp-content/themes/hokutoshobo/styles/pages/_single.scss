@@ -106,3 +106,39 @@
     }
   }
 } 
+
+.custom-field {
+  margin-top: 2em;
+  padding: 2em;
+  border: 2px solid $cOrangeDk;
+  border-radius: 10px;
+  &__title {
+    margin: 2em 0 .5em;
+    font-family: $fontGothic;
+    font-size: 1.1em;
+    font-weight: 900;
+    color: $cTheme;
+    
+  }
+  &__item {
+    & > p:first-of-type {
+      margin-top: unset;
+    }
+    & > ul {
+      font-family: $fontGothic;
+      font-size: 1em;
+      color: $cTheme;
+      & > li {
+        padding-left: 1.25em;
+        position: relative;
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "●";
+          color: rgba($color: $cOrangeDk, $alpha: .8);
+        }
+      }
+    }
+  }
+}
