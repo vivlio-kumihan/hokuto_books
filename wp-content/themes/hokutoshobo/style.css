@@ -1145,9 +1145,10 @@ a {
   margin-top: 1em;
   padding: 5px 10px;
   font-family: "Noto Sans JP", sans-serif;
-  font-weight: 900;
   font-size: 1.1em;
+  font-weight: 900;
   line-height: 1;
+  font-feature-settings: "palt" 1;
   color: #fff;
   background-color: #E49D5B;
   border-radius: 3px;
@@ -1156,9 +1157,10 @@ a {
   margin: 1em 0 1.3em;
   padding: 5px 10px;
   font-family: "Noto Sans JP", sans-serif;
-  font-weight: 900;
   font-size: 0.9em;
+  font-weight: 900;
   line-height: 1;
+  font-feature-settings: "palt" 1;
   text-align: center;
   color: #023163;
   border-bottom: 2px solid #01588C;
@@ -1309,7 +1311,13 @@ a {
 }
 .main .featured-articles__top-three {
   display: flex;
+  flex-direction: column;
   gap: 1em;
+}
+@media (min-width: 960px) {
+  .main .featured-articles__top-three {
+    flex-direction: row;
+  }
 }
 .main .featured-articles__item {
   box-shadow: 3px 3px 3px #999;

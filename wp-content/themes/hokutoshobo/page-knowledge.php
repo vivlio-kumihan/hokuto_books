@@ -95,7 +95,7 @@
 
           <div class="flex-wrapper ami">
             <div class="image-wrapper spread">
-              <img class=" to-modal" data-name="上製本開く" src=" <?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon01-l1-320x224.png" alt="上製本（開）" />
+              <img class="to-modal" data-name="上製本開く" src=" <?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon01-l1-320x224.png" alt="上製本（開）" />
             </div>
             <div class="image-wrapper gutter">
               <img class="to-modal" data-name="上製本開く" src=" <?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon02-l1-320x144.png" alt="上製本（綴じ状態）" /></a>

@@ -41,15 +41,15 @@
                 <ul class="faq__books">
                   <li>
                     <div class="image-wrapper">
-                      <img src="<?php echo get_template_directory_uri(); ?>/images/guide/guide-jyoseihon03-l.png" alt="ハードカバー（上製本）" title="ハードカバー（上製本）" />
+                      <img class="to-modal" data-name="上製本の書影と開いた状態" src="<?php echo get_template_directory_uri(); ?>/images/guide/guide-jyoseihon03-l.png" alt="ハードカバー（上製本）" title="ハードカバー（上製本）" />
                     </div>
                   </li>
                   <li>
                     <div class="image-wrapper">
-                      <img src="<?php echo get_template_directory_uri(); ?>/images/guide/guide-jyoseihon01-l.png" alt="ハードカバー（上製本）" title="ハードカバー（上製本）" />
+                      <img class="to-modal" data-name="上製本の書影と開いた状態" src="<?php echo get_template_directory_uri(); ?>/images/guide/guide-jyoseihon01-l.png" alt="ハードカバー（上製本）" title="ハードカバー（上製本）" />
                     </div>
                     <div class="image-wrapper">
-                      <img src="<?php echo get_template_directory_uri(); ?>/images/guide/guide-jyoseihon02-l.png" alt="ハードカバー（上製本）" title="ハードカバー（上製本）" />
+                      <img class="to-modal" data-name="上製本の書影と開いた状態" src="<?php echo get_template_directory_uri(); ?>/images/guide/guide-jyoseihon02-l.png" alt="ハードカバー（上製本）" title="ハードカバー（上製本）" />
                     </div>
                   </li>
                 </ul>
@@ -59,15 +59,15 @@
                 <ul class="faq__books">
                   <li>
                     <div class="image-wrapper">
-                      <img src="<?php echo get_template_directory_uri(); ?>/images/guide/guide-namiseihon-img03-l.png" alt="ソフトカバー（上製本）" title="ソフトカバー（上製本）" />
+                      <img class="to-modal" data-name="並製本の書影と開いた状態" src="<?php echo get_template_directory_uri(); ?>/images/guide/guide-namiseihon-img03-l.png" alt="ソフトカバー（上製本）" title="ソフトカバー（上製本）" />
                     </div>
                   </li>
                   <li>
                     <div class="image-wrapper">
-                      <img src="<?php echo get_template_directory_uri(); ?>/images/guide/guide-namiseihon-img01-l.png" alt="ソフトカバー（上製本）" title="ソフトカバー（上製本）" />
+                      <img class="to-modal" data-name="並製本の書影と開いた状態" src="<?php echo get_template_directory_uri(); ?>/images/guide/guide-namiseihon-img01-l.png" alt="ソフトカバー（上製本）" title="ソフトカバー（上製本）" />
                     </div>
                     <div class="image-wrapper">
-                      <img src="<?php echo get_template_directory_uri(); ?>/images/guide/guide-namiseihon-img02-l.png" alt="ソフトカバー（上製本）" title="ソフトカバー（上製本）" />
+                      <img class="to-modal" data-name="並製本の書影と開いた状態" src="<?php echo get_template_directory_uri(); ?>/images/guide/guide-namiseihon-img02-l.png" alt="ソフトカバー（上製本）" title="ソフトカバー（上製本）" />
                     </div>
                   </li>
                 </ul>
@@ -260,13 +260,43 @@
         </div>
       </div>
     </div>
-    
+
     <aside class="main__other-info">
       <?php
       // データをテンプレートファイルに渡して表示
       load_template(get_template_directory() . '/components/other-info.php', false);
       ?>
     </aside>
+  </div>
+
+  <div class="modal">
+    <button class="btn modal__toggle-btn">戻&ensp;る</button>
+    <div class="modal__inner" data-to-modal-matched-name="上製本の書影と開いた状態">
+      <div class="modal__window">
+        <div class="modal__image">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon03-l1.png" />
+        </div>
+        <div class="modal__image">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon01-l1.png" />
+        </div>
+        <div class="modal__image">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-jyoseihon02-l1.png" />
+        </div>
+      </div>
+    </div>
+    <div class="modal__inner" data-to-modal-matched-name="並製本の書影と開いた状態">
+      <div class="modal__window">
+        <div class="modal__image">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img03-l1.png" />
+        </div>
+        <div class="modal__image">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img01-l1.png" />
+        </div>
+        <div class="modal__image">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/modal/guide-namiseihon-img02-l1.png" />
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

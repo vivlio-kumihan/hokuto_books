@@ -64,18 +64,18 @@
         <section>
           <h3 class="main__header3">広域・詳細マップ</h3>
           <div class="access-map-wrapper">
-            <a class="access-map-wrapper__wide-area" href="<?php echo get_template_directory_uri(); ?>/images/access/map-l.png" target="_blank">
+            <div class="access-map-wrapper__wide-area">
               <figure class="image-wrapper">
                 <figcaption>広域マップ</figcaption>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/access/map-l-320x478.png" alt="広域マップ" />
+                <img class="to-modal" data-name="広域マップ" src="<?php echo get_template_directory_uri(); ?>/images/access/map-l-320x478.png" alt="広域マップ" />
               </figure>
-            </a>
-            <a class="access-map-wrapper__detailed-area" href="<?php echo get_template_directory_uri(); ?>/images/access/map-zoom.png" target="_blank">
+            </div>
+            <div class="access-map-wrapper__detailed-area">
               <figure class="image-wrapper">
                 <figcaption>詳細マップ</figcaption>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/access/map-zoom-320x323.png" alt="詳細マップ" />
+                <img class="to-modal" data-name="詳細マップ" src="<?php echo get_template_directory_uri(); ?>/images/access/map-zoom-320x323.png" alt="詳細マップ" />
               </figure>
-            </a>
+            </div>
           </div>
           <div class="note">※地図クリックで別ページが開きます。</div>
           <a class="arrow-link margin-top-1em" href="<?php echo get_template_directory_uri(); ?>/images/print-map.pdf" target="_blank">
@@ -92,6 +92,24 @@
       load_template(get_template_directory() . '/components/other-info.php', false);
       ?>
     </aside>
+  </div>
+
+  <div class="modal">
+    <button class="btn modal__toggle-btn">戻&ensp;る</button>
+    <div class="modal__inner" data-to-modal-matched-name="広域マップ">
+      <div class="modal__window">
+        <div class="modal__image">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/access/map-l.png" />
+        </div>
+      </div>
+    </div>
+    <div class="modal__inner" data-to-modal-matched-name="詳細マップ">
+      <div class="modal__window">
+        <div class="modal__image">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/access/map-zoom.png" />
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
