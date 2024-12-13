@@ -1,0 +1,36 @@
+#SITEGUARD_PLUGIN_SETTINGS_START
+#SITEGUARD_PLUGIN_SETTINGS_END
+
+# # HTTPをHTTPSにリダイレクト
+# <IfModule mod_rewrite.c>
+# RewriteEngine On
+
+# # 非wwwをwwwにリダイレクト
+# RewriteCond %{HTTP_HOST} ^hokutoshobo\.jp [NC]
+# RewriteRule ^(.*)$ https://www.hokutoshobo.jp/$1 [L,R=301]
+
+# # HTTPをHTTPSにリダイレクト
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://www.hokutoshobo.jp/$1 [L,R=301]
+
+# # /news/および /book/ のリダイレクト
+# RewriteRule ^news/(.*/)?(\d{3,4})$ /news/$2 [L,R=301]
+# RewriteRule ^book/(.*/)?(\d{3,4})$ /book/$2 [L,R=301]
+
+# # 任意のパスをリダイレクト
+# RewriteRule ^.*/([^/]+)$ https://www.hokutoshobo.jp/$1 [L,R=301]
+# </IfModule>
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# 通常のWPの場合の設定
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress

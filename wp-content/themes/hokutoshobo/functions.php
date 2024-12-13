@@ -20,6 +20,7 @@ function enable_post_thumbnail_for_post() {
 add_action('init', 'enable_post_thumbnail_for_post');
 
 // JavaScriptを読み込む
+// 注意：facebook-jssdkを最後にしないと体裁が崩れる。
 function my_scripts()
 {
   // wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
@@ -40,8 +41,6 @@ add_action('wp_enqueue_scripts', 'my_scripts');
 function my_enqueue_styles() {
   // デフォルトのスタイルシート（style.css）
   wp_enqueue_style('hokutoshobo-style', get_stylesheet_uri());
-
-  // リセットCSS
   wp_enqueue_style('destyle', 'https://unpkg.com/destyle.css@4.0.0/destyle.min.css');
 
   // Google Fontsの事前接続とフォントの読み込み
@@ -54,6 +53,7 @@ function my_enqueue_styles() {
   wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
   // Swiperのスタイルシート
   wp_enqueue_style('swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css');
+
 }
 add_action('wp_enqueue_scripts', 'my_enqueue_styles');
 
@@ -68,7 +68,6 @@ add_action('wp_enqueue_scripts', 'my_enqueue_styles');
 //   // メインスタイルシートを読み込む
 //   wp_enqueue_style('main-stylesheet', get_stylesheet_uri());
 // }
-
 // add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
 
 // post_has_archive()関数の定義
@@ -142,6 +141,25 @@ function my_wpcf7_dynamic_text($text) {
     return $text;
 }
 add_filter('wpcf7_dynamic_text', 'my_wpcf7_dynamic_text');
+
+// add_action('wp_footer', function() {
+//   if (isset($_GET[$text])) {
+//       echo '<div style="color: red;">onDemandTotal: ' . esc_html($_GET[$text]) . '</div>';
+//   } else {
+//       echo '<div style="color: red;">onDemandTotal is missing!</div>';
+//   }
+// });
+
+
+// function my_wpcf7_dynamic_value($value, $name) {
+//   // クエリパラメータから値を取得
+//   if (isset($_GET[$name])) {
+//       $value = sanitize_text_field($_GET[$name]);
+//   }
+//   return $value;
+// }
+// add_filter('wpcf7_default_get', 'my_wpcf7_dynamic_value');
+// add_filter('wpcf7_default_get', 'my_wpcf7_dynamic_value', 10, 2);
 
 // この警告は、All in One SEOプラグインが翻訳を読み込むタイミングが早すぎるために発生しているものです。
 // 具体的には、_load_textdomain_just_in_time関数が推奨される「init アクション以降」に翻訳を読み込むべきところで、

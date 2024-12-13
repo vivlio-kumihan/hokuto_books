@@ -53,11 +53,20 @@ body {
 // <weight>: Use a value from 200 to 900
 
 .noto-serif-jp {
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
   font-style: normal;
-  &__md {
-    font-weight: 600;
+  &__ex-light {
+    font-weight: 200;
+  }
+  &__regular {
+    font-weight: 400;
+  }
+  &__bold {
+    font-weight: 700;
+  }
+  &__black {
+    font-weight: 900;
   }
 }
 
@@ -65,46 +74,18 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  &__md {
-    font-weight: 500;
+  &__ex-light {
+    font-weight: 200;
   }
-}
-
-.kaisei-harunoumi-regular {
-  font-family: "Kaisei HarunoUmi", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.zen-old-mincho-regular {
-  font-family: "Zen Old Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.yuji-boku-regular {
-  font-family: "Yuji Boku", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.oswald {
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.zen-old-mincho-regular {
-  font-family: "Zen Old Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-black {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: normal;
+  &__regular {
+    font-weight: 400;
+  }
+  &__bold {
+    font-weight: 700;
+  }
+  &__black {
+    font-weight: 900;
+  }
 }
 
 // image

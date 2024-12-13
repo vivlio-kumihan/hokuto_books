@@ -40,12 +40,21 @@ body {
 }
 
 .noto-serif-jp {
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
-.noto-serif-jp__md {
-  font-weight: 600;
+.noto-serif-jp__ex-light {
+  font-weight: 200;
+}
+.noto-serif-jp__regular {
+  font-weight: 400;
+}
+.noto-serif-jp__bold {
+  font-weight: 700;
+}
+.noto-serif-jp__black {
+  font-weight: 900;
 }
 
 .noto-sans-jp {
@@ -53,45 +62,17 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
 }
-.noto-sans-jp__md {
-  font-weight: 500;
+.noto-sans-jp__ex-light {
+  font-weight: 200;
 }
-
-.kaisei-harunoumi-regular {
-  font-family: "Kaisei HarunoUmi", serif;
+.noto-sans-jp__regular {
   font-weight: 400;
-  font-style: normal;
 }
-
-.zen-old-mincho-regular {
-  font-family: "Zen Old Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
+.noto-sans-jp__bold {
+  font-weight: 700;
 }
-
-.yuji-boku-regular {
-  font-family: "Yuji Boku", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.oswald {
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.zen-old-mincho-regular {
-  font-family: "Zen Old Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-black {
-  font-family: "Roboto", sans-serif;
+.noto-sans-jp__black {
   font-weight: 900;
-  font-style: normal;
 }
 
 img {
