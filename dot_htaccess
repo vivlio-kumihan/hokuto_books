@@ -1,0 +1,67 @@
+#SITEGUARD_PLUGIN_SETTINGS_START
+#==== SITEGUARD_RENAME_LOGIN_SETTINGS_START
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteBase /
+  RewriteRule ^wp-signup\.php 404-siteguard [L]
+  RewriteRule ^wp-activate\.php 404-siteguard [L]
+  RewriteRule ^login_95069(.*)$ wp-login.php$1 [L]
+</IfModule>
+
+# WordPressメイン設定
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+  RewriteBase /
+  RewriteRule ^index\.php$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+
+# START Custom Redirects
+# HTTP → HTTPSリダイレクト + www ありを統一
+# HTTPSリダイレクト + wwwありを統一
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # # 1. 自主出版
+  # RewriteCond %{HTTP_HOST} ^(www\.)?hokutoshobo\.jp$ [NC]
+  # RewriteRule ^news/jihisyuppan/2350/$ https://hokutoshobo\.jp/news/2350/ [R=301,L]
+
+  # # 2. お知らせ
+  # RewriteCond %{HTTP_HOST} ^(www\.)?hokutoshobo\.jp$ [NC]
+  # RewriteRule ^news/info/803/$ https://hokutoshobo.jp/news/803/ [R=301,L]
+
+  # # 3. 地図リンク
+  # RewriteCond %{HTTP_HOST} ^(www\.)?hokutoshobo\.jp$ [NC]
+  # RewriteRule ^print/map\.html$ https://hokutoshobo.jp/access/#access-map [R=301,L]
+
+  # # ドメイン全体のリダイレクト
+  # # すべてのパスを https://hokutoshobo.jp/ にリダイレクト
+  # RewriteCond %{HTTP_HOST} ^(www\.)?hokutoshobo\.jp$ [NC]
+  # RewriteRule ^feature/$ https://hokutoshobo.jp/feature/ [R=301,L]
+  # RewriteRule ^price/$ https://hokutoshobo.jp/price/ [R=301,L]
+  # RewriteRule ^process/$ https://hokutoshobo.jp/process/ [R=301,L]
+  # RewriteRule ^knowledge/$ https://hokutoshobo.jp/knowledge/ [R=301,L]
+  # RewriteRule ^voice/$ https://hokutoshobo.jp/voice/ [R=301,L]
+  # RewriteRule ^faq/$ https://hokutoshobo.jp/faq/ [R=301,L]
+  # RewriteRule ^access/$ https://hokutoshobo.jp/access/ [R=301,L]
+  # RewriteRule ^contact/$ https://hokutoshobo.jp/contact/ [R=301,L]
+  # RewriteRule ^purchase/$ https://hokutoshobo.jp/purchase/ [R=301,L]
+  # RewriteRule ^book/$ https://hokutoshobo.jp/book/ [R=301,L]
+  # RewriteRule ^news/$ https://hokutoshobo.jp/news/ [R=301,L]
+  # RewriteRule ^price/namiseihon/$ https://hokutoshobo.jp/price/namiseihon/ [R=301,L]
+  # RewriteRule ^price/jyoseihon/$ https://hokutoshobo.jp/price/jyoseihon/ [R=301,L]
+
+  # HTTP → HTTPS リダイレクト
+  # RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP_HOST} ^(www\.)?hokutoshobo\.jp/ [NC]
+  RewriteRule ^(.*)$ https://hokutoshobo\.jp/$1 [R=301,L]
+</IfModule>
+# END Custom Redirects
+
+SetEnvIf Request_URI ".*" WpCommentDeny
+SetEnvIf Request_URI ".*" Ngx_Cache_NoCacheMode=off
+SetEnvIf Request_URI ".*" Ngx_Cache_AllCacheMode

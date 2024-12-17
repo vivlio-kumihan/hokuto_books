@@ -62,7 +62,7 @@
         </section>
 
         <section>
-          <h3 class="main__header3">広域・詳細マップ</h3>
+          <h3 id="access-map" class="main__header3">広域・詳細マップ</h3>
           <div class="access-map-wrapper">
             <div class="access-map-wrapper__wide-area">
               <figure class="image-wrapper">
