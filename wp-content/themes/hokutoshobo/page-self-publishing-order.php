@@ -17,9 +17,7 @@
     </aside>
   </div>
 </div>
-<script type="module" src="<?php echo get_template_directory_uri(); ?>/page-self-publishing-order/assets/index-HeOsRd9d.js">
-
-</script>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/page-self-publishing-order/assets/index-DLXKAAdV.css">
+<script type="module" src="<?php echo get_template_directory_uri(); ?>/page-self-publishing-order/assets/index-B-p7QJpN.js"></script>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/page-self-publishing-order/assets/index-BCWYegud.css">
 
 <?php get_footer(); ?>
